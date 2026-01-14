@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(dir /s /b \"C:\\\\Users\\\\KasunJ\\\\MCP\\\\odoo-crm-mcp-server\\\\odoo-crm-mcp-server\\\\src\")",
+      "Bash(dir /s /b \"C:\\\\Users\\\\KasunJ\\\\MCP\\\\odoo-crm-mcp-server\\\\odoo-crm-mcp-server\\\\src\\\\*.ts\")",
+      "Bash(npm run build:*)",
+      "Bash(npx tsx test-stage-filter.ts)",
+      "Bash(git push)",
+      "Bash(node:*)",
+      "Bash(timeout 10 npm start)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "google-workspace"
+  ]
+}
