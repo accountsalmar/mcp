@@ -268,7 +268,7 @@ function extractLinkedFieldDependencies(groupBy: string[]): string[] {
  */
 export function registerNexsusSearchTool(server: McpServer): void {
   server.tool(
-    'nexsus_search',
+    'finance_reports_search',
     `Execute precise data queries against synced Odoo data with filtering and aggregation.
 
 **WORKFLOW:** Before executing, Claude should:
@@ -979,7 +979,7 @@ ${JSON.stringify(args, null, 2)}
     }
   );
 
-  console.error('[NexsusSearch] Registered nexsus_search tool');
+  console.error('[FinanceReportsSearch] Registered finance_reports_search tool');
 }
 
 // =============================================================================
