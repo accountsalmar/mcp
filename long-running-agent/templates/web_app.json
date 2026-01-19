@@ -1,0 +1,253 @@
+{
+  "name": "Web Application Template",
+  "description": "Template for web applications with frontend, backend, and API features",
+  "features": [
+    {
+      "id": "W001",
+      "category": "setup",
+      "description": "Initialize project structure for web application",
+      "steps": [
+        "Create frontend and backend directories",
+        "Set up package.json or requirements.txt",
+        "Create README.md with architecture overview"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "W002",
+      "category": "setup",
+      "description": "Set up development environment configuration",
+      "steps": [
+        "Create .env.example with required variables",
+        "Configure development and production settings",
+        "Document environment setup steps"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "W003",
+      "category": "backend",
+      "description": "Create basic server with health check endpoint",
+      "steps": [
+        "Set up web framework (Express/Flask/FastAPI)",
+        "Create /health endpoint returning status",
+        "Verify server starts and responds"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "W004",
+      "category": "database",
+      "description": "Set up database connection and models",
+      "steps": [
+        "Configure database connection",
+        "Create initial data models/schemas",
+        "Test database connectivity"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "W005",
+      "category": "auth",
+      "description": "Implement user registration",
+      "steps": [
+        "Create registration endpoint",
+        "Hash passwords securely",
+        "Validate user input",
+        "Test registration flow"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "W006",
+      "category": "auth",
+      "description": "Implement user login and JWT authentication",
+      "steps": [
+        "Create login endpoint",
+        "Generate JWT tokens",
+        "Create token verification middleware",
+        "Test login flow"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "W007",
+      "category": "auth",
+      "description": "Implement logout and session management",
+      "steps": [
+        "Create logout endpoint",
+        "Handle token invalidation",
+        "Test session lifecycle"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "W008",
+      "category": "api",
+      "description": "Create CRUD endpoints for main resource",
+      "steps": [
+        "Implement Create endpoint (POST)",
+        "Implement Read endpoints (GET one/many)",
+        "Implement Update endpoint (PUT/PATCH)",
+        "Implement Delete endpoint (DELETE)",
+        "Add authentication requirements"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "W009",
+      "category": "api",
+      "description": "Add input validation and error responses",
+      "steps": [
+        "Validate request bodies",
+        "Return consistent error formats",
+        "Handle edge cases"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "W010",
+      "category": "frontend",
+      "description": "Create basic HTML/CSS layout",
+      "steps": [
+        "Create main page template",
+        "Add navigation structure",
+        "Style with CSS"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "W011",
+      "category": "frontend",
+      "description": "Create login and registration forms",
+      "steps": [
+        "Build login form UI",
+        "Build registration form UI",
+        "Connect to backend APIs",
+        "Handle validation errors"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "W012",
+      "category": "frontend",
+      "description": "Create main resource management UI",
+      "steps": [
+        "Create list view",
+        "Create detail view",
+        "Create add/edit forms",
+        "Connect to CRUD endpoints"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "W013",
+      "category": "testing",
+      "description": "Write unit tests for backend",
+      "steps": [
+        "Test authentication endpoints",
+        "Test CRUD endpoints",
+        "Test error handling"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "W014",
+      "category": "testing",
+      "description": "Write integration tests",
+      "steps": [
+        "Test complete user flows",
+        "Test database interactions",
+        "Test edge cases"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "W015",
+      "category": "security",
+      "description": "Implement security best practices",
+      "steps": [
+        "Add CORS configuration",
+        "Implement rate limiting",
+        "Add security headers",
+        "Sanitize inputs"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "W016",
+      "category": "logging",
+      "description": "Add request logging and monitoring",
+      "steps": [
+        "Log all requests with timing",
+        "Log errors with stack traces",
+        "Add health metrics"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "W017",
+      "category": "deployment",
+      "description": "Create deployment configuration",
+      "steps": [
+        "Create Dockerfile or deployment script",
+        "Document deployment process",
+        "Test deployment locally"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "W018",
+      "category": "documentation",
+      "description": "Write API documentation",
+      "steps": [
+        "Document all endpoints",
+        "Include request/response examples",
+        "Add authentication instructions"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "W019",
+      "category": "polish",
+      "description": "Responsive design and accessibility",
+      "steps": [
+        "Test on mobile devices",
+        "Add accessibility attributes",
+        "Fix responsive issues"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "W020",
+      "category": "polish",
+      "description": "Final review and optimization",
+      "steps": [
+        "Run security scan",
+        "Optimize performance",
+        "Update all documentation"
+      ],
+      "priority": 5,
+      "passes": false
+    }
+  ]
+}

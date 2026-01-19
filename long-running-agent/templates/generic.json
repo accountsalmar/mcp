@@ -1,0 +1,126 @@
+{
+  "name": "Generic Project Template",
+  "description": "A customizable template for any type of project",
+  "features": [
+    {
+      "id": "F001",
+      "category": "setup",
+      "description": "Create basic project structure with README.md",
+      "steps": [
+        "Create main source directory",
+        "Create README.md with project description",
+        "Verify structure matches conventions"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "F002",
+      "category": "setup",
+      "description": "Initialize version control and .gitignore",
+      "steps": [
+        "Verify git is initialized",
+        "Create appropriate .gitignore file",
+        "Make initial commit"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "F003",
+      "category": "core",
+      "description": "Implement main entry point",
+      "steps": [
+        "Create main module/script",
+        "Add basic argument handling",
+        "Verify it runs without errors"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "F004",
+      "category": "core",
+      "description": "Add configuration management",
+      "steps": [
+        "Create config file or environment variable handling",
+        "Document configuration options",
+        "Test with different configurations"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "F005",
+      "category": "testing",
+      "description": "Set up testing framework",
+      "steps": [
+        "Install testing dependencies",
+        "Create test directory structure",
+        "Add example test that passes"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "F006",
+      "category": "core",
+      "description": "Implement core business logic",
+      "steps": [
+        "Identify main functionality needed",
+        "Implement with proper error handling",
+        "Add tests for core logic"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F007",
+      "category": "logging",
+      "description": "Add logging support",
+      "steps": [
+        "Configure logging with appropriate levels",
+        "Add log statements to key operations",
+        "Verify logs are written correctly"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F008",
+      "category": "error-handling",
+      "description": "Implement comprehensive error handling",
+      "steps": [
+        "Identify potential failure points",
+        "Add try-except blocks with meaningful messages",
+        "Test error scenarios"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F009",
+      "category": "documentation",
+      "description": "Add inline documentation and docstrings",
+      "steps": [
+        "Add docstrings to all public functions",
+        "Add comments for complex logic",
+        "Verify documentation is accurate"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F010",
+      "category": "polish",
+      "description": "Final review and cleanup",
+      "steps": [
+        "Run linter and fix issues",
+        "Update README with usage examples",
+        "Ensure all tests pass"
+      ],
+      "priority": 5,
+      "passes": false
+    }
+  ]
+}

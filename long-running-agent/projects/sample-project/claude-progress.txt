@@ -1,0 +1,42 @@
+# Claude Progress Log
+Project: sample-project
+Type: generic (with dependency tracking)
+Created: 2026-01-12
+
+## Dependency Graph
+```
+F001 (Setup) ------> F002 (User Model) ------> F003 (Repository)
+                           |                         |
+                           +------------+------------+
+                                        |
+                                        v
+                              F004 (UserService)
+                                        |
+                                        v
+                              F005 (Authentication)
+```
+
+## Interface Contracts
+- UserInterface: Implemented by F002, used by F003, F004
+- RepositoryInterface: Implemented by F003, used by F004
+- UserServiceInterface: Implemented by F004, used by F005
+
+## Session Log
+
+### Session 1 (Demo - Manual)
+- Completed: F001 (Project Setup), F002 (User Model)
+- Status: 2/5 features complete (40%)
+- Next: F003 (UserRepository) - only implementable feature
+
+### Compatibility Notes
+- F002 implements UserInterface - DO NOT CHANGE signature
+  - get_id() -> string
+  - get_email() -> string
+  - validate() -> bool
+- Any changes to User model require updates to F003, F004
+
+## Next Session Should:
+1. Implement F003 (UserRepository)
+2. Follow RepositoryInterface contract
+3. Write integration tests for F002 + F003
+4. Update this file with interface notes

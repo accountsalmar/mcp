@@ -1,0 +1,636 @@
+{
+  "project": {
+    "name": "test-cli-app",
+    "type": "cli_tool",
+    "description": "A simple CLI tool to test the agent system"
+  },
+  "features": [
+    {
+      "id": "F001",
+      "category": "setup",
+      "description": "Initialize CLI project structure with source and test directories",
+      "steps": [
+        "Verify src/test_cli_app directory exists",
+        "Verify tests directory exists",
+        "Verify docs directory exists",
+        "Check README.md is present"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "F002",
+      "category": "setup",
+      "description": "Create package configuration with pyproject.toml",
+      "steps": [
+        "Verify pyproject.toml exists",
+        "Check project metadata is defined",
+        "Verify dependencies are listed",
+        "Check console script entry point is configured"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "F003",
+      "category": "setup",
+      "description": "Create main module __init__.py and __main__.py files",
+      "steps": [
+        "Verify src/test_cli_app/__init__.py exists",
+        "Verify src/test_cli_app/__main__.py exists",
+        "Check __main__.py enables -m execution",
+        "Verify version is defined in __init__.py"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "F004",
+      "category": "core",
+      "description": "Set up argument parsing with click or argparse",
+      "steps": [
+        "Verify argument parser is imported",
+        "Check main entry point function exists",
+        "Verify --help option works",
+        "Verify --version option works"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "F005",
+      "category": "core",
+      "description": "Implement CLI main entry point with basic command structure",
+      "steps": [
+        "Verify CLI can be invoked",
+        "Check help text is displayed correctly",
+        "Verify graceful handling of no arguments",
+        "Test exit codes are correct"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "F006",
+      "category": "core",
+      "description": "Add 'hello' command that greets the user",
+      "steps": [
+        "Verify 'hello' command exists",
+        "Test default greeting output",
+        "Verify command accepts --name parameter",
+        "Check personalized greeting works"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "F007",
+      "category": "core",
+      "description": "Add 'echo' command that repeats user input",
+      "steps": [
+        "Verify 'echo' command exists",
+        "Test echoing a simple string",
+        "Verify command accepts positional argument",
+        "Check output matches input"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "F008",
+      "category": "core",
+      "description": "Add 'count' command that counts from 1 to N",
+      "steps": [
+        "Verify 'count' command exists",
+        "Test counting to a specified number",
+        "Verify input validation for non-numeric values",
+        "Check error handling for negative numbers"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "F009",
+      "category": "core",
+      "description": "Add 'info' command that displays system information",
+      "steps": [
+        "Verify 'info' command exists",
+        "Check it displays Python version",
+        "Check it displays OS information",
+        "Check it displays current directory"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "F010",
+      "category": "config",
+      "description": "Add configuration file support (JSON or YAML)",
+      "steps": [
+        "Verify config loading function exists",
+        "Test loading config from default location",
+        "Verify --config option to override location",
+        "Check graceful handling of missing config"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F011",
+      "category": "config",
+      "description": "Add 'config' command to view current configuration",
+      "steps": [
+        "Verify 'config' command exists",
+        "Test displaying all config values",
+        "Verify command shows default values",
+        "Check output is readable"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F012",
+      "category": "output",
+      "description": "Add colored output support using colorama or rich",
+      "steps": [
+        "Verify color library is installed",
+        "Check success messages are green",
+        "Check error messages are red",
+        "Verify warnings are yellow"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F013",
+      "category": "output",
+      "description": "Add --no-color flag to disable colored output",
+      "steps": [
+        "Verify --no-color flag exists",
+        "Test that colors are disabled when flag is used",
+        "Check plain text output works",
+        "Verify flag works with all commands"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F014",
+      "category": "output",
+      "description": "Add formatted table output for structured data",
+      "steps": [
+        "Verify table formatting function exists",
+        "Test displaying data in table format",
+        "Check column alignment is correct",
+        "Verify headers are displayed"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F015",
+      "category": "output",
+      "description": "Add JSON output format option",
+      "steps": [
+        "Verify --output-format json option exists",
+        "Test JSON output is valid",
+        "Check JSON is properly formatted",
+        "Verify works with all applicable commands"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F016",
+      "category": "logging",
+      "description": "Add verbose logging with -v/--verbose flag",
+      "steps": [
+        "Verify logging module is configured",
+        "Check -v flag increases verbosity",
+        "Test verbose output shows additional info",
+        "Verify default mode is non-verbose"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F017",
+      "category": "logging",
+      "description": "Add debug mode with --debug flag",
+      "steps": [
+        "Verify --debug flag exists",
+        "Check debug output shows detailed information",
+        "Test stack traces are shown in debug mode",
+        "Verify debug mode is more verbose than -v"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F018",
+      "category": "logging",
+      "description": "Add log file output option",
+      "steps": [
+        "Verify --log-file option exists",
+        "Test logs are written to specified file",
+        "Check log file contains timestamps",
+        "Verify log file is created in correct location"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F019",
+      "category": "error-handling",
+      "description": "Create custom exception classes for CLI errors",
+      "steps": [
+        "Verify CLIError base class exists",
+        "Check specific exception types are defined",
+        "Test exceptions have meaningful messages",
+        "Verify exception hierarchy is logical"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F020",
+      "category": "error-handling",
+      "description": "Implement user-friendly error messages",
+      "steps": [
+        "Test error messages are clear and actionable",
+        "Verify technical details are hidden by default",
+        "Check suggestions are provided for common errors",
+        "Test error formatting is consistent"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F021",
+      "category": "error-handling",
+      "description": "Implement proper exit codes for different error types",
+      "steps": [
+        "Verify exit code 0 for success",
+        "Check exit code 1 for general errors",
+        "Test exit code 2 for invalid arguments",
+        "Verify exit code 130 for KeyboardInterrupt"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "F022",
+      "category": "interactive",
+      "description": "Add confirmation prompts for destructive actions",
+      "steps": [
+        "Verify prompt function exists",
+        "Test y/n confirmation works",
+        "Check actions are cancelled on 'n'",
+        "Verify actions proceed on 'y'"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F023",
+      "category": "interactive",
+      "description": "Add --yes flag to skip confirmation prompts",
+      "steps": [
+        "Verify --yes flag exists",
+        "Test prompts are skipped when flag is used",
+        "Check all actions proceed automatically",
+        "Verify flag works globally"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F024",
+      "category": "interactive",
+      "description": "Add interactive input for missing required parameters",
+      "steps": [
+        "Verify CLI prompts for missing values",
+        "Test input is validated",
+        "Check default values are suggested",
+        "Verify non-interactive mode bypasses prompts"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F025",
+      "category": "progress",
+      "description": "Add progress bar for long-running operations",
+      "steps": [
+        "Verify progress bar library is integrated",
+        "Test progress bar updates correctly",
+        "Check progress bar shows percentage",
+        "Verify progress bar disappears when complete"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F026",
+      "category": "progress",
+      "description": "Add spinner for indeterminate operations",
+      "steps": [
+        "Verify spinner animation works",
+        "Test spinner with status messages",
+        "Check spinner stops on completion",
+        "Verify spinner is disabled in quiet mode"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F027",
+      "category": "testing",
+      "description": "Write unit tests for hello command",
+      "steps": [
+        "Verify test file exists for hello command",
+        "Test default greeting output",
+        "Test personalized greeting with --name",
+        "Check all tests pass"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F028",
+      "category": "testing",
+      "description": "Write unit tests for echo command",
+      "steps": [
+        "Verify test file exists for echo command",
+        "Test echoing various strings",
+        "Test edge cases (empty, special chars)",
+        "Check all tests pass"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F029",
+      "category": "testing",
+      "description": "Write unit tests for count command",
+      "steps": [
+        "Verify test file exists for count command",
+        "Test counting with valid numbers",
+        "Test error handling for invalid input",
+        "Check all tests pass"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F030",
+      "category": "testing",
+      "description": "Write unit tests for info command",
+      "steps": [
+        "Verify test file exists for info command",
+        "Test system information is retrieved",
+        "Test output format is correct",
+        "Check all tests pass"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F031",
+      "category": "testing",
+      "description": "Write unit tests for config loading",
+      "steps": [
+        "Verify test file exists for config module",
+        "Test loading valid config files",
+        "Test handling of missing config",
+        "Test handling of invalid config",
+        "Check all tests pass"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F032",
+      "category": "testing",
+      "description": "Write unit tests for error handling",
+      "steps": [
+        "Verify test file exists for error module",
+        "Test custom exceptions are raised correctly",
+        "Test error messages are formatted properly",
+        "Test exit codes are correct",
+        "Check all tests pass"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F033",
+      "category": "testing",
+      "description": "Write integration tests for CLI invocation",
+      "steps": [
+        "Verify integration test file exists",
+        "Test CLI can be invoked via command line",
+        "Test command execution end-to-end",
+        "Check all tests pass"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F034",
+      "category": "testing",
+      "description": "Add test coverage reporting",
+      "steps": [
+        "Verify coverage tool is configured",
+        "Test coverage report is generated",
+        "Check coverage meets minimum threshold (80%)",
+        "Verify coverage report is readable"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "F035",
+      "category": "documentation",
+      "description": "Write comprehensive README with installation instructions",
+      "steps": [
+        "Verify README.md exists",
+        "Check installation steps are clear",
+        "Verify prerequisites are listed",
+        "Check examples are provided"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F036",
+      "category": "documentation",
+      "description": "Document all commands with usage examples",
+      "steps": [
+        "Verify each command is documented",
+        "Check examples are provided for each command",
+        "Verify all options are documented",
+        "Check examples are accurate"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F037",
+      "category": "documentation",
+      "description": "Add API documentation for core modules",
+      "steps": [
+        "Verify docstrings exist for all functions",
+        "Check docstrings follow consistent format",
+        "Verify parameter types are documented",
+        "Check return values are documented"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F038",
+      "category": "documentation",
+      "description": "Create CONTRIBUTING.md with development guidelines",
+      "steps": [
+        "Verify CONTRIBUTING.md exists",
+        "Check development setup is documented",
+        "Verify testing guidelines are included",
+        "Check code style guidelines are clear"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F039",
+      "category": "packaging",
+      "description": "Configure package metadata in pyproject.toml",
+      "steps": [
+        "Verify project name and version are set",
+        "Check author information is present",
+        "Verify license is specified",
+        "Check description is clear"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F040",
+      "category": "packaging",
+      "description": "Set up console script entry point",
+      "steps": [
+        "Verify console_scripts entry exists",
+        "Test CLI can be invoked by command name",
+        "Check entry point points to correct function",
+        "Verify installation creates executable"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F041",
+      "category": "packaging",
+      "description": "Test package installation in virtual environment",
+      "steps": [
+        "Create fresh virtual environment",
+        "Install package in development mode",
+        "Test CLI command is available",
+        "Verify all commands work after installation"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F042",
+      "category": "packaging",
+      "description": "Create requirements.txt and requirements-dev.txt",
+      "steps": [
+        "Verify requirements.txt exists",
+        "Verify requirements-dev.txt exists",
+        "Check runtime dependencies are in requirements.txt",
+        "Check dev dependencies are in requirements-dev.txt"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F043",
+      "category": "ci",
+      "description": "Add .gitignore for Python projects",
+      "steps": [
+        "Verify .gitignore exists",
+        "Check __pycache__ is ignored",
+        "Check .pyc files are ignored",
+        "Check virtual environment is ignored",
+        "Check dist and build are ignored"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "F044",
+      "category": "polish",
+      "description": "Add code formatting with black",
+      "steps": [
+        "Verify black is in dev dependencies",
+        "Test code can be formatted with black",
+        "Check pyproject.toml has black config",
+        "Verify all code passes black check"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F045",
+      "category": "polish",
+      "description": "Add linting with flake8 or ruff",
+      "steps": [
+        "Verify linter is in dev dependencies",
+        "Test code can be linted",
+        "Check configuration file exists",
+        "Verify code passes linting"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F046",
+      "category": "polish",
+      "description": "Add type checking with mypy",
+      "steps": [
+        "Verify mypy is in dev dependencies",
+        "Add type hints to functions",
+        "Test type checking runs successfully",
+        "Verify code passes type checks"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F047",
+      "category": "polish",
+      "description": "Create pre-commit hooks",
+      "steps": [
+        "Verify pre-commit config exists",
+        "Check hooks include formatting",
+        "Check hooks include linting",
+        "Test hooks run on commit"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "F048",
+      "category": "polish",
+      "description": "Final code review and cleanup",
+      "steps": [
+        "Review all source files for clarity",
+        "Remove debug statements and TODOs",
+        "Verify all tests pass",
+        "Check documentation is complete"
+      ],
+      "priority": 5,
+      "passes": false
+    }
+  ]
+}

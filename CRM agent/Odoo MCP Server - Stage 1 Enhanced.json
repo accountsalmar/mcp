@@ -1,0 +1,805 @@
+{
+  "name": "Odoo MCP Server - Stage 1 Enhanced",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "odoo-read-server"
+      },
+      "id": "cca75f9e-367f-4193-b098-f994a106f1d2",
+      "name": "MCP Server Trigger",
+      "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "position": [
+        700,
+        500
+      ],
+      "webhookId": "odoo-read-server",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "contactId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Contact_ID', 'The ID of the contact to retrieve', 'string') }}",
+        "options": {}
+      },
+      "id": "803367a9-a518-48d6-9498-cb498215d25e",
+      "name": "Get Contact",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1100,
+        100
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "options": {}
+      },
+      "id": "8a489a3b-1d3d-4980-bef2-9ea6764a8974",
+      "name": "Get All Contacts",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1100,
+        200
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 50,
+        "filters": {
+          "email": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('email', 'Email address to search for', 'string') }}"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-111111111111",
+      "name": "Search Contact by Email",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1100,
+        300
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 50,
+        "filters": {
+          "name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('name', 'Name to search for (partial match supported)', 'string') }}"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-222222222222",
+      "name": "Search Contact by Name",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1100,
+        400
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 50,
+        "filters": {
+          "phone": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('phone', 'Phone number to search for', 'string') }}"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-333333333333",
+      "name": "Search Contact by Phone",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1100,
+        500
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 50,
+        "options": {
+          "sort": "create_date DESC"
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-444444444444",
+      "name": "Get Recent Contacts",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1100,
+        600
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "get",
+        "opportunityId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Opportunity_ID', 'The ID of the opportunity to retrieve', 'string') }}",
+        "options": {}
+      },
+      "id": "bd701f91-8007-44da-bbba-e0454bd05454",
+      "name": "Get Opportunity",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1500,
+        100
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "options": {
+          "sort": "create_date DESC"
+        }
+      },
+      "id": "85cb3930-83b6-488c-a7b0-7ee43def8f16",
+      "name": "Get All Opportunities",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1500,
+        200
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "filters": {
+          "stage_id.is_won": "false",
+          "active": "false"
+        },
+        "options": {
+          "sort": "date_closed DESC",
+          "fields": ["name", "partner_id", "expected_revenue", "date_closed", "lost_reason", "stage_id", "user_id"]
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-555555555555",
+      "name": "Get Lost Opportunities",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1500,
+        300
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "filters": {
+          "stage_id.is_won": "true"
+        },
+        "options": {
+          "sort": "date_closed DESC",
+          "fields": ["name", "partner_id", "expected_revenue", "date_closed", "stage_id", "user_id"]
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-666666666666",
+      "name": "Get Won Opportunities",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1500,
+        400
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "filters": {
+          "stage_id": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('stage_id', 'The ID or name of the pipeline stage', 'string') }}"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-777777777777",
+      "name": "Get Opportunities by Stage",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1500,
+        500
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "filters": {
+          "create_date": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('days_back', 'Number of days to look back (default 30)', 'number', 30) }}"
+        },
+        "options": {
+          "sort": "create_date DESC"
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-888888888888",
+      "name": "Get Recent Opportunities",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1500,
+        600
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "filters": {
+          "expected_revenue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('min_revenue', 'Minimum expected revenue threshold', 'number', 10000) }}"
+        },
+        "options": {
+          "sort": "expected_revenue DESC"
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-999999999999",
+      "name": "Get High Value Opportunities",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1500,
+        700
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "filters": {
+          "partner_id": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('customer_id', 'The ID or name of the customer/partner', 'string') }}"
+        },
+        "options": {
+          "sort": "create_date DESC"
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-aaaaaaaaaaaa",
+      "name": "Search Opportunities by Customer",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        1500,
+        800
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "note",
+        "operation": "get",
+        "noteId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Note_ID', 'The ID of the note to retrieve', 'string') }}",
+        "options": {}
+      },
+      "id": "59c23ee7-ae0d-44e5-8b06-aea6301b54ea",
+      "name": "Get Note",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        300,
+        100
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "note",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "options": {}
+      },
+      "id": "c60eab6b-49be-41b2-a3fe-fc6213de9530",
+      "name": "Get All Notes",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        300,
+        200
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "note",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 50,
+        "options": {
+          "sort": "create_date DESC"
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-bbbbbbbbbbbb",
+      "name": "Get Recent Notes",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        300,
+        300
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "crm.lost.reason",
+        "operation": "getAll",
+        "returnAll": true,
+        "options": {
+          "fields": ["name", "active"]
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-cccccccccccc",
+      "name": "Get Loss Reasons",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        300,
+        400
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "crm.stage",
+        "operation": "getAll",
+        "returnAll": true,
+        "options": {
+          "fields": ["name", "sequence", "is_won", "fold", "team_id"]
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-dddddddddddd",
+      "name": "Get Pipeline Stages",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        300,
+        500
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "crm.team",
+        "operation": "getAll",
+        "returnAll": true,
+        "options": {
+          "fields": ["name", "user_id", "member_ids", "alias_name"]
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-eeeeeeeeeeee",
+      "name": "Get Sales Teams",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        300,
+        600
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "mail.activity",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 100,
+        "options": {
+          "sort": "date_deadline ASC",
+          "fields": ["res_id", "res_model", "activity_type_id", "summary", "date_deadline", "user_id"]
+        }
+      },
+      "id": "a1b2c3d4-e5f6-4a5b-9c8d-ffffffffffff",
+      "name": "Get Activities",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        300,
+        700
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Odoo MCP Server - Stage 1 Enhanced\n\n### 🎯 Purpose\nConnects Claude.ai to your Odoo CRM database (10,000+ opportunities) for read-only analysis and insights.\n\n### 🔌 Setup Instructions\n\n**1. Deploy & Activate**\n   - Import this workflow to n8n Cloud\n   - Verify Odoo credentials are connected\n   - Activate the workflow\n\n**2. Get Your MCP Endpoint**\n   - n8n Cloud: `https://your-instance.app.n8n.cloud/mcp/odoo-read-server`\n   - Copy your actual n8n Cloud URL\n\n**3. Connect to Claude Desktop**\n   Edit `claude_desktop_config.json`:\n   ```json\n   {\n     \"mcpServers\": {\n       \"odoo-crm\": {\n         \"url\": \"https://your-instance.app.n8n.cloud/mcp/odoo-read-server\"\n       }\n     }\n   }\n   ```\n\n### 📊 Available Tools (21 Total)\n\n**Contact Tools (7):**\n- Get Contact (by ID)\n- Get All Contacts (limited to 100)\n- Search Contact by Email\n- Search Contact by Name\n- Search Contact by Phone\n- Get Recent Contacts (50 most recent)\n\n**Opportunity Tools (10):**\n- Get Opportunity (by ID)\n- Get All Opportunities (limited to 100)\n- Get Lost Opportunities\n- Get Won Opportunities\n- Get Opportunities by Stage\n- Get Recent Opportunities\n- Get High Value Opportunities\n- Search Opportunities by Customer\n\n**Note Tools (3):**\n- Get Note (by ID)\n- Get All Notes (limited to 100)\n- Get Recent Notes (50 most recent)\n\n**Analysis Tools (4):**\n- Get Loss Reasons (configured loss reasons)\n- Get Pipeline Stages (all CRM stages)\n- Get Sales Teams (team information)\n- Get Activities (tasks, calls, meetings)\n\n### 💬 Example Queries for Claude\n\n**Trend Analysis:**\n- \"What are the trends in opportunities this month?\"\n- \"Show me opportunity creation patterns over time\"\n- \"How many opportunities are in each pipeline stage?\"\n\n**Loss Analysis:**\n- \"Show me lost opportunities\"\n- \"What are the common reasons for lost opportunities?\"\n- \"Which customers have the most lost deals?\"\n\n**Customer Metrics:**\n- \"What's our win rate?\"\n- \"Lost percentage by customer\"\n- \"Show me high-value opportunities over $50,000\"\n\n**Pattern Recognition:**\n- \"Which sales team member has the most won deals?\"\n- \"What stages do opportunities get stuck in?\"\n- \"Show me recent activities and their deadlines\"\n\n### ⚡ Stage 1 Features\n\n**✅ Included:**\n- Read-only access (no data modification)\n- 21 specialized query tools\n- Safety limits (max 100 records for large queries)\n- Search and filter capabilities\n- Context-aware AI parameter extraction\n- Sorted results (most recent first)\n- Error handling\n\n**🚫 Not Included (Future Stages):**\n- Write operations (create/update/delete)\n- Machine learning predictions\n- Advanced analytics\n- Data visualization\n- Real-time notifications\n\n### 🔒 Safety Features\n\n- All \"Get All\" operations limited to 100 records\n- Read-only mode (no database modifications)\n- Transparent error messages\n- Conservative query interpretation\n- Manual retry on failures\n\n### 🛠️ Troubleshooting\n\n**Issue: Claude can't connect**\n- Verify workflow is active in n8n\n- Check MCP endpoint URL is correct\n- Restart Claude Desktop\n\n**Issue: \"Odoo connection failed\"**\n- Verify Odoo credentials in n8n\n- Check Odoo API is accessible\n- Test connection in n8n manually\n\n**Issue: No results returned**\n- Check if data exists in Odoo\n- Verify filter criteria aren't too restrictive\n- Try a simpler query first\n\n### 📈 Next Steps (Stage 2+)\n\n- Write operations (create opportunities, update contacts)\n- Advanced trend analysis with ML\n- Predictive lead scoring\n- Automated reporting\n- Custom dashboards\n\n---\n\n**Version:** Stage 1\n**Last Updated:** December 2025\n**Status:** Production Ready",
+        "height": 1040,
+        "width": 600
+      },
+      "id": "5d214661-eaa2-4b7a-ab7a-60f0a3a4f658",
+      "name": "Instructions",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -100,
+        0
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get Contact": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Contacts": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Contact by Email": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Contact by Name": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Contact by Phone": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Contacts": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Opportunity": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Opportunities": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Lost Opportunities": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Won Opportunities": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Opportunities by Stage": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Opportunities": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get High Value Opportunities": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Opportunities by Customer": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Note": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Notes": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Recent Notes": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Loss Reasons": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Pipeline Stages": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Sales Teams": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Activities": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "stage-1-enhanced-v1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "48f36034e4a2bfdbb95395249e302e906a9824918221f4fb1b3478c27b60a247"
+  },
+  "id": "stage1Enhanced",
+  "tags": ["mcp", "odoo", "crm", "stage-1", "read-only"]
+}

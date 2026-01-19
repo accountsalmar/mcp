@@ -1,0 +1,224 @@
+{
+  "name": "CLI Tool Template",
+  "description": "Template for command-line interface tools and utilities",
+  "features": [
+    {
+      "id": "C001",
+      "category": "setup",
+      "description": "Initialize CLI project structure",
+      "steps": [
+        "Create source directory",
+        "Set up package configuration",
+        "Create README.md with tool description"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "C002",
+      "category": "setup",
+      "description": "Set up argument parsing framework",
+      "steps": [
+        "Choose argument parser (argparse/click/typer)",
+        "Create main entry point",
+        "Add --help and --version options"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "C003",
+      "category": "core",
+      "description": "Implement main command structure",
+      "steps": [
+        "Define primary commands/subcommands",
+        "Add command descriptions",
+        "Wire up command handlers"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "C004",
+      "category": "core",
+      "description": "Add configuration file support",
+      "steps": [
+        "Define config file format (YAML/JSON/TOML)",
+        "Create config loading logic",
+        "Support config file location overrides"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "C005",
+      "category": "core",
+      "description": "Implement first core command",
+      "steps": [
+        "Define command arguments and options",
+        "Implement command logic",
+        "Add input validation",
+        "Test command execution"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "C006",
+      "category": "core",
+      "description": "Implement second core command",
+      "steps": [
+        "Define command arguments and options",
+        "Implement command logic",
+        "Add input validation",
+        "Test command execution"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "C007",
+      "category": "output",
+      "description": "Add formatted output support",
+      "steps": [
+        "Support multiple output formats (table/JSON/CSV)",
+        "Add --output-format option",
+        "Implement format handlers"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "C008",
+      "category": "output",
+      "description": "Add colored and styled output",
+      "steps": [
+        "Add color support (rich/colorama)",
+        "Use colors for status indicators",
+        "Support --no-color option"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "C009",
+      "category": "output",
+      "description": "Add progress indicators for long operations",
+      "steps": [
+        "Add progress bars for iterations",
+        "Add spinners for async operations",
+        "Support quiet mode"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "C010",
+      "category": "error-handling",
+      "description": "Implement comprehensive error handling",
+      "steps": [
+        "Create custom exception classes",
+        "Add user-friendly error messages",
+        "Return appropriate exit codes"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "C011",
+      "category": "logging",
+      "description": "Add verbose and debug logging",
+      "steps": [
+        "Add -v/--verbose option",
+        "Add --debug option",
+        "Configure log levels"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "C012",
+      "category": "interactive",
+      "description": "Add interactive prompts where appropriate",
+      "steps": [
+        "Add confirmation prompts for destructive actions",
+        "Add interactive input for missing required values",
+        "Support --yes for non-interactive mode"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "C013",
+      "category": "testing",
+      "description": "Write unit tests for commands",
+      "steps": [
+        "Test each command with various inputs",
+        "Test error conditions",
+        "Test output formats"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "C014",
+      "category": "testing",
+      "description": "Add CLI integration tests",
+      "steps": [
+        "Test full command execution",
+        "Verify exit codes",
+        "Test configuration loading"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "C015",
+      "category": "completion",
+      "description": "Add shell completion support",
+      "steps": [
+        "Generate bash completion",
+        "Generate zsh completion",
+        "Document completion installation"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "C016",
+      "category": "documentation",
+      "description": "Write comprehensive documentation",
+      "steps": [
+        "Document all commands and options",
+        "Add usage examples",
+        "Document configuration options"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "C017",
+      "category": "packaging",
+      "description": "Set up package distribution",
+      "steps": [
+        "Configure setup.py or pyproject.toml",
+        "Add console entry points",
+        "Test package installation"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "C018",
+      "category": "polish",
+      "description": "Final review and cleanup",
+      "steps": [
+        "Run linter and fix issues",
+        "Verify all tests pass",
+        "Update documentation"
+      ],
+      "priority": 5,
+      "passes": false
+    }
+  ]
+}

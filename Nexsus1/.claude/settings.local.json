@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(node -e:*)",
+      "Bash(dir:*)",
+      "Bash(git add:*)",
+      "Bash(npm run build:*)",
+      "Bash(node scripts/update-schema-with-knowledge.cjs:*)",
+      "Bash(npm run sync:*)",
+      "Bash(CLAUDE.md )",
+      "Bash(samples/Nexsus1_schema.xlsx )",
+      "Bash(samples/SAMPLE_payload_config.xlsx )",
+      "Bash(src/common/services/simple-schema-converter.ts )",
+      "Bash(src/common/types.ts )",
+      "Bash(src/console/sync/index.ts )",
+      "Bash(src/knowledge/adapter/knowledge-adapter.ts )",
+      "Bash(src/knowledge/dynamic/loaders/index.ts )",
+      "Bash(src/knowledge/dynamic/loaders/excel-knowledge-loader.ts )",
+      "Bash(src/knowledge/dynamic/loaders/extended-knowledge-sync.ts )",
+      "Bash(src/knowledge/dynamic/loaders/knowledge-point-builder.ts )",
+      "Bash(src/knowledge/dynamic/schemas/index.ts )",
+      "Bash(src/knowledge/dynamic/schemas/field-knowledge-schema.ts )",
+      "Bash(src/knowledge/dynamic/schemas/instance-config-schema.ts )",
+      "Bash(src/knowledge/dynamic/schemas/model-metadata-schema.ts )",
+      "Bash(scripts/update-schema-with-knowledge.cjs )",
+      "Bash(docs/plans/dynamic-knowledge-template.md)",
+      "Bash(git commit:*)",
+      "Bash(npm ls:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell -Command \"Stop-Process -Id 154280 -Force; Start-Sleep -Seconds 2\")",
+      "Bash(npm install:*)",
+      "Bash(npx knip)",
+      "Bash(git rm:*)",
+      "Bash(npx knip:*)",
+      "Bash(powershell -Command \"\nAdd-Type -AssemblyName System.IO.Compression.FileSystem\n[System.IO.Compression.ZipFile]::ExtractToDirectory\\(''samples/Nexsus1_schema.xlsx'', ''C:\\\\tmp\\\\schema_temp'', $true\\)\nGet-ChildItem C:\\\\tmp\\\\schema_temp -Recurse\n\")",
+      "Bash(python3:*)",
+      "Bash(npx tsc:*)",
+      "Bash(python -c \"\nimport ssl\nimport xmlrpc.client\n\nssl_context = ssl.create_default_context\\(\\)\nssl_context.check_hostname = False\nssl_context.verify_mode = ssl.CERT_NONE\n\nurl = ''https://duracubeuat.com.au''\ndb = ''26_01_06''\nadmin_user = ''kasun.jayasinghe@duracube.com.au''\nadmin_password = ''02987a3cdf5eda34268b00c80b78ed8ff731e0d7''\n\ncommon = xmlrpc.client.ServerProxy\\(f''{url}/xmlrpc/2/common'', context=ssl_context\\)\nmodels = xmlrpc.client.ServerProxy\\(f''{url}/xmlrpc/2/object'', context=ssl_context\\)\n\nuid = common.authenticate\\(db, admin_user, admin_password, {}\\)\n\n# Get user groups\nuser = models.execute_kw\\(\n    db, uid, admin_password,\n    ''res.users'', ''search_read'',\n    [[\\(''id'', ''='', 135\\)]],\n    {''fields'': [''login'', ''name'', ''groups_id'']}\n\\)[0]\n\nprint\\(f''User: {user[\"\"name\"\"]} \\({user[\"\"login\"\"]}\\)''\\)\nprint\\(f''Total groups: {len\\(user[\"\"groups_id\"\"]\\)}''\\)\nprint\\(\\)\n\n# Get group details\ngroups = models.execute_kw\\(\n    db, uid, admin_password,\n    ''res.groups'', ''search_read'',\n    [[\\(''id'', ''in'', user[''groups_id'']\\)]],\n    {''fields'': [''name'', ''full_name'', ''category_id'']}\n\\)\n\nprint\\(''Current groups:''\\)\nfor g in groups:\n    print\\(f''  - {g.get\\(\"\"full_name\"\", g[\"\"name\"\"]\\)}''\\)\n\")",
+      "Bash(powershell -Command:*)",
+      "mcp__nexsus1__semantic_search",
+      "mcp__nexsus1__system_status",
+      "Bash(python verify_readonly_acl.py:*)",
+      "Bash(python -c \"\nimport ssl\nimport xmlrpc.client\nimport json\nfrom datetime import datetime\n\n# Disable SSL verification\nssl_context = ssl.create_default_context\\(\\)\nssl_context.check_hostname = False\nssl_context.verify_mode = ssl.CERT_NONE\n\nurl = ''https://duracubeuat.com.au''\ndb = ''26_01_06''\nadmin_user = ''kasun.jayasinghe@duracube.com.au''\nadmin_password = ''02987a3cdf5eda34268b00c80b78ed8ff731e0d7''\n\n# Connect as admin\ncommon = xmlrpc.client.ServerProxy\\(f''{url}/xmlrpc/2/common'', context=ssl_context\\)\nmodels_proxy = xmlrpc.client.ServerProxy\\(f''{url}/xmlrpc/2/object'', context=ssl_context\\)\nuid = common.authenticate\\(db, admin_user, admin_password, {}\\)\nprint\\(f''Connected as admin \\(UID: {uid}\\)''\\)\nprint\\(''''\\)\n\n# The 8 problematic models\nproblematic_models = [\n    ''account.move.approval'',\n    ''account.move.stage'', \n    ''approval.rule'',\n    ''board.calculator'',\n    ''board.calculator.line'',\n    ''product.attribute.category'',\n    ''sale.revision'',\n    ''sale.revision.line''\n]\n\n# User''s group ID\nreadonly_group_id = 241\n\nprint\\(''='' * 90\\)\nprint\\(''CREATING RECORD RULES TO BLOCK WRITE/CREATE/DELETE''\\)\nprint\\(''='' * 90\\)\nprint\\(''''\\)\n\n# Backup existing rules first\nbackup_data = {\n    ''timestamp'': datetime.now\\(\\).isoformat\\(\\),\n    ''created_rule_ids'': [],\n    ''readonly_group_id'': readonly_group_id\n}\n\ncreated_rules = []\n\nfor model_name in problematic_models:\n    # Get model ID\n    model_ids = models_proxy.execute_kw\\(db, uid, admin_password,\n        ''ir.model'', ''search'',\n        [[\\(''model'', ''='', model_name\\)]]\n    \\)\n    \n    if not model_ids:\n        print\\(f''ERROR: Model not found: {model_name}''\\)\n        continue\n    \n    model_id = model_ids[0]\n    \n    # Check if rule already exists\n    existing_rules = models_proxy.execute_kw\\(db, uid, admin_password,\n        ''ir.rule'', ''search'',\n        [[\\(''name'', ''='', f''Block Write for API Read-Only: {model_name}''\\),\n          \\(''model_id'', ''='', model_id\\)]]\n    \\)\n    \n    if existing_rules:\n        print\\(f''SKIP: Rule already exists for {model_name}''\\)\n        continue\n    \n    # Create a record rule that:\n    # - Applies to the readonly group \\(241\\)\n    # - Allows READ \\(domain [\\(1,''='',1\\)] means all records\\)\n    # - BLOCKS write/create/delete by using an impossible domain [\\(0,''='',1\\)]\n    \n    # In Odoo, record rules work like this:\n    # - perm_read/write/create/unlink = True means the rule APPLIES to that operation\n    # - The domain_force defines WHICH records the rule allows\n    # - An impossible domain like [\\(0,''='',1\\)] means NO records match = operation blocked\n    \n    try:\n        rule_id = models_proxy.execute_kw\\(db, uid, admin_password,\n            ''ir.rule'', ''create'',\n            [{\n                ''name'': f''Block Write for API Read-Only: {model_name}'',\n                ''model_id'': model_id,\n                ''domain_force'': ''[\\(0, \"\"=\"\", 1\\)]'',  # Impossible domain - blocks all\n                ''groups'': [\\(6, 0, [readonly_group_id]\\)],  # Apply to group 241\n                ''perm_read'': False,   # Don''t apply to read \\(allow reading\\)\n                ''perm_write'': True,   # Apply to write \\(block it\\)\n                ''perm_create'': True,  # Apply to create \\(block it\\)\n                ''perm_unlink'': True,  # Apply to delete \\(block it\\)\n                ''active'': True\n            }]\n        \\)\n        \n        created_rules.append\\({\n            ''id'': rule_id,\n            ''model'': model_name,\n            ''model_id'': model_id\n        }\\)\n        \n        print\\(f''SUCCESS: Created rule ID {rule_id} for {model_name}''\\)\n        \n    except Exception as e:\n        print\\(f''ERROR: Failed to create rule for {model_name}: {e}''\\)\n\nprint\\(''''\\)\nprint\\(''='' * 90\\)\nprint\\(''SUMMARY''\\)\nprint\\(''='' * 90\\)\nprint\\(f''Rules created: {len\\(created_rules\\)}''\\)\n\n# Save backup\nbackup_data[''created_rule_ids''] = [r[''id''] for r in created_rules]\nbackup_data[''created_rules''] = created_rules\n\nwith open\\(''backups/record_rules_backup.json'', ''w''\\) as f:\n    json.dump\\(backup_data, f, indent=2\\)\n\nprint\\(f''Backup saved to: backups/record_rules_backup.json''\\)\nprint\\(''''\\)\nprint\\(''To rollback, delete these rule IDs:'', [r[''id''] for r in created_rules]\\)\n\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "nexsus1"
+  ]
+}

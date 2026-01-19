@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "fabric-analytics": {
+      "command": "node",
+      "args": ["C:\\Users\\KasunJ\\MCP\\Power-bi-map-server\\build\\index.js"],
+      "cwd": "C:\\Users\\KasunJ\\MCP\\Power-bi-map-server",
+      "env": {
+        "FABRIC_AUTH_METHOD": "azure_cli",
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

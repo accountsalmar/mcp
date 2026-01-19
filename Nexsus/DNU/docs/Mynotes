@@ -1,0 +1,119 @@
+I want to build the FK validation
+    check the FK validation to identfiy the missing records
+    check whether the FK traversal check is working from top to bottom and bottom to top
+    Data intergrity
+    to extract important information while do the check to build a machine learning system to remember and learn the relationship and the flow of FK traversal
+    To add another validation check what is the similary of the records ( what are the common text in account.move.line records )
+    Ultimately build a solid data grid , where the system is quite aware of the data not only sementic (similarity) as well as it structural relationship -ie nexsus
+
+
+
+
+
+
+
+    I want to access all the forms , views , and menus of odoo , through a web link , for example if I want to enter a bill , the view is https://duracubeuat.com.au/web#cids=1&menu_id=204&action=325&model=account.move&view_type=form , I belive all the text in the ULR is a variable that can be built ,
+
+
+
+    Similarly the aged receivable odoo view  - https://duracubeuat.com.au/web#action=465&cids=1&menu_id=297
+
+    can you carefully evaluate and let me know the what models I need to embed and the process of building this feature ( skill , tool etc)
+
+
+
+    Enter a bill - https://duracubeuat.com.au/web#action=325&model=account.move&view_type=list&cids=1&menu_id=204
+    Enter a contact - https://duracubeuat.com.au/web#cids=1&menu_id=228&action=335&model=res.partner&view_type=form
+    Enter a sales Order - https://duracubeuat.com.au/web#id=20950&cids=1&menu_id=438&action=746&model=sale.order&view_type=form
+    View contacts  - https://duracubeuat.com.au/web#action=334&model=res.partner&view_type=kanban&cids=1&menu_id=225
+    View Aged receivables  - https://duracubeuat.com.au/web#action=465&cids=1&menu_id=297
+    View Profit and loss  - https://duracubeuat.com.au/web#action=1389&cids=1&menu_id=808
+
+
+
+
+    This is a very important prompt , This prompt will lool at the nexus point in a differnet angle ,direction or an approach
+    The objective is the improve the interconnecivity between 
+    Odoo - data source
+    schema
+    data upload pipolie
+    data embedding 
+    vector database - inified nexsus
+    data seach tools  
+    claude.ai 
+
+    The core of nexsus project is the interconnectivity of these components , it need to be 100%
+    Please find some examples 
+    All the data in odoo is logically fed in to vector database in dedicated UUID with the proper improved understanding - the pipeline understands the odoo database structure through the schema and logically create the UUID where data need to be located in vector database ,Unified vecor.
+    When creating that data point , pipleline also build the knowledge graphy related to that data point and it relationship to the other data points.
+    FK validation checks, vlaidate and protect those relationhips , the story of the data is recorded in vecotor text , while Knowledge graphy gives the root of that data and it relationship with other vectors
+    The beauty of nexsus , you understand and save , NOT save and understiand , we are building not a database , we are building a data grid (nexsus)
+
+    Once the data is in the vector , the data is live and already understand it position and connection of the data and ready for any quesries searches, vecotr data is fully optimised with proper payload fields and indexing 
+
+    search tools are two types
+    Nexsus search provide exact data like an accountant , mainly using the root of the data through nexsus UUIDs
+    Pyloads are playing an important role in this regards , if payload fields are not configured , it idenfily the gaps and highlighs in FK validation process
+
+    Semetic search - provide the vector search and which can be backed by the nexsus search 
+    These tools are well coordinated and know there roles 
+    Semtic search is suitalble for more analysis may be for a CFO, slaes team etc
+
+    Search tools have a complete understaing of the knowledge graphs (KG) and use KG to efficiently locate data and to provide the citation
+    KG provide the connection of the data 
+    Vector -UUIDs is the address (exact location) of data 
+    vector text provide the rich sementic meaning 
+    This is the core of nexsus
+
+I do not want to introduce new technology or methods ,only thing need to do is by doing a deepresearch and understand whether this connection exit , If you prefer you can do the reverse engininer the process , indentify the areas where the connection is lost , where the connection got conflic each other , or where there are duplicate relationships which significantly limit the efficiency , remember at this stage my objectivity is the connection
+
+after the deep reserach provide a detailed report on your findings and areas to improve
+with detail plan , mangable stages and proper testing stages to make sure that we did not break the current functionality
+
+I made a singnificant strategic decision on the nexsus project, for context clarity I divide the project into 4 sub sections 
+1 Nexsus_sementic -  This section of the project is mainly for the sementic search , the tools and the mechanism is mainly built and trained for this sementic search , the development of this section should not afect the other section of the project
+2 Nexsus_exact -  This section the context is the tools and objective is to provide exact results , no sementic serach , the tools the mechanism all work towards that goal , no AI usage in search, may use some help to decide the parameters for filters but results and output is pure data from the vector, like through a SQL querries 
+3 Nexsus_knowledge  this is the subject knowledge , may include claude skills , accounting knowledge , odoo knowlege etc and may use in the nexsus consol for generating a rich output , for example may include knolege and the strucuter of the P&L and the balance sheet
+4 Nexsus_common -  This section include comman features like , api connections, voyage , Qdrant , Railway logins etc and the basis architecture , may include common tools like export to excel etc, This also include the values and high level rules which apply to all the sections
+5 Nexusus_consol -  This is the area of the priject , which blend the results of the Nexsus_sementic, Nexsus_exact, Nexsus_knowledge and give the final answer for any user queries 
+
+The objective of doing this is to ngive clear context and direction for claude code as well as myself , if the claude code confused with the objective the development is not clean and clear , Furhter this is how human brain also works
+When making a decision or express something , we first remember what we know exactly ( Nexsus_exact), Then we collect what similar experiance or information we have (Nexsus_search) , Then we combine those data with our subject knowledge common sense (Nexsus_knowledge), Then we decide what to tell or make the decicion combining all the  sections , sementic data , exact data , subject knowledge and our values (Nexsus_common) and then provide the answer or the decision 
+
+For example , IF someone ask , Do you know a good resturant in Penrith
+1 First I may recall what I know exactly about Penrith , what is the list of resturants also may refer to google search to get exact list of resturants in Penrith (Nexus_exact)
+2 Then we may combine our previous experiance , quality of resurants , What I feels , other feaures like parking etc (Nexsus_sementic)
+3 Then I may combine some of my knowlede about different foods , safery of foods , knowledge on the area etc (Nexsus_knowlwdge)
+4 NExsus_consol - I may combine all of the above information , the values - IF some of the user are vegitarian , I decide a resturant with vegitarian options also 
+I want to replicate this thinking process to user as well as in the decign process , what is your idea and further develop this
+
+
+ Tools (src/tools/):
+  | File             | Your Section Choice                               |
+  |------------------|---------------------------------------------------|
+  | nexsus-search.ts | Nexsus_exact |
+  | data-tool.ts     | No Idea |
+  | schema-tool.ts   | Nexsus_common |
+  | graph-tool.ts    | Nexsus_common |
+
+  Services (src/services/):
+  | File                    | Your Section Choice |
+  |-------------------------|---------------------|
+  | semantic-search.ts      | Nexsus_semetic              |
+  | schema-query-service.ts | Nexsus_common                   |
+  | nexsus-link.ts          | Nexsus_common                   |
+  | pipeline-data-sync.ts   | Nexsus_common       |
+  | odoo-client.ts          | Nexsus_common       |
+  | qdrant-client.ts        | Nexsus_common       |
+  | voyage-client.ts        | Nexsus_common       |
+  | file-export.ts          | Nexsus_common       |
+
+  Other:
+  | File         | Your Section Choice |
+  |--------------|---------------------|
+  | constants.ts | No idea |
+  | types.ts     | No idea             |
+
+
+  I want to 
+  

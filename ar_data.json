@@ -1,0 +1,3123 @@
+{
+  "operation": "search_read",
+  "model": "account.move",
+  "domain": [
+    [
+      "move_type",
+      "=",
+      "out_invoice"
+    ],
+    [
+      "payment_state",
+      "not in",
+      [
+        "paid"
+      ]
+    ]
+  ],
+  "fields_requested": [
+    "invoice_date_due",
+    "amount_residual"
+  ],
+  "limit": 2000,
+  "offset": 0,
+  "record_count": 619,
+  "total_matching": 619,
+  "records": [
+    {
+      "id": 227837,
+      "invoice_date_due": "2026-01-12",
+      "amount_residual": 7092.95
+    },
+    {
+      "id": 227835,
+      "invoice_date_due": "2026-02-14",
+      "amount_residual": 472.14
+    },
+    {
+      "id": 227383,
+      "invoice_date_due": "2026-01-12",
+      "amount_residual": 9579.22
+    },
+    {
+      "id": 227382,
+      "invoice_date_due": "2026-02-28",
+      "amount_residual": 13270.96
+    },
+    {
+      "id": 227381,
+      "invoice_date_due": "2026-02-28",
+      "amount_residual": 39008.22
+    },
+    {
+      "id": 227380,
+      "invoice_date_due": "2026-02-28",
+      "amount_residual": 5768.3
+    },
+    {
+      "id": 227375,
+      "invoice_date_due": "2026-01-12",
+      "amount_residual": 2643.63
+    },
+    {
+      "id": 227374,
+      "invoice_date_due": "2026-02-28",
+      "amount_residual": 499.4
+    },
+    {
+      "id": 227329,
+      "invoice_date_due": "2026-01-12",
+      "amount_residual": 19806.63
+    },
+    {
+      "id": 227321,
+      "invoice_date_due": "2026-01-12",
+      "amount_residual": 8459.87
+    },
+    {
+      "id": 227318,
+      "invoice_date_due": "2026-01-12",
+      "amount_residual": 6998.96
+    },
+    {
+      "id": 227317,
+      "invoice_date_due": "2026-01-12",
+      "amount_residual": 2651.11
+    },
+    {
+      "id": 227316,
+      "invoice_date_due": "2026-01-12",
+      "amount_residual": 10816.93
+    },
+    {
+      "id": 227290,
+      "invoice_date_due": "2026-01-09",
+      "amount_residual": 119.02
+    },
+    {
+      "id": 227277,
+      "invoice_date_due": "2026-01-09",
+      "amount_residual": 3488.4
+    },
+    {
+      "id": 227192,
+      "invoice_date_due": "2026-01-09",
+      "amount_residual": 9284.15
+    },
+    {
+      "id": 227190,
+      "invoice_date_due": "2026-01-09",
+      "amount_residual": 19287.17
+    },
+    {
+      "id": 227189,
+      "invoice_date_due": "2026-01-09",
+      "amount_residual": 13066.79
+    },
+    {
+      "id": 227188,
+      "invoice_date_due": "2026-01-09",
+      "amount_residual": 1742.34
+    },
+    {
+      "id": 227187,
+      "invoice_date_due": "2026-02-14",
+      "amount_residual": 27828.36
+    },
+    {
+      "id": 226654,
+      "invoice_date_due": "2026-02-28",
+      "amount_residual": 16367.18
+    },
+    {
+      "id": 226653,
+      "invoice_date_due": "2026-01-07",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 226651,
+      "invoice_date_due": "2026-02-28",
+      "amount_residual": 561.0
+    },
+    {
+      "id": 226520,
+      "invoice_date_due": "2026-01-07",
+      "amount_residual": 2650.63
+    },
+    {
+      "id": 226519,
+      "invoice_date_due": "2026-01-07",
+      "amount_residual": 11809.25
+    },
+    {
+      "id": 226518,
+      "invoice_date_due": "2026-01-07",
+      "amount_residual": 16087.5
+    },
+    {
+      "id": 226517,
+      "invoice_date_due": "2026-01-07",
+      "amount_residual": 6299.48
+    },
+    {
+      "id": 226269,
+      "invoice_date_due": "2026-01-06",
+      "amount_residual": 15923.52
+    },
+    {
+      "id": 226190,
+      "invoice_date_due": "2026-01-05",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 226189,
+      "invoice_date_due": "2026-01-05",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 225992,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 31493.01
+    },
+    {
+      "id": 225304,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 8357.81
+    },
+    {
+      "id": 225303,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 8357.81
+    },
+    {
+      "id": 225302,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 8357.81
+    },
+    {
+      "id": 225301,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 14569.67
+    },
+    {
+      "id": 225300,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 36229.28
+    },
+    {
+      "id": 225298,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 10263.04
+    },
+    {
+      "id": 225268,
+      "invoice_date_due": "2025-12-18",
+      "amount_residual": 2250.47
+    },
+    {
+      "id": 225264,
+      "invoice_date_due": "2025-12-18",
+      "amount_residual": 6863.38
+    },
+    {
+      "id": 225263,
+      "invoice_date_due": "2025-12-18",
+      "amount_residual": 13855.81
+    },
+    {
+      "id": 225261,
+      "invoice_date_due": "2025-12-18",
+      "amount_residual": 6321.16
+    },
+    {
+      "id": 225193,
+      "invoice_date_due": "2025-12-18",
+      "amount_residual": 3563.24
+    },
+    {
+      "id": 225168,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 9471.83
+    },
+    {
+      "id": 225166,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 87291.08
+    },
+    {
+      "id": 225159,
+      "invoice_date_due": "2025-12-18",
+      "amount_residual": 13804.94
+    },
+    {
+      "id": 225158,
+      "invoice_date_due": "2025-12-18",
+      "amount_residual": 17475.59
+    },
+    {
+      "id": 225142,
+      "invoice_date_due": "2025-12-18",
+      "amount_residual": 4523.39
+    },
+    {
+      "id": 225110,
+      "invoice_date_due": "2025-12-17",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 225007,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 2474.63
+    },
+    {
+      "id": 224994,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 54505.01
+    },
+    {
+      "id": 224992,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 165831.41
+    },
+    {
+      "id": 224990,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 67670.84
+    },
+    {
+      "id": 224989,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 6930.05
+    },
+    {
+      "id": 224988,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 45101.01
+    },
+    {
+      "id": 224964,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 35007.52
+    },
+    {
+      "id": 224960,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 3124.61
+    },
+    {
+      "id": 224956,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 11594.96
+    },
+    {
+      "id": 224955,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 8280.91
+    },
+    {
+      "id": 224862,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 16207.41
+    },
+    {
+      "id": 224861,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 14614.43
+    },
+    {
+      "id": 224860,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 50824.19
+    },
+    {
+      "id": 224858,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 31650.29
+    },
+    {
+      "id": 224848,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 27500.01
+    },
+    {
+      "id": 224859,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 18696.99
+    },
+    {
+      "id": 224426,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 21133.22
+    },
+    {
+      "id": 224427,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 74558.1
+    },
+    {
+      "id": 224423,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 50359.98
+    },
+    {
+      "id": 224398,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 31151.72
+    },
+    {
+      "id": 224338,
+      "invoice_date_due": "2025-12-15",
+      "amount_residual": 5036.41
+    },
+    {
+      "id": 224236,
+      "invoice_date_due": "2025-12-15",
+      "amount_residual": 526.76
+    },
+    {
+      "id": 223830,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 23106.45
+    },
+    {
+      "id": 224159,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 13047.51
+    },
+    {
+      "id": 224153,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 6661.54
+    },
+    {
+      "id": 224152,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 64068.15
+    },
+    {
+      "id": 224058,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 25802.59
+    },
+    {
+      "id": 224048,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 18077.55
+    },
+    {
+      "id": 224036,
+      "invoice_date_due": "2025-12-12",
+      "amount_residual": 1603.65
+    },
+    {
+      "id": 224035,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 30987.75
+    },
+    {
+      "id": 224018,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 7655.55
+    },
+    {
+      "id": 224017,
+      "invoice_date_due": "2025-12-12",
+      "amount_residual": 19397.62
+    },
+    {
+      "id": 224011,
+      "invoice_date_due": "2025-12-12",
+      "amount_residual": 7791.15
+    },
+    {
+      "id": 223878,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 28311.25
+    },
+    {
+      "id": 223877,
+      "invoice_date_due": "2025-12-12",
+      "amount_residual": 19806.61
+    },
+    {
+      "id": 223866,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 97040.36
+    },
+    {
+      "id": 223864,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 12984.71
+    },
+    {
+      "id": 223863,
+      "invoice_date_due": "2025-12-12",
+      "amount_residual": 6863.4
+    },
+    {
+      "id": 223861,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 116033.3
+    },
+    {
+      "id": 223850,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 107766.54
+    },
+    {
+      "id": 223849,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 65316.92
+    },
+    {
+      "id": 223848,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 7934.02
+    },
+    {
+      "id": 223805,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 6135.27
+    },
+    {
+      "id": 223789,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 56994.81
+    },
+    {
+      "id": 224021,
+      "invoice_date_due": "2025-12-12",
+      "amount_residual": 242.88
+    },
+    {
+      "id": 223643,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 41590.32
+    },
+    {
+      "id": 223171,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 38021.83
+    },
+    {
+      "id": 222792,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 87553.97
+    },
+    {
+      "id": 223167,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 78032.09
+    },
+    {
+      "id": 223111,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 109704.01
+    },
+    {
+      "id": 223082,
+      "invoice_date_due": "2025-12-10",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 222793,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 3611.72
+    },
+    {
+      "id": 222782,
+      "invoice_date_due": "2025-12-10",
+      "amount_residual": 7582.55
+    },
+    {
+      "id": 222781,
+      "invoice_date_due": "2025-12-10",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 222780,
+      "invoice_date_due": "2025-12-10",
+      "amount_residual": 403.92
+    },
+    {
+      "id": 222009,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 16367.18
+    },
+    {
+      "id": 221893,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 1890.2
+    },
+    {
+      "id": 221868,
+      "invoice_date_due": "2025-12-08",
+      "amount_residual": 18134.81
+    },
+    {
+      "id": 221730,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 40704.31
+    },
+    {
+      "id": 221673,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 8096.0
+    },
+    {
+      "id": 221623,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 31145.22
+    },
+    {
+      "id": 221525,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 43822.94
+    },
+    {
+      "id": 221523,
+      "invoice_date_due": "2025-12-05",
+      "amount_residual": 10242.66
+    },
+    {
+      "id": 221503,
+      "invoice_date_due": "2025-12-05",
+      "amount_residual": 6725.1
+    },
+    {
+      "id": 221450,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 718.66
+    },
+    {
+      "id": 221424,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 22416.65
+    },
+    {
+      "id": 221220,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 6900.31
+    },
+    {
+      "id": 221261,
+      "invoice_date_due": "2025-12-04",
+      "amount_residual": 970.26
+    },
+    {
+      "id": 220612,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 0.04
+    },
+    {
+      "id": 220566,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 54964.68
+    },
+    {
+      "id": 220528,
+      "invoice_date_due": "2025-12-03",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 220525,
+      "invoice_date_due": "2026-01-31",
+      "amount_residual": 2858.38
+    },
+    {
+      "id": 220486,
+      "invoice_date_due": "2025-12-02",
+      "amount_residual": 8714.42
+    },
+    {
+      "id": 220310,
+      "invoice_date_due": "2026-01-14",
+      "amount_residual": 7681.71
+    },
+    {
+      "id": 219814,
+      "invoice_date_due": "2025-11-28",
+      "amount_residual": 26371.4
+    },
+    {
+      "id": 219468,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 24807.26
+    },
+    {
+      "id": 219467,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 5874.0
+    },
+    {
+      "id": 219421,
+      "invoice_date_due": "2025-11-28",
+      "amount_residual": 37707.03
+    },
+    {
+      "id": 218918,
+      "invoice_date_due": "2025-12-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 218691,
+      "invoice_date_due": "2025-11-26",
+      "amount_residual": 5571.14
+    },
+    {
+      "id": 218677,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 4561.2
+    },
+    {
+      "id": 218643,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 8752.13
+    },
+    {
+      "id": 218624,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 15058.02
+    },
+    {
+      "id": 218589,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 48095.71
+    },
+    {
+      "id": 218580,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 25564.39
+    },
+    {
+      "id": 218574,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 22156.55
+    },
+    {
+      "id": 218571,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 42644.36
+    },
+    {
+      "id": 218479,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 7249.94
+    },
+    {
+      "id": 218405,
+      "invoice_date_due": "2025-11-24",
+      "amount_residual": 486.59
+    },
+    {
+      "id": 218277,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 18460.99
+    },
+    {
+      "id": 218265,
+      "invoice_date_due": "2025-12-14",
+      "amount_residual": 21336.37
+    },
+    {
+      "id": 218187,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 30155.36
+    },
+    {
+      "id": 218222,
+      "invoice_date_due": "2025-12-14",
+      "amount_residual": 13326.8
+    },
+    {
+      "id": 218186,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 1412.13
+    },
+    {
+      "id": 217997,
+      "invoice_date_due": "2025-11-21",
+      "amount_residual": 11192.24
+    },
+    {
+      "id": 217071,
+      "invoice_date_due": "2025-12-14",
+      "amount_residual": 2814.82
+    },
+    {
+      "id": 216542,
+      "invoice_date_due": "2025-11-17",
+      "amount_residual": 7092.97
+    },
+    {
+      "id": 216423,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 910.44
+    },
+    {
+      "id": 216395,
+      "invoice_date_due": "2025-11-17",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 216391,
+      "invoice_date_due": "2025-11-17",
+      "amount_residual": 11985.13
+    },
+    {
+      "id": 216388,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 43415.03
+    },
+    {
+      "id": 216397,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": -2281.31
+    },
+    {
+      "id": 216197,
+      "invoice_date_due": "2025-11-13",
+      "amount_residual": 4846.19
+    },
+    {
+      "id": 215748,
+      "invoice_date_due": "2025-12-14",
+      "amount_residual": 29698.15
+    },
+    {
+      "id": 215455,
+      "invoice_date_due": "2025-11-10",
+      "amount_residual": 5571.15
+    },
+    {
+      "id": 215412,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 11892.12
+    },
+    {
+      "id": 215290,
+      "invoice_date_due": "2025-12-14",
+      "amount_residual": 2747.82
+    },
+    {
+      "id": 215272,
+      "invoice_date_due": "2025-11-07",
+      "amount_residual": 31923.77
+    },
+    {
+      "id": 215451,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 12537.74
+    },
+    {
+      "id": 215201,
+      "invoice_date_due": "2025-12-31",
+      "amount_residual": 29911.29
+    },
+    {
+      "id": 215124,
+      "invoice_date_due": "2025-11-05",
+      "amount_residual": 6471.69
+    },
+    {
+      "id": 213484,
+      "invoice_date_due": "2025-10-30",
+      "amount_residual": 8189.36
+    },
+    {
+      "id": 213294,
+      "invoice_date_due": "2025-10-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 212224,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 1518.52
+    },
+    {
+      "id": 212216,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 2145.02
+    },
+    {
+      "id": 212147,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 483.22
+    },
+    {
+      "id": 212047,
+      "invoice_date_due": "2025-10-24",
+      "amount_residual": 4754.83
+    },
+    {
+      "id": 211417,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 1469.71
+    },
+    {
+      "id": 211251,
+      "invoice_date_due": "2025-11-14",
+      "amount_residual": 43855.69
+    },
+    {
+      "id": 210308,
+      "invoice_date_due": "2025-11-14",
+      "amount_residual": 31645.77
+    },
+    {
+      "id": 210309,
+      "invoice_date_due": "2025-11-14",
+      "amount_residual": 31037.61
+    },
+    {
+      "id": 210303,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 38.28
+    },
+    {
+      "id": 209801,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 264.0
+    },
+    {
+      "id": 209797,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 3256.78
+    },
+    {
+      "id": 209682,
+      "invoice_date_due": "2025-10-13",
+      "amount_residual": 11185.16
+    },
+    {
+      "id": 209672,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 442.75
+    },
+    {
+      "id": 209186,
+      "invoice_date_due": "2025-10-10",
+      "amount_residual": 7478.04
+    },
+    {
+      "id": 207881,
+      "invoice_date_due": "2025-10-07",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 207496,
+      "invoice_date_due": "2025-11-30",
+      "amount_residual": 485.05
+    },
+    {
+      "id": 206573,
+      "invoice_date_due": "2025-10-13",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 205995,
+      "invoice_date_due": "2025-09-25",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 204553,
+      "invoice_date_due": "2025-10-14",
+      "amount_residual": 25051.64
+    },
+    {
+      "id": 202288,
+      "invoice_date_due": "2025-10-31",
+      "amount_residual": 3949.57
+    },
+    {
+      "id": 201777,
+      "invoice_date_due": "2025-10-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 198312,
+      "invoice_date_due": "2025-08-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 197136,
+      "invoice_date_due": "2025-09-30",
+      "amount_residual": 2858.38
+    },
+    {
+      "id": 196350,
+      "invoice_date_due": "2025-08-21",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 195027,
+      "invoice_date_due": "2025-08-13",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 194614,
+      "invoice_date_due": "2025-09-30",
+      "amount_residual": 4513.87
+    },
+    {
+      "id": 194610,
+      "invoice_date_due": "2025-09-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 192371,
+      "invoice_date_due": "2025-09-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 192249,
+      "invoice_date_due": "2025-09-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 192246,
+      "invoice_date_due": "2025-08-04",
+      "amount_residual": 1081.3
+    },
+    {
+      "id": 191372,
+      "invoice_date_due": "2025-08-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 191077,
+      "invoice_date_due": "2025-07-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 190607,
+      "invoice_date_due": "2025-08-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 190605,
+      "invoice_date_due": "2025-08-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 190561,
+      "invoice_date_due": "2025-07-29",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 190277,
+      "invoice_date_due": "2025-08-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 190011,
+      "invoice_date_due": "2025-08-31",
+      "amount_residual": 3196.59
+    },
+    {
+      "id": 190006,
+      "invoice_date_due": "2025-07-25",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 188560,
+      "invoice_date_due": "2025-08-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 188251,
+      "invoice_date_due": "2025-07-17",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 186787,
+      "invoice_date_due": "2025-07-08",
+      "amount_residual": 17638.51
+    },
+    {
+      "id": 186642,
+      "invoice_date_due": "2025-07-08",
+      "amount_residual": 30.5
+    },
+    {
+      "id": 188102,
+      "invoice_date_due": "2025-07-01",
+      "amount_residual": 127074.42
+    },
+    {
+      "id": 184882,
+      "invoice_date_due": "2025-08-31",
+      "amount_residual": 1691.8
+    },
+    {
+      "id": 183868,
+      "invoice_date_due": "2025-06-27",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 183712,
+      "invoice_date_due": "2025-06-26",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 183603,
+      "invoice_date_due": "2025-07-31",
+      "amount_residual": 56286.89
+    },
+    {
+      "id": 183597,
+      "invoice_date_due": "2025-08-07",
+      "amount_residual": 2970.03
+    },
+    {
+      "id": 181905,
+      "invoice_date_due": "2025-06-19",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 181583,
+      "invoice_date_due": "2025-06-17",
+      "amount_residual": 20412.93
+    },
+    {
+      "id": 180470,
+      "invoice_date_due": "2025-06-11",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 179929,
+      "invoice_date_due": "2025-06-05",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 179082,
+      "invoice_date_due": "2025-06-02",
+      "amount_residual": 6947.05
+    },
+    {
+      "id": 178092,
+      "invoice_date_due": "2025-07-15",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 178090,
+      "invoice_date_due": "2025-07-15",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 177696,
+      "invoice_date_due": "2025-05-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 177647,
+      "invoice_date_due": "2025-05-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 177178,
+      "invoice_date_due": "2025-06-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 177169,
+      "invoice_date_due": "2025-06-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 176804,
+      "invoice_date_due": "2025-05-22",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 176798,
+      "invoice_date_due": "2025-06-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 176362,
+      "invoice_date_due": "2025-05-20",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 175202,
+      "invoice_date_due": "2025-05-12",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 173792,
+      "invoice_date_due": "2025-05-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 172685,
+      "invoice_date_due": "2025-04-28",
+      "amount_residual": 752.5
+    },
+    {
+      "id": 172391,
+      "invoice_date_due": "2025-05-31",
+      "amount_residual": 1579.6
+    },
+    {
+      "id": 170530,
+      "invoice_date_due": "2025-04-11",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 170424,
+      "invoice_date_due": "2025-04-10",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 169564,
+      "invoice_date_due": "2025-05-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 169078,
+      "invoice_date_due": "2025-05-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 167435,
+      "invoice_date_due": "2025-04-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 166386,
+      "invoice_date_due": "2025-03-21",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 164233,
+      "invoice_date_due": "2025-04-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 162970,
+      "invoice_date_due": "2025-02-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 161525,
+      "invoice_date_due": "2025-03-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 161497,
+      "invoice_date_due": "2025-03-06",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 161487,
+      "invoice_date_due": "2025-03-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 160895,
+      "invoice_date_due": "2025-03-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 160056,
+      "invoice_date_due": "2025-02-12",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 159891,
+      "invoice_date_due": "2025-02-11",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 159052,
+      "invoice_date_due": "2025-03-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 158224,
+      "invoice_date_due": "2025-02-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 157285,
+      "invoice_date_due": "2025-02-12",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 157283,
+      "invoice_date_due": "2025-02-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 154787,
+      "invoice_date_due": "2025-02-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 153541,
+      "invoice_date_due": "2025-01-07",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 153357,
+      "invoice_date_due": "2025-01-06",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 153293,
+      "invoice_date_due": "2025-02-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 152373,
+      "invoice_date_due": "2024-12-18",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 151510,
+      "invoice_date_due": "2025-01-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 151451,
+      "invoice_date_due": "2024-12-13",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 150901,
+      "invoice_date_due": "2024-12-11",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 150900,
+      "invoice_date_due": "2025-01-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 150552,
+      "invoice_date_due": "2025-01-31",
+      "amount_residual": 60495.97
+    },
+    {
+      "id": 149952,
+      "invoice_date_due": "2024-12-05",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 149370,
+      "invoice_date_due": "2024-12-03",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 149463,
+      "invoice_date_due": "2024-12-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 148623,
+      "invoice_date_due": "2024-11-29",
+      "amount_residual": 3555.87
+    },
+    {
+      "id": 148585,
+      "invoice_date_due": "2024-12-14",
+      "amount_residual": 220.0
+    },
+    {
+      "id": 148441,
+      "invoice_date_due": "2024-11-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 147959,
+      "invoice_date_due": "2024-11-26",
+      "amount_residual": 21138.54
+    },
+    {
+      "id": 147794,
+      "invoice_date_due": "2024-11-26",
+      "amount_residual": 5361.95
+    },
+    {
+      "id": 147064,
+      "invoice_date_due": "2024-12-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 146903,
+      "invoice_date_due": "2024-11-20",
+      "amount_residual": 5361.95
+    },
+    {
+      "id": 146565,
+      "invoice_date_due": "2024-11-20",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 146365,
+      "invoice_date_due": "2024-11-19",
+      "amount_residual": 1.0
+    },
+    {
+      "id": 146360,
+      "invoice_date_due": "2024-11-19",
+      "amount_residual": 1.0
+    },
+    {
+      "id": 146340,
+      "invoice_date_due": "2024-11-18",
+      "amount_residual": 10569.27
+    },
+    {
+      "id": 145980,
+      "invoice_date_due": "2024-12-14",
+      "amount_residual": 662.2
+    },
+    {
+      "id": 145093,
+      "invoice_date_due": "2024-12-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 144065,
+      "invoice_date_due": "2024-10-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 139909,
+      "invoice_date_due": "2024-10-04",
+      "amount_residual": 4887.23
+    },
+    {
+      "id": 139595,
+      "invoice_date_due": "2024-09-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 137941,
+      "invoice_date_due": "2024-10-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 134174,
+      "invoice_date_due": "2024-09-30",
+      "amount_residual": 29156.38
+    },
+    {
+      "id": 131102,
+      "invoice_date_due": "2024-08-05",
+      "amount_residual": 0.01
+    },
+    {
+      "id": 129532,
+      "invoice_date_due": "2024-07-26",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 128279,
+      "invoice_date_due": "2024-08-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 128198,
+      "invoice_date_due": "2024-08-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 126551,
+      "invoice_date_due": "2024-08-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 123632,
+      "invoice_date_due": "2024-06-27",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 122877,
+      "invoice_date_due": "2024-06-21",
+      "amount_residual": 8800.0
+    },
+    {
+      "id": 122829,
+      "invoice_date_due": "2024-06-21",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 122288,
+      "invoice_date_due": "2024-06-21",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 121076,
+      "invoice_date_due": "2024-06-19",
+      "amount_residual": 29156.38
+    },
+    {
+      "id": 104445,
+      "invoice_date_due": "2024-07-14",
+      "amount_residual": 1000.0
+    },
+    {
+      "id": 104132,
+      "invoice_date_due": "2024-06-13",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 104128,
+      "invoice_date_due": "2024-07-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 101894,
+      "invoice_date_due": "2024-06-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 101561,
+      "invoice_date_due": "2024-06-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 101089,
+      "invoice_date_due": "2024-05-17",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 98153,
+      "invoice_date_due": "2024-04-23",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 97480,
+      "invoice_date_due": "2024-04-17",
+      "amount_residual": 5112.54
+    },
+    {
+      "id": 97003,
+      "invoice_date_due": "2024-04-11",
+      "amount_residual": 5112.55
+    },
+    {
+      "id": 96667,
+      "invoice_date_due": "2024-04-09",
+      "amount_residual": 15202.98
+    },
+    {
+      "id": 96076,
+      "invoice_date_due": false,
+      "amount_residual": 2264.23
+    },
+    {
+      "id": 94297,
+      "invoice_date_due": "2024-04-14",
+      "amount_residual": 7513.62
+    },
+    {
+      "id": 92836,
+      "invoice_date_due": "2024-04-30",
+      "amount_residual": 6811.2
+    },
+    {
+      "id": 91139,
+      "invoice_date_due": "2024-03-04",
+      "amount_residual": 5693.25
+    },
+    {
+      "id": 89775,
+      "invoice_date_due": "2024-03-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 89635,
+      "invoice_date_due": "2024-02-21",
+      "amount_residual": 68.4
+    },
+    {
+      "id": 89023,
+      "invoice_date_due": "2024-02-20",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 89014,
+      "invoice_date_due": "2024-03-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 88905,
+      "invoice_date_due": "2024-03-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 88532,
+      "invoice_date_due": "2024-03-01",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 88062,
+      "invoice_date_due": "2024-02-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 85933,
+      "invoice_date_due": "2024-01-30",
+      "amount_residual": 4716.25
+    },
+    {
+      "id": 85903,
+      "invoice_date_due": "2024-02-14",
+      "amount_residual": 26653.47
+    },
+    {
+      "id": 85302,
+      "invoice_date_due": "2024-01-24",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 84867,
+      "invoice_date_due": "2024-01-19",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 84195,
+      "invoice_date_due": "2024-01-15",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 82866,
+      "invoice_date_due": "2023-12-20",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 82520,
+      "invoice_date_due": "2024-01-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 82094,
+      "invoice_date_due": "2024-01-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 81752,
+      "invoice_date_due": "2024-01-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 81685,
+      "invoice_date_due": "2023-12-12",
+      "amount_residual": 14515.63
+    },
+    {
+      "id": 81158,
+      "invoice_date_due": "2023-12-07",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 79507,
+      "invoice_date_due": "2023-11-29",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 79501,
+      "invoice_date_due": "2023-12-14",
+      "amount_residual": 1938.09
+    },
+    {
+      "id": 79221,
+      "invoice_date_due": "2023-11-27",
+      "amount_residual": 2483.93
+    },
+    {
+      "id": 79014,
+      "invoice_date_due": "2023-12-07",
+      "amount_residual": 11328.34
+    },
+    {
+      "id": 78826,
+      "invoice_date_due": "2024-01-05",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 78455,
+      "invoice_date_due": "2023-12-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 77967,
+      "invoice_date_due": "2023-11-13",
+      "amount_residual": 1032.9
+    },
+    {
+      "id": 77966,
+      "invoice_date_due": "2023-11-13",
+      "amount_residual": 6540.44
+    },
+    {
+      "id": 77835,
+      "invoice_date_due": "2023-12-14",
+      "amount_residual": 18535.41
+    },
+    {
+      "id": 77787,
+      "invoice_date_due": "2023-12-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 76813,
+      "invoice_date_due": "2023-11-01",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 76800,
+      "invoice_date_due": "2023-11-01",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 77035,
+      "invoice_date_due": "2023-11-14",
+      "amount_residual": 88.0
+    },
+    {
+      "id": 76356,
+      "invoice_date_due": "2023-11-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 75113,
+      "invoice_date_due": "2023-11-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 74852,
+      "invoice_date_due": "2023-10-17",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 74327,
+      "invoice_date_due": "2023-11-30",
+      "amount_residual": 20065.29
+    },
+    {
+      "id": 73987,
+      "invoice_date_due": "2023-10-09",
+      "amount_residual": 37587.74
+    },
+    {
+      "id": 73841,
+      "invoice_date_due": "2023-10-06",
+      "amount_residual": 2570.15
+    },
+    {
+      "id": 73455,
+      "invoice_date_due": "2023-10-05",
+      "amount_residual": 2570.15
+    },
+    {
+      "id": 72477,
+      "invoice_date_due": "2023-09-29",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 72204,
+      "invoice_date_due": "2023-10-30",
+      "amount_residual": 6563.29
+    },
+    {
+      "id": 71376,
+      "invoice_date_due": "2023-10-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 71375,
+      "invoice_date_due": "2023-10-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 71374,
+      "invoice_date_due": "2023-10-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 71296,
+      "invoice_date_due": "2023-10-14",
+      "amount_residual": 26620.54
+    },
+    {
+      "id": 71114,
+      "invoice_date_due": "2023-09-19",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 70230,
+      "invoice_date_due": "2023-09-18",
+      "amount_residual": 5382.98
+    },
+    {
+      "id": 70626,
+      "invoice_date_due": "2023-10-14",
+      "amount_residual": 78.1
+    },
+    {
+      "id": 70625,
+      "invoice_date_due": "2023-10-14",
+      "amount_residual": 88.0
+    },
+    {
+      "id": 70133,
+      "invoice_date_due": "2023-09-12",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 70130,
+      "invoice_date_due": "2023-09-12",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 70062,
+      "invoice_date_due": "2023-09-11",
+      "amount_residual": 7149.52
+    },
+    {
+      "id": 68648,
+      "invoice_date_due": "2023-08-30",
+      "amount_residual": 3178.44
+    },
+    {
+      "id": 68157,
+      "invoice_date_due": "2023-09-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 67814,
+      "invoice_date_due": "2023-09-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 65198,
+      "invoice_date_due": "2023-08-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 65107,
+      "invoice_date_due": "2023-07-26",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 64997,
+      "invoice_date_due": "2023-07-25",
+      "amount_residual": 25534.0
+    },
+    {
+      "id": 64309,
+      "invoice_date_due": "2023-07-17",
+      "amount_residual": 8701.42
+    },
+    {
+      "id": 64258,
+      "invoice_date_due": "2023-08-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 64248,
+      "invoice_date_due": "2023-07-17",
+      "amount_residual": 38081.82
+    },
+    {
+      "id": 63055,
+      "invoice_date_due": "2023-07-21",
+      "amount_residual": 5080.35
+    },
+    {
+      "id": 63053,
+      "invoice_date_due": "2023-08-14",
+      "amount_residual": 11.0
+    },
+    {
+      "id": 61580,
+      "invoice_date_due": "2023-06-16",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 61579,
+      "invoice_date_due": "2023-06-16",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 60523,
+      "invoice_date_due": "2023-06-06",
+      "amount_residual": 2246.75
+    },
+    {
+      "id": 60480,
+      "invoice_date_due": "2023-07-14",
+      "amount_residual": 14.3
+    },
+    {
+      "id": 60316,
+      "invoice_date_due": "2023-06-02",
+      "amount_residual": 7574.81
+    },
+    {
+      "id": 61002,
+      "invoice_date_due": "2023-06-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 60163,
+      "invoice_date_due": "2023-06-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 58941,
+      "invoice_date_due": "2023-05-18",
+      "amount_residual": 940.5
+    },
+    {
+      "id": 58718,
+      "invoice_date_due": "2023-06-14",
+      "amount_residual": 426.4
+    },
+    {
+      "id": 57882,
+      "invoice_date_due": "2023-05-04",
+      "amount_residual": 20743.88
+    },
+    {
+      "id": 57828,
+      "invoice_date_due": "2023-05-04",
+      "amount_residual": 17404.73
+    },
+    {
+      "id": 57698,
+      "invoice_date_due": "2023-07-07",
+      "amount_residual": 3135.0
+    },
+    {
+      "id": 59002,
+      "invoice_date_due": "2023-05-14",
+      "amount_residual": 662.2
+    },
+    {
+      "id": 57097,
+      "invoice_date_due": "2023-04-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 56949,
+      "invoice_date_due": "2023-05-12",
+      "amount_residual": 53006.47
+    },
+    {
+      "id": 56079,
+      "invoice_date_due": "2023-04-20",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 55924,
+      "invoice_date_due": "2023-04-11",
+      "amount_residual": 6067.05
+    },
+    {
+      "id": 55762,
+      "invoice_date_due": "2023-04-06",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 55269,
+      "invoice_date_due": "2023-03-30",
+      "amount_residual": 7773.91
+    },
+    {
+      "id": 55131,
+      "invoice_date_due": "2023-04-14",
+      "amount_residual": 15947.64
+    },
+    {
+      "id": 53802,
+      "invoice_date_due": "2023-03-14",
+      "amount_residual": 24098.39
+    },
+    {
+      "id": 53244,
+      "invoice_date_due": "2023-03-31",
+      "amount_residual": 11549.6
+    },
+    {
+      "id": 51130,
+      "invoice_date_due": "2023-02-09",
+      "amount_residual": 12861.85
+    },
+    {
+      "id": 50945,
+      "invoice_date_due": "2023-02-08",
+      "amount_residual": 6644.24
+    },
+    {
+      "id": 50571,
+      "invoice_date_due": "2023-02-06",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 52008,
+      "invoice_date_due": "2023-02-15",
+      "amount_residual": 662.2
+    },
+    {
+      "id": 49840,
+      "invoice_date_due": "2023-02-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 48757,
+      "invoice_date_due": "2023-04-12",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 48756,
+      "invoice_date_due": "2023-02-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 48557,
+      "invoice_date_due": "2023-01-13",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 48010,
+      "invoice_date_due": "2023-02-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 49487,
+      "invoice_date_due": "2023-02-14",
+      "amount_residual": 11.0
+    },
+    {
+      "id": 47429,
+      "invoice_date_due": "2023-01-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 47069,
+      "invoice_date_due": "2023-01-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 46920,
+      "invoice_date_due": "2023-01-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 46913,
+      "invoice_date_due": "2023-01-30",
+      "amount_residual": 18622.73
+    },
+    {
+      "id": 46627,
+      "invoice_date_due": "2023-01-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 46171,
+      "invoice_date_due": "2023-01-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 45962,
+      "invoice_date_due": "2022-12-06",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 45343,
+      "invoice_date_due": "2022-11-29",
+      "amount_residual": 836.0
+    },
+    {
+      "id": 45148,
+      "invoice_date_due": "2022-12-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 42000,
+      "invoice_date_due": "2022-12-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 44176,
+      "invoice_date_due": "2022-11-18",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 43759,
+      "invoice_date_due": "2022-11-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 43575,
+      "invoice_date_due": "2022-11-10",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 43394,
+      "invoice_date_due": "2022-11-22",
+      "amount_residual": 623.7
+    },
+    {
+      "id": 43326,
+      "invoice_date_due": "2022-11-07",
+      "amount_residual": 580.8
+    },
+    {
+      "id": 43027,
+      "invoice_date_due": "2022-11-03",
+      "amount_residual": 5567.45
+    },
+    {
+      "id": 42877,
+      "invoice_date_due": "2022-11-14",
+      "amount_residual": 20407.2
+    },
+    {
+      "id": 42470,
+      "invoice_date_due": "2022-10-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 42204,
+      "invoice_date_due": "2022-11-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 42005,
+      "invoice_date_due": "2022-11-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 42002,
+      "invoice_date_due": "2022-11-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 41833,
+      "invoice_date_due": "2022-10-21",
+      "amount_residual": 572.88
+    },
+    {
+      "id": 41589,
+      "invoice_date_due": "2022-10-18",
+      "amount_residual": 11004.48
+    },
+    {
+      "id": 40476,
+      "invoice_date_due": "2022-10-10",
+      "amount_residual": 5325.49
+    },
+    {
+      "id": 40086,
+      "invoice_date_due": "2022-10-05",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 39939,
+      "invoice_date_due": "2022-10-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 39848,
+      "invoice_date_due": "2022-10-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 39833,
+      "invoice_date_due": "2022-10-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 39517,
+      "invoice_date_due": "2022-09-29",
+      "amount_residual": 1233.05
+    },
+    {
+      "id": 39427,
+      "invoice_date_due": "2022-10-14",
+      "amount_residual": 564.66
+    },
+    {
+      "id": 39429,
+      "invoice_date_due": "2022-10-14",
+      "amount_residual": 371.33
+    },
+    {
+      "id": 39428,
+      "invoice_date_due": "2022-10-14",
+      "amount_residual": 564.66
+    },
+    {
+      "id": 39426,
+      "invoice_date_due": "2022-10-14",
+      "amount_residual": 564.66
+    },
+    {
+      "id": 39425,
+      "invoice_date_due": "2022-10-14",
+      "amount_residual": 363.0
+    },
+    {
+      "id": 39393,
+      "invoice_date_due": "2022-09-27",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 39205,
+      "invoice_date_due": "2022-10-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 38847,
+      "invoice_date_due": "2022-09-15",
+      "amount_residual": 17.6
+    },
+    {
+      "id": 38601,
+      "invoice_date_due": "2022-09-13",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 38599,
+      "invoice_date_due": "2022-09-13",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 38270,
+      "invoice_date_due": "2022-09-07",
+      "amount_residual": 4606.98
+    },
+    {
+      "id": 39540,
+      "invoice_date_due": false,
+      "amount_residual": 2348.5
+    },
+    {
+      "id": 37805,
+      "invoice_date_due": "2022-10-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 37410,
+      "invoice_date_due": "2022-09-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 37325,
+      "invoice_date_due": "2022-09-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 37164,
+      "invoice_date_due": "2022-08-26",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 36970,
+      "invoice_date_due": "2022-08-25",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 36919,
+      "invoice_date_due": "2022-10-10",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 36833,
+      "invoice_date_due": "2022-09-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 36820,
+      "invoice_date_due": "2022-09-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 36773,
+      "invoice_date_due": "2022-08-23",
+      "amount_residual": 30000.0
+    },
+    {
+      "id": 36290,
+      "invoice_date_due": "2022-08-12",
+      "amount_residual": 14168.66
+    },
+    {
+      "id": 36127,
+      "invoice_date_due": "2022-09-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 35211,
+      "invoice_date_due": "2022-08-09",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 33756,
+      "invoice_date_due": "2022-07-15",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 33618,
+      "invoice_date_due": "2022-07-13",
+      "amount_residual": 14591.48
+    },
+    {
+      "id": 32403,
+      "invoice_date_due": "2022-09-22",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 32384,
+      "invoice_date_due": "2022-07-15",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 31367,
+      "invoice_date_due": "2022-07-02",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 31090,
+      "invoice_date_due": "2022-06-27",
+      "amount_residual": 5824.8
+    },
+    {
+      "id": 31231,
+      "invoice_date_due": "2022-07-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 31115,
+      "invoice_date_due": "2022-06-24",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 30946,
+      "invoice_date_due": "2022-07-03",
+      "amount_residual": 4020.85
+    },
+    {
+      "id": 30959,
+      "invoice_date_due": "2022-07-15",
+      "amount_residual": 1232.5
+    },
+    {
+      "id": 30837,
+      "invoice_date_due": "2022-06-20",
+      "amount_residual": 8849.5
+    },
+    {
+      "id": 30806,
+      "invoice_date_due": "2022-06-26",
+      "amount_residual": 3951.34
+    },
+    {
+      "id": 30606,
+      "invoice_date_due": "2022-06-14",
+      "amount_residual": 13617.49
+    },
+    {
+      "id": 30272,
+      "invoice_date_due": "2022-06-08",
+      "amount_residual": 12319.76
+    },
+    {
+      "id": 30033,
+      "invoice_date_due": "2022-06-13",
+      "amount_residual": 14314.06
+    },
+    {
+      "id": 30032,
+      "invoice_date_due": "2022-06-08",
+      "amount_residual": 14269.07
+    },
+    {
+      "id": 29968,
+      "invoice_date_due": "2022-07-14",
+      "amount_residual": 1403.6
+    },
+    {
+      "id": 29804,
+      "invoice_date_due": "2022-06-06",
+      "amount_residual": 1403.6
+    },
+    {
+      "id": 29207,
+      "invoice_date_due": "2022-07-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 28996,
+      "invoice_date_due": "2022-05-31",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 28918,
+      "invoice_date_due": "2022-07-17",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 28866,
+      "invoice_date_due": "2022-06-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 28587,
+      "invoice_date_due": "2022-05-27",
+      "amount_residual": 1320.2
+    },
+    {
+      "id": 28324,
+      "invoice_date_due": "2022-05-25",
+      "amount_residual": 887.28
+    },
+    {
+      "id": 28298,
+      "invoice_date_due": "2022-05-24",
+      "amount_residual": 432.92
+    },
+    {
+      "id": 24298,
+      "invoice_date_due": "2022-06-14",
+      "amount_residual": 8009.31
+    },
+    {
+      "id": 23466,
+      "invoice_date_due": "2022-08-08",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 23440,
+      "invoice_date_due": "2022-05-19",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 22766,
+      "invoice_date_due": "2022-06-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 23420,
+      "invoice_date_due": "2022-03-27",
+      "amount_residual": 623.7
+    },
+    {
+      "id": 22332,
+      "invoice_date_due": "2022-05-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 22331,
+      "invoice_date_due": "2022-05-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 21773,
+      "invoice_date_due": "2022-05-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 21762,
+      "invoice_date_due": "2022-05-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 21410,
+      "invoice_date_due": "2022-05-14",
+      "amount_residual": 623.7
+    },
+    {
+      "id": 21359,
+      "invoice_date_due": "2022-04-14",
+      "amount_residual": 11115.96
+    },
+    {
+      "id": 21317,
+      "invoice_date_due": "2022-04-13",
+      "amount_residual": 5519.25
+    },
+    {
+      "id": 21275,
+      "invoice_date_due": "2022-04-13",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 21274,
+      "invoice_date_due": "2022-04-13",
+      "amount_residual": 5695.21
+    },
+    {
+      "id": 20829,
+      "invoice_date_due": "2022-04-06",
+      "amount_residual": 13790.74
+    },
+    {
+      "id": 20766,
+      "invoice_date_due": "2022-04-05",
+      "amount_residual": 27467.97
+    },
+    {
+      "id": 20726,
+      "invoice_date_due": "2022-04-05",
+      "amount_residual": 5695.21
+    },
+    {
+      "id": 20712,
+      "invoice_date_due": "2022-04-05",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 20655,
+      "invoice_date_due": "2022-04-04",
+      "amount_residual": 7347.45
+    },
+    {
+      "id": 20062,
+      "invoice_date_due": "2022-03-29",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 19904,
+      "invoice_date_due": "2022-04-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 19703,
+      "invoice_date_due": "2022-03-22",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 19671,
+      "invoice_date_due": "2022-03-22",
+      "amount_residual": 997.15
+    },
+    {
+      "id": 19576,
+      "invoice_date_due": "2022-03-21",
+      "amount_residual": 2863.8
+    },
+    {
+      "id": 19500,
+      "invoice_date_due": "2022-03-18",
+      "amount_residual": 36424.84
+    },
+    {
+      "id": 19425,
+      "invoice_date_due": "2022-03-17",
+      "amount_residual": 997.15
+    },
+    {
+      "id": 19397,
+      "invoice_date_due": "2022-04-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 19235,
+      "invoice_date_due": "2022-03-11",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 18577,
+      "invoice_date_due": "2022-03-02",
+      "amount_residual": 5937.97
+    },
+    {
+      "id": 20077,
+      "invoice_date_due": false,
+      "amount_residual": 0.0
+    },
+    {
+      "id": 20075,
+      "invoice_date_due": false,
+      "amount_residual": 0.0
+    },
+    {
+      "id": 18226,
+      "invoice_date_due": "2022-03-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 17804,
+      "invoice_date_due": "2022-02-22",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 17604,
+      "invoice_date_due": "2022-02-17",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 17564,
+      "invoice_date_due": "2022-03-14",
+      "amount_residual": 23917.78
+    },
+    {
+      "id": 17032,
+      "invoice_date_due": "2022-03-14",
+      "amount_residual": 11651.7
+    },
+    {
+      "id": 16746,
+      "invoice_date_due": "2022-02-04",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 16666,
+      "invoice_date_due": "2022-02-03",
+      "amount_residual": 25005.02
+    },
+    {
+      "id": 16665,
+      "invoice_date_due": "2022-03-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 16276,
+      "invoice_date_due": "2022-02-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 16204,
+      "invoice_date_due": "2022-01-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 16147,
+      "invoice_date_due": "2022-01-28",
+      "amount_residual": 112.75
+    },
+    {
+      "id": 15919,
+      "invoice_date_due": "2022-01-25",
+      "amount_residual": 2161.5
+    },
+    {
+      "id": 15831,
+      "invoice_date_due": "2022-02-28",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 15686,
+      "invoice_date_due": "2022-01-20",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 14733,
+      "invoice_date_due": "2022-01-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 14400,
+      "invoice_date_due": "2022-01-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 14602,
+      "invoice_date_due": "2022-01-14",
+      "amount_residual": 19521.72
+    },
+    {
+      "id": 13866,
+      "invoice_date_due": "2021-12-13",
+      "amount_residual": 513.54
+    },
+    {
+      "id": 13639,
+      "invoice_date_due": "2021-12-09",
+      "amount_residual": 173.8
+    },
+    {
+      "id": 13417,
+      "invoice_date_due": "2021-12-07",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 13373,
+      "invoice_date_due": "2021-12-07",
+      "amount_residual": 5879.35
+    },
+    {
+      "id": 13251,
+      "invoice_date_due": "2021-12-06",
+      "amount_residual": 12597.49
+    },
+    {
+      "id": 13181,
+      "invoice_date_due": "2021-12-03",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 13090,
+      "invoice_date_due": "2021-12-02",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 12980,
+      "invoice_date_due": "2021-12-01",
+      "amount_residual": 19521.72
+    },
+    {
+      "id": 12360,
+      "invoice_date_due": "2021-11-24",
+      "amount_residual": 25024.45
+    },
+    {
+      "id": 12261,
+      "invoice_date_due": "2021-12-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 12134,
+      "invoice_date_due": "2021-11-18",
+      "amount_residual": 10246.32
+    },
+    {
+      "id": 12114,
+      "invoice_date_due": "2021-11-18",
+      "amount_residual": 14582.18
+    },
+    {
+      "id": 11934,
+      "invoice_date_due": "2021-12-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 11800,
+      "invoice_date_due": "2021-12-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 8759,
+      "invoice_date_due": "2021-11-11",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 11073,
+      "invoice_date_due": "2021-11-02",
+      "amount_residual": 2728.0
+    },
+    {
+      "id": 10461,
+      "invoice_date_due": "2021-10-28",
+      "amount_residual": 12500.3
+    },
+    {
+      "id": 10217,
+      "invoice_date_due": "2021-10-22",
+      "amount_residual": 1897.46
+    },
+    {
+      "id": 9999,
+      "invoice_date_due": "2021-10-19",
+      "amount_residual": 2860.96
+    },
+    {
+      "id": 9904,
+      "invoice_date_due": "2021-11-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 9717,
+      "invoice_date_due": "2021-10-14",
+      "amount_residual": 2860.96
+    },
+    {
+      "id": 9451,
+      "invoice_date_due": "2021-11-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 9235,
+      "invoice_date_due": "2021-10-07",
+      "amount_residual": 1356.3
+    },
+    {
+      "id": 9009,
+      "invoice_date_due": "2021-10-04",
+      "amount_residual": 1486.1
+    },
+    {
+      "id": 9008,
+      "invoice_date_due": false,
+      "amount_residual": 0.0
+    },
+    {
+      "id": 9007,
+      "invoice_date_due": "2021-10-04",
+      "amount_residual": 7007.41
+    },
+    {
+      "id": 9006,
+      "invoice_date_due": "2021-10-04",
+      "amount_residual": 7007.41
+    },
+    {
+      "id": 8622,
+      "invoice_date_due": "2021-10-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 8401,
+      "invoice_date_due": "2021-09-27",
+      "amount_residual": 862.68
+    },
+    {
+      "id": 8387,
+      "invoice_date_due": "2021-09-24",
+      "amount_residual": 7439.51
+    },
+    {
+      "id": 8373,
+      "invoice_date_due": "2021-09-24",
+      "amount_residual": 3780.35
+    },
+    {
+      "id": 8341,
+      "invoice_date_due": "2021-09-23",
+      "amount_residual": 7439.51
+    },
+    {
+      "id": 7798,
+      "invoice_date_due": "2021-10-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 6945,
+      "invoice_date_due": "2021-09-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 5943,
+      "invoice_date_due": "2021-09-14",
+      "amount_residual": 2615.8
+    },
+    {
+      "id": 5418,
+      "invoice_date_due": "2022-07-29",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 5236,
+      "invoice_date_due": "2021-07-28",
+      "amount_residual": 650.1
+    },
+    {
+      "id": 5210,
+      "invoice_date_due": "2021-07-27",
+      "amount_residual": 28072.22
+    },
+    {
+      "id": 4968,
+      "invoice_date_due": "2021-07-23",
+      "amount_residual": 8954.96
+    },
+    {
+      "id": 4742,
+      "invoice_date_due": "2021-07-20",
+      "amount_residual": 18632.24
+    },
+    {
+      "id": 4382,
+      "invoice_date_due": "2021-08-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 4381,
+      "invoice_date_due": "2021-08-14",
+      "amount_residual": 695.2
+    },
+    {
+      "id": 4380,
+      "invoice_date_due": false,
+      "amount_residual": 0.0
+    },
+    {
+      "id": 4175,
+      "invoice_date_due": "2021-08-14",
+      "amount_residual": 1747.24
+    },
+    {
+      "id": 4168,
+      "invoice_date_due": "2021-08-14",
+      "amount_residual": 22079.2
+    },
+    {
+      "id": 4124,
+      "invoice_date_due": "2021-07-14",
+      "amount_residual": 8107.47
+    },
+    {
+      "id": 4122,
+      "invoice_date_due": "2021-07-14",
+      "amount_residual": 12601.99
+    },
+    {
+      "id": 3996,
+      "invoice_date_due": "2021-07-12",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 3915,
+      "invoice_date_due": "2021-07-08",
+      "amount_residual": 6058.69
+    },
+    {
+      "id": 3897,
+      "invoice_date_due": "2021-07-07",
+      "amount_residual": 6393.06
+    },
+    {
+      "id": 3471,
+      "invoice_date_due": "2021-06-28",
+      "amount_residual": 3802.04
+    },
+    {
+      "id": 2969,
+      "invoice_date_due": "2021-06-11",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 2980,
+      "invoice_date_due": "2021-06-11",
+      "amount_residual": 1042.8
+    },
+    {
+      "id": 2673,
+      "invoice_date_due": "2021-06-04",
+      "amount_residual": 1442.65
+    },
+    {
+      "id": 5916,
+      "invoice_date_due": "2021-06-03",
+      "amount_residual": 23832.0
+    },
+    {
+      "id": 2647,
+      "invoice_date_due": "2021-07-14",
+      "amount_residual": 8864.37
+    },
+    {
+      "id": 2357,
+      "invoice_date_due": "2021-05-20",
+      "amount_residual": 10356.35
+    },
+    {
+      "id": 2229,
+      "invoice_date_due": "2021-06-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 2192,
+      "invoice_date_due": "2021-05-18",
+      "amount_residual": 3360.41
+    },
+    {
+      "id": 2136,
+      "invoice_date_due": "2021-05-17",
+      "amount_residual": 7989.74
+    },
+    {
+      "id": 2137,
+      "invoice_date_due": "2021-05-17",
+      "amount_residual": 4071.65
+    },
+    {
+      "id": 2091,
+      "invoice_date_due": "2021-05-14",
+      "amount_residual": 4648.41
+    },
+    {
+      "id": 1851,
+      "invoice_date_due": "2021-05-03",
+      "amount_residual": 1494.28
+    },
+    {
+      "id": 1755,
+      "invoice_date_due": "2021-05-30",
+      "amount_residual": 4725.71
+    },
+    {
+      "id": 1749,
+      "invoice_date_due": "2021-04-27",
+      "amount_residual": 6377.14
+    },
+    {
+      "id": 1747,
+      "invoice_date_due": "2021-04-27",
+      "amount_residual": 6418.54
+    },
+    {
+      "id": 1672,
+      "invoice_date_due": "2021-05-14",
+      "amount_residual": 3866.5
+    },
+    {
+      "id": 1550,
+      "invoice_date_due": "2021-04-13",
+      "amount_residual": 373.89
+    },
+    {
+      "id": 1534,
+      "invoice_date_due": "2021-04-12",
+      "amount_residual": 148.71
+    },
+    {
+      "id": 1477,
+      "invoice_date_due": "2021-04-08",
+      "amount_residual": 7458.55
+    },
+    {
+      "id": 1401,
+      "invoice_date_due": "2021-04-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 1340,
+      "invoice_date_due": "2021-03-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 1339,
+      "invoice_date_due": "2021-03-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 1166,
+      "invoice_date_due": "2021-03-19",
+      "amount_residual": 9835.07
+    },
+    {
+      "id": 1088,
+      "invoice_date_due": "2021-04-30",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 932,
+      "invoice_date_due": "2021-03-04",
+      "amount_residual": 1.1
+    },
+    {
+      "id": 903,
+      "invoice_date_due": "2021-03-30",
+      "amount_residual": 9239.63
+    },
+    {
+      "id": 765,
+      "invoice_date_due": "2021-02-23",
+      "amount_residual": 2931.5
+    },
+    {
+      "id": 633,
+      "invoice_date_due": "2021-02-15",
+      "amount_residual": 3202.1
+    },
+    {
+      "id": 623,
+      "invoice_date_due": "2021-03-14",
+      "amount_residual": 50556.61
+    },
+    {
+      "id": 607,
+      "invoice_date_due": "2021-02-11",
+      "amount_residual": 841.5
+    },
+    {
+      "id": 605,
+      "invoice_date_due": "2021-02-11",
+      "amount_residual": 2363.08
+    },
+    {
+      "id": 588,
+      "invoice_date_due": "2021-03-30",
+      "amount_residual": 54947.7
+    },
+    {
+      "id": 533,
+      "invoice_date_due": "2021-02-04",
+      "amount_residual": 2708.2
+    },
+    {
+      "id": 529,
+      "invoice_date_due": "2021-03-14",
+      "amount_residual": 8945.2
+    },
+    {
+      "id": 517,
+      "invoice_date_due": "2021-03-30",
+      "amount_residual": 7150.0
+    },
+    {
+      "id": 518,
+      "invoice_date_due": "2021-03-14",
+      "amount_residual": 0.0
+    },
+    {
+      "id": 498,
+      "invoice_date_due": "2021-02-02",
+      "amount_residual": 1080.75
+    },
+    {
+      "id": 495,
+      "invoice_date_due": "2021-02-02",
+      "amount_residual": 1.1
+    },
+    {
+      "id": 499,
+      "invoice_date_due": "2021-02-02",
+      "amount_residual": 1080.75
+    },
+    {
+      "id": 486,
+      "invoice_date_due": "2021-02-01",
+      "amount_residual": 3732.85
+    },
+    {
+      "id": 464,
+      "invoice_date_due": "2021-01-29",
+      "amount_residual": 1401.4
+    },
+    {
+      "id": 366,
+      "invoice_date_due": "2021-01-29",
+      "amount_residual": 25476.61
+    },
+    {
+      "id": 355,
+      "invoice_date_due": "2021-01-29",
+      "amount_residual": 2161.5
+    },
+    {
+      "id": 354,
+      "invoice_date_due": "2021-01-29",
+      "amount_residual": 841.5
+    },
+    {
+      "id": 362,
+      "invoice_date_due": "2021-01-29",
+      "amount_residual": 6025.19
+    },
+    {
+      "id": 188,
+      "invoice_date_due": "2021-02-14",
+      "amount_residual": 26800.4
+    },
+    {
+      "id": 118,
+      "invoice_date_due": "2021-02-14",
+      "amount_residual": 5874.0
+    },
+    {
+      "id": 151,
+      "invoice_date_due": "2021-01-15",
+      "amount_residual": 0.0
+    }
+  ]
+}

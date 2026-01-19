@@ -1,0 +1,82 @@
+{
+  "name": "mcp-for-microsoft-fabric-analytics",
+  "version": "2.0.0",
+  "description": "MCP server for Microsoft Fabric Analytics with Synapse-to-Fabric migration - enables LLMs to access, analyze, and migrate workloads to Microsoft Fabric",
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "fabric-analytics": "./build/index.js",
+    "fabric-analytics-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "test": "jest --forceExit",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "docker:build": "docker build -t fabric-analytics-mcp .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env fabric-analytics-mcp",
+    "docker:push": "./scripts/build-and-push.sh",
+    "k8s:deploy": "./scripts/deploy-to-aks.sh",
+    "azure:setup": "./scripts/setup-azure-resources.sh",
+    "health:check": "curl -f http://localhost:3000/health || exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "microsoft-fabric",
+    "analytics",
+    "data-analysis",
+    "llm",
+    "ai",
+    "claude",
+    "spark",
+    "livy",
+    "msal",
+    "authentication"
+  ],
+  "author": "Microsoft Fabric Analytics Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santhoshravindran7/Fabric-Analytics-MCP.git"
+  },
+  "homepage": "https://github.com/santhoshravindran7/Fabric-Analytics-MCP#readme",
+  "bugs": {
+    "url": "https://github.com/santhoshravindran7/Fabric-Analytics-MCP/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "babel-jest": "^30.0.4",
+    "eslint": "^9.29.0",
+    "jest": "^30.0.3",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@azure/msal-node": "^2.16.2",
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "@types/node-fetch": "^2.6.13",
+    "child_process": "^1.0.2",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.25.67"
+  }
+}

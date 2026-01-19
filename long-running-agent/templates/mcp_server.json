@@ -1,0 +1,259 @@
+{
+  "name": "MCP Server Template",
+  "description": "Template for Model Context Protocol (MCP) servers",
+  "features": [
+    {
+      "id": "M001",
+      "category": "setup",
+      "description": "Initialize MCP server project structure",
+      "steps": [
+        "Create source directory",
+        "Set up MCP SDK dependency",
+        "Create README.md with server description"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "M002",
+      "category": "setup",
+      "description": "Set up basic MCP server with transport",
+      "steps": [
+        "Import MCP SDK",
+        "Create server instance",
+        "Configure stdio transport",
+        "Verify server starts"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "M003",
+      "category": "setup",
+      "description": "Add configuration and environment handling",
+      "steps": [
+        "Define required environment variables",
+        "Create .env.example",
+        "Add configuration validation"
+      ],
+      "priority": 1,
+      "passes": false
+    },
+    {
+      "id": "M004",
+      "category": "auth",
+      "description": "Implement authentication handling",
+      "steps": [
+        "Define authentication method",
+        "Implement token/key validation",
+        "Handle authentication errors",
+        "Test with valid/invalid credentials"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "M005",
+      "category": "tools",
+      "description": "Create first MCP tool",
+      "steps": [
+        "Define tool schema with Zod/JSON Schema",
+        "Implement tool handler",
+        "Add input validation",
+        "Return properly formatted results"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "M006",
+      "category": "tools",
+      "description": "Create second MCP tool",
+      "steps": [
+        "Define tool schema",
+        "Implement tool handler",
+        "Add input validation",
+        "Return properly formatted results"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "M007",
+      "category": "tools",
+      "description": "Create third MCP tool",
+      "steps": [
+        "Define tool schema",
+        "Implement tool handler",
+        "Add input validation",
+        "Return properly formatted results"
+      ],
+      "priority": 2,
+      "passes": false
+    },
+    {
+      "id": "M008",
+      "category": "resources",
+      "description": "Implement MCP resources (if applicable)",
+      "steps": [
+        "Define resource types",
+        "Implement resource handlers",
+        "Add resource listing",
+        "Test resource retrieval"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "M009",
+      "category": "prompts",
+      "description": "Add MCP prompts (if applicable)",
+      "steps": [
+        "Define prompt templates",
+        "Implement prompt handlers",
+        "Add prompt listing",
+        "Test prompt generation"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "M010",
+      "category": "error-handling",
+      "description": "Implement comprehensive error handling",
+      "steps": [
+        "Create error response helpers",
+        "Handle API errors gracefully",
+        "Return user-friendly error messages",
+        "Log errors with context"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "M011",
+      "category": "api",
+      "description": "Add API client for external service",
+      "steps": [
+        "Create API client class",
+        "Implement connection handling",
+        "Add request retry logic",
+        "Handle rate limiting"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "M012",
+      "category": "caching",
+      "description": "Add caching for API responses (if needed)",
+      "steps": [
+        "Implement cache storage",
+        "Add cache expiration",
+        "Cache frequently used data",
+        "Test cache behavior"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "M013",
+      "category": "testing",
+      "description": "Write unit tests for tools",
+      "steps": [
+        "Test each tool with valid inputs",
+        "Test error cases",
+        "Test edge cases",
+        "Verify response formats"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "M014",
+      "category": "testing",
+      "description": "Add integration tests with MCP client",
+      "steps": [
+        "Test tool invocation via MCP",
+        "Test resource access",
+        "Test error propagation"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "M015",
+      "category": "logging",
+      "description": "Add logging (stderr only)",
+      "steps": [
+        "Configure stderr logging",
+        "Log tool invocations",
+        "Log errors with stack traces",
+        "Add debug logging option"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "M016",
+      "category": "config",
+      "description": "Create Claude Desktop configuration",
+      "steps": [
+        "Create example claude_desktop_config.json",
+        "Document configuration options",
+        "Add setup instructions"
+      ],
+      "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "M017",
+      "category": "documentation",
+      "description": "Write comprehensive documentation",
+      "steps": [
+        "Document all tools with examples",
+        "Document authentication setup",
+        "Add troubleshooting guide"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "M018",
+      "category": "packaging",
+      "description": "Set up package distribution",
+      "steps": [
+        "Configure package.json or pyproject.toml",
+        "Add bin entry point",
+        "Test package installation"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "M019",
+      "category": "polish",
+      "description": "Add simulation/mock mode for testing",
+      "steps": [
+        "Create mock responses",
+        "Add --simulation flag",
+        "Document testing mode"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "M020",
+      "category": "polish",
+      "description": "Final review and cleanup",
+      "steps": [
+        "Run linter and fix issues",
+        "Verify all tests pass",
+        "Update documentation",
+        "Test with Claude Desktop"
+      ],
+      "priority": 5,
+      "passes": false
+    }
+  ]
+}

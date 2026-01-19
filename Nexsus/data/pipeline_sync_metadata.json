@@ -1,0 +1,272 @@
+{
+  "account.account": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 63,
+    "field_count": 10
+  },
+  "crm.lead": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 662,
+    "field_count": 20
+  },
+  "crm.stage": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 3,
+    "field_count": 6
+  },
+  "res.users": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 54,
+    "field_count": 68
+  },
+  "res.company": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 1,
+    "field_count": 77
+  },
+  "ir.ui.menu": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 17,
+    "field_count": 9
+  },
+  "mrp.production": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 1592,
+    "field_count": 58
+  },
+  "account.move": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 34667,
+    "field_count": 80
+  },
+  "res.partner": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 20606,
+    "field_count": 71
+  },
+  "account.account.tag": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 11,
+    "field_count": 7
+  },
+  "stock.valuation.layer": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 38714,
+    "field_count": 16
+  },
+  "account.analytic.account": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 5533,
+    "field_count": 20
+  },
+  "product.product": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 6265,
+    "field_count": 55
+  },
+  "account.journal": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 18,
+    "field_count": 33
+  },
+  "sale.order.line": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 6775,
+    "field_count": 34
+  },
+  "account.partial.reconcile": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 13718,
+    "field_count": 13
+  },
+  "purchase.order.line": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 17956,
+    "field_count": 20
+  },
+  "account.analytic.line": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 756,
+    "field_count": 33
+  },
+  "stock.move.line": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 129718,
+    "field_count": 31
+  },
+  "stock.move": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 155065,
+    "field_count": 39
+  },
+  "res.currency": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 173,
+    "field_count": 7
+  },
+  "sale.order": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 31366,
+    "field_count": 67
+  },
+  "purchase.order": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 4887,
+    "field_count": 27
+  },
+  "stock.picking": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 7532,
+    "field_count": 36
+  },
+  "quality.check": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 10264,
+    "field_count": 37
+  },
+  "stock.quant": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 12874,
+    "field_count": 19
+  },
+  "project.task": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 4708,
+    "field_count": 29
+  },
+  "mrp.workcenter.productivity": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 48942,
+    "field_count": 13
+  },
+  "ir.model": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 684,
+    "field_count": 15
+  },
+  "ir.model.fields": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 17907,
+    "field_count": 25
+  },
+  "ir.model.fields.selection": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 3190,
+    "field_count": 8
+  },
+  "ir.model.access": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 1630,
+    "field_count": 10
+  },
+  "ir.ui.view": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 51,
+    "field_count": 20
+  },
+  "ir.actions.act_window.view": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 8,
+    "field_count": 8
+  },
+  "ir.attachment": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 19605,
+    "field_count": 18
+  },
+  "ir.rule": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 338,
+    "field_count": 12
+  },
+  "ir.mail_server": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 1,
+    "field_count": 10
+  },
+  "ir.module.category": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 34,
+    "field_count": 8
+  },
+  "ir.module.module": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 470,
+    "field_count": 20
+  },
+  "ir.module.module.dependency": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 1068,
+    "field_count": 6
+  },
+  "report.paperformat": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 1,
+    "field_count": 15
+  },
+  "res.country": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 6,
+    "field_count": 12
+  },
+  "res.country.state": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 13,
+    "field_count": 6
+  },
+  "res.lang": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 1,
+    "field_count": 15
+  },
+  "res.partner.category": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 3,
+    "field_count": 8
+  },
+  "res.partner.title": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 2,
+    "field_count": 6
+  },
+  "res.bank": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 10,
+    "field_count": 10
+  },
+  "res.partner.bank": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 124,
+    "field_count": 15
+  },
+  "res.currency.rate": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 10,
+    "field_count": 8
+  },
+  "res.groups": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 107,
+    "field_count": 12
+  },
+  "res.users.log": {
+    "last_sync_timestamp": "2026-01-18T00:00:00.000Z",
+    "record_count": 130615,
+    "field_count": 5
+  },
+  "account.move.line": {
+    "last_sync_timestamp": "2026-01-17T23:49:30.026Z",
+    "record_count": 46915,
+    "field_count": 54
+  },
+  "ir.actions.act_window": {
+    "last_sync_timestamp": "2026-01-18T01:01:21.409Z",
+    "record_count": 871,
+    "field_count": 17
+  },
+  "account.report.line": {
+    "last_sync_timestamp": "2026-01-18T01:15:43.427Z",
+    "record_count": 100,
+    "field_count": 9
+  }
+}

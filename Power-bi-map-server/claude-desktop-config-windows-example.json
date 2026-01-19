@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "fabric-model-reader": {
+      "command": "python",
+      "args": ["C:\\Users\\KasunJ\\MCP\\fabric-model-reader-mcp.py"]
+    },
+    "fabric-workspace-reader": {
+      "command": "python",
+      "args": ["C:\\Users\\KasunJ\\MCP\\fabric-workspace-reader-mcp.py"]
+    },
+    "fabric-analytics": {
+      "command": "node",
+      "args": ["C:\\Users\\KasunJ\\Power-bi-map-server\\build\\index.js"],
+      "cwd": "C:\\Users\\KasunJ\\Power-bi-map-server",
+      "env": {
+        "FABRIC_AUTH_METHOD": "azure_cli",
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

@@ -11,7 +11,17 @@
       "Bash(timeout 10 npm start)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(claude config list:*)",
+      "Bash(cat:*)",
+      "Bash(dir \"C:\\\\Users\\\\KasunJ\\\\MCP\\\\odoo-crm-mcp-server\\\\odoo-crm-mcp-server\\\\src\" /B /S)",
+      "Bash(cmd //c \"ren odoo-crm-mcp-server odoo-crm-mcp-server-old\")",
+      "Bash(npm start)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(cmd /c \"taskkill /F /PID 22368\")",
+      "Bash(powershell -Command:*)",
+      "Bash(timeout /t 5 /nobreak)"
     ]
   },
   "enableAllProjectMcpServers": true,

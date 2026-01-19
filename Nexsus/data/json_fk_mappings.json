@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "description": "JSON field mappings - FK fields for resolution, metadata for tracking",
+  "mappings": [
+    {
+      "source_model": "account.move.line",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "account.asset",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "account.analytic.distribution.model",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "account.reconcile.model.line",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "analytic.mixin",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "bank.rec.widget.line",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "mrp.bom",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "mrp.production",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "mrp.workcenter",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "purchase.order.line",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "sale.order.line",
+      "field_name": "analytic_distribution",
+      "mapping_type": "fk",
+      "key_target_model": "account.analytic.account",
+      "key_target_model_id": 177,
+      "key_type": "record_id",
+      "value_type": "percentage",
+      "description": "Analytic account distribution percentages"
+    },
+    {
+      "source_model": "crm.lead",
+      "field_name": "duration_tracking",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "duration_ms",
+      "description": "Time spent in each workflow stage (milliseconds)"
+    },
+    {
+      "source_model": "helpdesk.ticket",
+      "field_name": "duration_tracking",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "duration_ms",
+      "description": "Time spent in each workflow stage (milliseconds)"
+    },
+    {
+      "source_model": "project.task",
+      "field_name": "duration_tracking",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "duration_ms",
+      "description": "Time spent in each workflow stage (milliseconds)"
+    },
+    {
+      "source_model": "mail.tracking.duration.mixin",
+      "field_name": "duration_tracking",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "duration_ms",
+      "description": "Time spent in each workflow stage (milliseconds)"
+    },
+    {
+      "source_model": "account.move",
+      "field_name": "send_and_print_values",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Email and print preferences for invoice sending"
+    },
+    {
+      "source_model": "account.bank.statement.line",
+      "field_name": "send_and_print_values",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Email and print preferences"
+    },
+    {
+      "source_model": "account.payment",
+      "field_name": "send_and_print_values",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Email and print preferences for payment sending"
+    },
+    {
+      "source_model": "html.field.history.mixin",
+      "field_name": "html_field_history",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "HTML field revision history"
+    },
+    {
+      "source_model": "html.field.history.mixin",
+      "field_name": "html_field_history_metadata",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "HTML field revision metadata"
+    },
+    {
+      "source_model": "account.move.send",
+      "field_name": "mail_attachments_widget",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Mail attachments widget state"
+    },
+    {
+      "source_model": "account.online.link",
+      "field_name": "connection_state_details",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Online banking connection error details"
+    },
+    {
+      "source_model": "account.report.file.download.error.wizard",
+      "field_name": "file_generation_errors",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "File generation error details"
+    },
+    {
+      "source_model": "bank.rec.widget",
+      "field_name": "todo_command",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Bank reconciliation widget todo command state"
+    },
+    {
+      "source_model": "bank.rec.widget",
+      "field_name": "return_todo_command",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Bank reconciliation widget return command state"
+    },
+    {
+      "source_model": "mail.tracking.value",
+      "field_name": "field_info",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Removed field tracking metadata"
+    },
+    {
+      "source_model": "res.users.settings",
+      "field_name": "homemenu_config",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "User home menu configuration"
+    },
+    {
+      "source_model": "sale.order",
+      "field_name": "access_point_address",
+      "mapping_type": "metadata",
+      "key_type": "string",
+      "value_type": "mixed",
+      "description": "Delivery access point address details"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "name": "Sample Project with Dependencies",
+  "description": "Demonstrates feature compatibility system with dependencies",
+  "features": [
+    {
+      "id": "F001",
+      "category": "setup",
+      "description": "Create basic project structure with README.md",
+      "steps": [
+        "Create main source directory",
+        "Create README.md with project description",
+        "Verify structure matches conventions"
+      ],
+      "priority": 1,
+      "passes": true,
+      "dependencies": [],
+      "implements_interfaces": [],
+      "uses_interfaces": []
+    },
+    {
+      "id": "F002",
+      "category": "core",
+      "description": "Create User data model with validation",
+      "steps": [
+        "Define User class with id, name, email fields",
+        "Add validation for email format",
+        "Add unit tests for User model"
+      ],
+      "priority": 1,
+      "passes": true,
+      "dependencies": ["F001"],
+      "implements_interfaces": ["UserInterface"],
+      "uses_interfaces": []
+    },
+    {
+      "id": "F003",
+      "category": "core",
+      "description": "Create UserRepository for data persistence",
+      "steps": [
+        "Create repository interface",
+        "Implement in-memory storage",
+        "Add CRUD methods: create, read, update, delete"
+      ],
+      "priority": 2,
+      "passes": false,
+      "dependencies": ["F002"],
+      "implements_interfaces": ["RepositoryInterface"],
+      "uses_interfaces": ["UserInterface"]
+    },
+    {
+      "id": "F004",
+      "category": "api",
+      "description": "Create UserService with business logic",
+      "steps": [
+        "Create service layer",
+        "Add user registration logic",
+        "Add user lookup methods"
+      ],
+      "priority": 2,
+      "passes": false,
+      "dependencies": ["F002", "F003"],
+      "implements_interfaces": ["UserServiceInterface"],
+      "uses_interfaces": ["UserInterface", "RepositoryInterface"]
+    },
+    {
+      "id": "F005",
+      "category": "auth",
+      "description": "Implement authentication using UserService",
+      "steps": [
+        "Add password hashing to User model",
+        "Create login method in UserService",
+        "Create JWT token generation"
+      ],
+      "priority": 3,
+      "passes": false,
+      "dependencies": ["F004"],
+      "implements_interfaces": ["AuthInterface"],
+      "uses_interfaces": ["UserServiceInterface"]
+    }
+  ],
+  "interface_contracts": {
+    "UserInterface": {
+      "description": "Contract for User data model",
+      "methods": [
+        {"name": "get_id", "returns": "string"},
+        {"name": "get_email", "returns": "string"},
+        {"name": "validate", "returns": "bool"}
+      ]
+    },
+    "RepositoryInterface": {
+      "description": "Contract for data persistence",
+      "methods": [
+        {"name": "create", "params": ["entity"], "returns": "entity"},
+        {"name": "find_by_id", "params": ["id"], "returns": "entity|null"},
+        {"name": "update", "params": ["entity"], "returns": "entity"},
+        {"name": "delete", "params": ["id"], "returns": "bool"}
+      ]
+    },
+    "UserServiceInterface": {
+      "description": "Contract for user business logic",
+      "methods": [
+        {"name": "register_user", "params": ["name", "email", "password"], "returns": "User"},
+        {"name": "get_user", "params": ["user_id"], "returns": "User|null"},
+        {"name": "authenticate", "params": ["email", "password"], "returns": "bool"}
+      ]
+    }
+  }
+}

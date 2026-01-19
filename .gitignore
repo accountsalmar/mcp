@@ -1,0 +1,8 @@
+nul
+*/nul
+
+# Secrets and environment files
+.env
+*.env
+.mcp.json
+**/CUsersKasunJMCPNexsus.env

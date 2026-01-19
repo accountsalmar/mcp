@@ -1,0 +1,244 @@
+{
+  "name": "Odoo MCP Server - Read Only",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "odoo-read-server"
+      },
+      "id": "cca75f9e-367f-4193-b098-f994a106f1d2",
+      "name": "MCP Server Trigger",
+      "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "position": [
+        304,
+        128
+      ],
+      "webhookId": "odoo-read-server",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "contactId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Contact_ID', 'The ID of the contact to retrieve', 'string') }}",
+        "options": {}
+      },
+      "id": "803367a9-a518-48d6-9498-cb498215d25e",
+      "name": "Get Contact",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        608,
+        32
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "options": {}
+      },
+      "id": "8a489a3b-1d3d-4980-bef2-9ea6764a8974",
+      "name": "Get All Contacts",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        608,
+        176
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "get",
+        "opportunityId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Opportunity_ID', 'The ID of the opportunity to retrieve', 'string') }}",
+        "options": {}
+      },
+      "id": "bd701f91-8007-44da-bbba-e0454bd05454",
+      "name": "Get Opportunity",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        608,
+        320
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "opportunity",
+        "operation": "getAll",
+        "returnAll": true,
+        "options": {}
+      },
+      "id": "85cb3930-83b6-488c-a7b0-7ee43def8f16",
+      "name": "Get All Opportunities",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        608,
+        480
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "note",
+        "operation": "get",
+        "noteId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Note_ID', 'The ID of the note to retrieve', 'string') }}",
+        "options": {}
+      },
+      "id": "59c23ee7-ae0d-44e5-8b06-aea6301b54ea",
+      "name": "Get Note",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        608,
+        624
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "note",
+        "operation": "getAll",
+        "returnAll": true,
+        "options": {}
+      },
+      "id": "c60eab6b-49be-41b2-a3fe-fc6213de9530",
+      "name": "Get All Notes",
+      "type": "n8n-nodes-base.odooTool",
+      "position": [
+        608,
+        784
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "odooApi": {
+          "id": "76S7GkzZq1drhjcU",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Odoo MCP Server - Read Only\n\n### How to use with Claude:\n\n1. **Deploy this workflow** and activate it\n2. **Get your MCP endpoint URL:**\n   - Local: `http://localhost:5678/mcp/odoo-read-server`\n   - Cloud/Tunnel: `https://your-domain.com/mcp/odoo-read-server`\n\n3. **Connect to Claude Desktop** by adding to `claude_desktop_config.json`:\n```json\n{\n  \"mcpServers\": {\n    \"odoo\": {\n      \"url\": \"https://your-n8n-url/mcp/odoo-read-server\"\n    }\n  }\n}\n```\n\n### Available Tools:\n- Get Contact (by ID)\n- Get All Contacts\n- Get Opportunity (by ID)\n- Get All Opportunities\n- Get Note (by ID)\n- Get All Notes",
+        "height": 520,
+        "width": 400
+      },
+      "id": "5d214661-eaa2-4b7a-ab7a-60f0a3a4f658",
+      "name": "Instructions",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        32
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get Contact": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Contacts": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Opportunity": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Opportunities": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Note": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Notes": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3e7d2f2b-adf5-454d-930e-d950f93d5362",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "48f36034e4a2bfdbb95395249e302e906a9824918221f4fb1b3478c27b60a247"
+  },
+  "id": "qNgmrrIPWinEqp9Z",
+  "tags": []
+}

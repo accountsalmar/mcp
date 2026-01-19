@@ -1,0 +1,12 @@
+{
+  "master": {
+    "last_sync_timestamp": "2026-01-07T00:00:00.000Z",
+    "record_count": 560,
+    "field_count": 11
+  },
+  "actual": {
+    "last_sync_timestamp": "2026-01-07T00:00:00.000Z",
+    "record_count": 12313,
+    "field_count": 8
+  }
+}
