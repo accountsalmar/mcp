@@ -1,0 +1,849 @@
+{
+  "principles": [
+    {
+      "id": 1,
+      "name": "Limitation of Liability",
+      "standard": "Cap of 100% of the Contract value",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["limitation of liability", "liability cap", "maximum liability"],
+        "alternative": ["aggregate liability", "total liability", "liability ceiling"],
+        "related": ["indemnity cap", "damages limitation", "financial exposure"]
+      },
+      "red_flags": [
+        "Unlimited liability clauses",
+        "Caps exceeding 100% of contract value",
+        "Carve-outs that effectively negate the cap"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Contract liability cap <= 100% of contract value",
+        "non_compliant_if": "Contract liability cap > 100% OR unlimited",
+        "no_term_risk": "HIGH - creates existential exposure"
+      },
+      "negotiation_positions": {
+        "preferred": "100% cap on all liability",
+        "fallback": "Higher cap with specific carve-outs for gross negligence only",
+        "deal_breaker": "Unlimited liability exposure"
+      },
+      "departure_template": "Replace: '[current term]' with 'Liability limited to 100% of Contract Value'"
+    },
+    {
+      "id": 2,
+      "name": "Consequential Damages",
+      "standard": "Neither party is liable to the other for any consequential loss",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["consequential damages", "consequential loss", "indirect damages"],
+        "alternative": ["special damages", "incidental damages", "lost profits"],
+        "related": ["direct damages", "foreseeable losses", "economic loss"]
+      },
+      "red_flags": [
+        "One-sided consequential damage exclusions",
+        "Broad definitions of direct damages that capture consequential losses",
+        "Failure to define consequential damages"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Mutual exclusion of all consequential damages",
+        "non_compliant_if": "One-sided exclusion or no exclusion",
+        "no_term_risk": "HIGH - unpredictable exposure"
+      },
+      "negotiation_positions": {
+        "preferred": "Mutual exclusion of all consequential damages",
+        "fallback": "Limited consequential damages with specific caps",
+        "deal_breaker": "Unlimited consequential damage exposure"
+      },
+      "departure_template": "Insert: 'Neither party shall be liable to the other for any consequential, indirect, or special damages'"
+    },
+    {
+      "id": 3,
+      "name": "Head Contract Provision",
+      "standard": "No Head Contract provision: DuraCube is not obligated to accept the terms and conditions outlined in the Head Contract document",
+      "risk_level": "MEDIUM-HIGH",
+      "search_terms": {
+        "primary": ["head contract", "main contract", "principal contract"],
+        "alternative": ["back-to-back", "flow-down", "pass-through"],
+        "related": ["incorporated by reference", "subject to head contract", "mirror provisions"]
+      },
+      "red_flags": [
+        "Automatic incorporation of head contract terms",
+        "Flow-down provisions",
+        "References to compliance with head contract"
+      ],
+      "compliance_logic": {
+        "compliant_if": "No head contract provisions or specific limited agreed provisions",
+        "non_compliant_if": "Blanket incorporation of head contract terms",
+        "no_term_risk": "MEDIUM - no automatic concern"
+      },
+      "negotiation_positions": {
+        "preferred": "Complete exclusion of head contract provisions",
+        "fallback": "Limited specific provisions identified and agreed",
+        "deal_breaker": "Blanket incorporation of unknown head contract terms"
+      },
+      "departure_template": "Delete: head contract flow-down provisions OR Amend: to specify only agreed provisions"
+    },
+    {
+      "id": 4,
+      "name": "Liquidated Damages",
+      "standard": "Limited to a max of 10% of the Contract value, and the Contract must specifically say that LDs are the Principal's sole remedy for delay. Liquidated Damages under the Head Contract are not applicable",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["liquidated damages", "LDs", "delay damages"],
+        "alternative": ["predetermined damages", "agreed damages", "daily rate"],
+        "related": ["sole remedy", "exclusive remedy", "delay costs"]
+      },
+      "red_flags": [
+        "LDs exceeding 10% cap",
+        "No exclusivity clause for delay remedies",
+        "Reference to head contract LDs",
+        "Daily rates creating unlimited exposure"
+      ],
+      "compliance_logic": {
+        "compliant_if": "LDs <= 10% of contract value AND stated as sole remedy for delay",
+        "non_compliant_if": "LDs > 10% OR not exclusive remedy OR head contract LDs apply",
+        "no_term_risk": "FAVORABLE - no LD exposure"
+      },
+      "negotiation_positions": {
+        "preferred": "10% cap with sole remedy provision",
+        "fallback": "15% cap with clear exclusivity",
+        "deal_breaker": "Uncapped LDs or multiple delay remedies"
+      },
+      "departure_template": "Amend: 'Liquidated Damages capped at 10% of Contract Value as the Principal's sole remedy for delay'"
+    },
+    {
+      "id": 5,
+      "name": "Extension of Time",
+      "standard": "DuraCube should be entitled to an extension of time (EOT) and demonstrated actual cost for delays not caused by DuraCube, including war and its effect, material delays, material shortages, fuel shortages, delay in granting access to the Site, Epidemics, Pandemics (including COVID-19), Pandemic event declared by a local, state, and/or federal authority, Quarantine Restrictions, Inclement Weather, Force Majeure and events beyond the reasonable control of the DuraCube",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["extension of time", "EOT", "time relief"],
+        "alternative": ["delay relief", "qualifying delay", "excusable delay"],
+        "related": ["force majeure", "pandemic", "supply chain", "cost relief"]
+      },
+      "red_flags": [
+        "Limited qualifying delay events",
+        "Time relief without cost relief",
+        "Exclusion of pandemic/epidemic events",
+        "No provision for supply chain delays"
+      ],
+      "compliance_logic": {
+        "compliant_if": "EOT with time AND cost relief for comprehensive list of events",
+        "non_compliant_if": "Limited events OR time only without cost",
+        "no_term_risk": "HIGH - vulnerable to delay penalties"
+      },
+      "negotiation_positions": {
+        "preferred": "Full list with time and cost relief",
+        "fallback": "Time relief for all events, cost for force majeure only",
+        "deal_breaker": "No pandemic or supply chain provisions"
+      },
+      "departure_template": "Insert: 'DuraCube entitled to EOT and demonstrated actual costs for delays including pandemic, supply chain, access, weather, and force majeure events'"
+    },
+    {
+      "id": 6,
+      "name": "Force Majeure",
+      "standard": "Should be entitled to an EOT and demonstrated actual cost",
+      "risk_level": "MEDIUM-HIGH",
+      "search_terms": {
+        "primary": ["force majeure", "act of God", "unforeseeable circumstances"],
+        "alternative": ["extraordinary events", "impossibility", "frustration"],
+        "related": ["relief events", "neutral events", "excusable events"]
+      },
+      "red_flags": [
+        "Time-only force majeure relief",
+        "Narrow definition of qualifying events",
+        "No cost recovery mechanism"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Force majeure provides time AND cost relief",
+        "non_compliant_if": "Time only without cost recovery",
+        "no_term_risk": "MEDIUM - may not have force majeure protection"
+      },
+      "negotiation_positions": {
+        "preferred": "Time and full cost recovery",
+        "fallback": "Time and partial cost recovery",
+        "deal_breaker": "No force majeure protection"
+      },
+      "departure_template": "Amend: 'Force majeure events entitle DuraCube to EOT and recovery of demonstrated actual costs'"
+    },
+    {
+      "id": 7,
+      "name": "Variations: Accelerations, Omissions",
+      "standard": "Variation direction shall be in writing or agreed upon prior to commencement. DuraCube can claim demonstrated actual costs incurred due to any direction resulting from change of scope or programme and where applicable EOT",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["variations", "change orders", "scope changes"],
+        "alternative": ["modifications", "alterations", "additional work"],
+        "related": ["acceleration", "omission", "deceleration", "variation instruction"]
+      },
+      "red_flags": [
+        "Oral variation provisions",
+        "Fixed variation rates without adjustment mechanism",
+        "No provision for acceleration costs",
+        "Deemed acceptance of variations"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Written direction required with full cost recovery",
+        "non_compliant_if": "Oral variations OR fixed rates without adjustment",
+        "no_term_risk": "HIGH - vulnerable to unpaid scope changes"
+      },
+      "negotiation_positions": {
+        "preferred": "Written direction with full cost recovery",
+        "fallback": "Written confirmation within 24 hours",
+        "deal_breaker": "Oral variations without documentation"
+      },
+      "departure_template": "Amend: 'All variations require written direction prior to commencement with DuraCube entitled to demonstrated actual costs and applicable EOT'"
+    },
+    {
+      "id": 8,
+      "name": "Time Bars/Notification Period",
+      "standard": "Notification periods should be at least 5 business days",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["time bar", "notification period", "notice requirement"],
+        "alternative": ["condition precedent", "claim notification", "written notice"],
+        "related": ["notice deadline", "claim period", "notification deadline"]
+      },
+      "red_flags": [
+        "Notification periods under 5 business days",
+        "Absolute time bars without relief provisions",
+        "Multiple different notification periods",
+        "Unclear triggering events"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Notification period >= 5 business days",
+        "non_compliant_if": "Notification period < 5 business days OR absolute time bar",
+        "no_term_risk": "MEDIUM - no strict time bars may be favorable"
+      },
+      "negotiation_positions": {
+        "preferred": "5+ business days with reasonable excuse provisions",
+        "fallback": "5 business days as absolute minimum",
+        "deal_breaker": "Less than 3 business days notification"
+      },
+      "departure_template": "Amend: 'Notification period extended to minimum 5 business days'"
+    },
+    {
+      "id": 9,
+      "name": "Assessment Period",
+      "standard": "10 business days assessment period for all claims",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["assessment period", "review period", "evaluation period"],
+        "alternative": ["determination period", "response time", "claim assessment"],
+        "related": ["deemed approval", "assessment deadline", "review timeframe"]
+      },
+      "red_flags": [
+        "Assessment periods over 10 business days",
+        "No deemed approval provisions",
+        "Unlimited assessment timeframes",
+        "No consequence for late assessment"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Assessment period <= 10 business days",
+        "non_compliant_if": "Assessment period > 10 business days OR unlimited",
+        "no_term_risk": "MEDIUM - no defined timeframe may cause delays"
+      },
+      "negotiation_positions": {
+        "preferred": "10 business days with deemed approval",
+        "fallback": "15 business days maximum",
+        "deal_breaker": "Unlimited assessment period"
+      },
+      "departure_template": "Insert: 'Claims to be assessed within 10 business days, failing which deemed approved'"
+    },
+    {
+      "id": 10,
+      "name": "Service for Notices",
+      "standard": "Email should be included",
+      "risk_level": "LOW-MEDIUM",
+      "search_terms": {
+        "primary": ["service of notices", "notice delivery", "communication method"],
+        "alternative": ["deemed service", "notice provisions", "delivery method"],
+        "related": ["email notice", "electronic service", "notice address"]
+      },
+      "red_flags": [
+        "Exclusion of email service",
+        "Requirement for registered post only",
+        "Multiple service requirements",
+        "Unclear deemed receipt provisions"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Email included as valid service method",
+        "non_compliant_if": "Email excluded OR registered post only",
+        "no_term_risk": "LOW - practical inconvenience only"
+      },
+      "negotiation_positions": {
+        "preferred": "Email as primary service method",
+        "fallback": "Email with courtesy hard copy",
+        "deal_breaker": "Registered post only"
+      },
+      "departure_template": "Amend: 'Notices may be served by email to designated addresses'"
+    },
+    {
+      "id": 11,
+      "name": "Termination",
+      "standard": "The party's rights and remedies shall be reciprocal",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["termination", "termination rights", "contract termination"],
+        "alternative": ["end of contract", "cessation", "contract end"],
+        "related": ["reciprocal rights", "mutual termination", "termination grounds"]
+      },
+      "red_flags": [
+        "Unilateral termination rights",
+        "Imbalanced remedy provisions",
+        "Different notice periods for each party",
+        "Asymmetric default provisions"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Termination rights are reciprocal for both parties",
+        "non_compliant_if": "One-sided termination rights",
+        "no_term_risk": "MEDIUM - no defined termination rights"
+      },
+      "negotiation_positions": {
+        "preferred": "Complete reciprocity in all termination provisions",
+        "fallback": "Substantial reciprocity with minor variations",
+        "deal_breaker": "Completely one-sided termination rights"
+      },
+      "departure_template": "Amend: 'Termination rights and remedies to be reciprocal for both parties'"
+    },
+    {
+      "id": 12,
+      "name": "Termination for Convenience",
+      "standard": "DuraCube must be paid for demonstrated actual costs including overheads, completed works to date, reasonable costs of ordered materials, and demobilisation expenses. Security must be released",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["termination for convenience", "convenience termination", "at-will termination"],
+        "alternative": ["termination without cause", "voluntary termination", "discretionary termination"],
+        "related": ["termination compensation", "demobilization", "wind-down costs"]
+      },
+      "red_flags": [
+        "Exclusion of overhead recovery",
+        "No provision for committed materials",
+        "Security retention after termination",
+        "Missing demobilization costs"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Full cost recovery including overheads, materials, demob AND security released",
+        "non_compliant_if": "Partial recovery only OR security not released",
+        "no_term_risk": "HIGH - no protection for sunk costs"
+      },
+      "negotiation_positions": {
+        "preferred": "Full cost recovery plus margin on completed work",
+        "fallback": "Full cost recovery without margin",
+        "deal_breaker": "Partial cost recovery only"
+      },
+      "departure_template": "Amend: 'On termination for convenience, DuraCube entitled to payment for completed work, ordered materials, demobilisation costs, and overheads with immediate security release'"
+    },
+    {
+      "id": 13,
+      "name": "Dispute Resolution",
+      "standard": "Senior representatives of both parties with the authority to negotiate a resolution prior to consideration of Adjudication",
+      "risk_level": "LOW-MEDIUM",
+      "search_terms": {
+        "primary": ["dispute resolution", "dispute procedure", "conflict resolution"],
+        "alternative": ["escalation procedure", "dispute mechanism", "resolution process"],
+        "related": ["senior negotiation", "adjudication", "arbitration", "mediation"]
+      },
+      "red_flags": [
+        "Skip straight to formal proceedings",
+        "No defined negotiation period",
+        "Lack of authority requirements",
+        "Immediate arbitration clauses"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Senior executive negotiation required before formal proceedings",
+        "non_compliant_if": "Immediate escalation to formal proceedings",
+        "no_term_risk": "MEDIUM - no commercial resolution opportunity"
+      },
+      "negotiation_positions": {
+        "preferred": "Mandatory senior executive negotiation",
+        "fallback": "Good faith negotiation requirement",
+        "deal_breaker": "No commercial resolution opportunity"
+      },
+      "departure_template": "Insert: 'Disputes to be escalated to senior representatives with authority to resolve before formal proceedings'"
+    },
+    {
+      "id": 14,
+      "name": "Payment and Cash Neutrality",
+      "standard": "Payment term 14 days End of Month, subjected to the credit limit approval",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["payment terms", "payment period", "invoice payment"],
+        "alternative": ["payment due date", "credit terms", "payment schedule"],
+        "related": ["EOM", "end of month", "credit limit", "cash neutrality"]
+      },
+      "red_flags": [
+        "Payment terms over 30 days",
+        "Pay when paid clauses",
+        "Contingent payment provisions",
+        "No interest on late payments"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Payment within 14 days EOM OR better",
+        "non_compliant_if": "Payment > 30 days OR pay when paid",
+        "no_term_risk": "MEDIUM - uncertain cash flow"
+      },
+      "negotiation_positions": {
+        "preferred": "14 days EOM",
+        "fallback": "30 days from invoice",
+        "deal_breaker": "Over 45 days or contingent payment"
+      },
+      "departure_template": "Amend: 'Payment due 14 days End of Month following invoice'"
+    },
+    {
+      "id": 15,
+      "name": "Security & Parent Company Guarantees",
+      "standard": "DuraCube agrees to 2 x 2.5% dated Commonwealth Bank Guarantee as a form of Security. DuraCube only accepts dated bank guarantees and does not agree to unconditional bank guarantees. BG 1 expires on the Practical Completion date. BG 2 expires after the end of Defect Liability Period (52 weeks/12 months). DuraCube does not provide for cash retention. DuraCube does not agree to provide a Parent Company Guarantee",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["security", "retention", "bank guarantee", "unconditional guarantee"],
+        "alternative": ["performance bond", "retention money", "contract security", "dated guarantee"],
+        "related": ["parent company guarantee", "PCG", "group guarantee", "guarantee expiry", "on-demand guarantee", "52 weeks", "12 months"]
+      },
+      "red_flags": [
+        "Total security over 5%",
+        "Unconditional/on-demand bank guarantees",
+        "Guarantees without fixed expiry dates",
+        "Expiry dates beyond PC and DLP end (52 weeks/12 months)",
+        "Cash retention requirements",
+        "Parent company guarantee demands",
+        "Evergreen or auto-renewal guarantee provisions"
+      ],
+      "compliance_logic": {
+        "compliant_if": "No security required (FAVORABLE) OR security <= 5% with dated guarantees only",
+        "non_compliant_if": "Security > 5% OR unconditional guarantees OR cash retention OR parent company guarantee required",
+        "no_term_risk": "FAVORABLE - no security burden"
+      },
+      "negotiation_positions": {
+        "preferred": "2 x 2.5% dated guarantees (BG1 expires at PC, BG2 expires 52 weeks/12 months after PC)",
+        "fallback": "Dated guarantees with negotiated expiry within 30 days of milestones",
+        "deal_breaker": "Unconditional guarantees, cash retention, or parent guarantee"
+      },
+      "departure_template": "Amend: 'Security limited to 2 x 2.5% dated bank guarantees: BG1 expiring at PC, BG2 expiring 52 weeks after PC. No unconditional guarantees, cash retention, or parent company guarantees'"
+    },
+    {
+      "id": 16,
+      "name": "Release of Security",
+      "standard": "50% of Security is released on the date of Practical Completion of the Contract (BG 1 expires) and 50% upon the expiry date of the defect liability period of the Contract (BG 2 expires after 52 weeks/12 months)",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["security release", "retention release", "guarantee release", "guarantee expiry"],
+        "alternative": ["security reduction", "progressive release", "staged release", "dated guarantee"],
+        "related": ["practical completion", "defects liability period", "final release", "automatic expiry", "52 weeks", "12 months"]
+      },
+      "red_flags": [
+        "Full retention until final completion",
+        "Conditional release requirements",
+        "No automatic expiry provisions",
+        "Extended retention beyond 52 weeks/12 months DLP",
+        "Requirements to return or cancel guarantees"
+      ],
+      "compliance_logic": {
+        "compliant_if": "No security required (FAVORABLE - auto compliant) OR 50% at PC, 50% at DLP end with dated guarantees",
+        "non_compliant_if": "Release beyond DLP OR conditional release OR no automatic expiry",
+        "no_term_risk": "Depends on Principle 15 - if no security, auto compliant"
+      },
+      "negotiation_positions": {
+        "preferred": "Dated guarantees with automatic expiry (PC and 52 weeks/12 months after)",
+        "fallback": "Dated guarantees with 30-day grace period",
+        "deal_breaker": "Unconditional guarantees requiring consent for release"
+      },
+      "departure_template": "Amend: 'Security to be via dated guarantees: BG1 (50%) expires at PC, BG2 (50%) expires 52 weeks after PC'"
+    },
+    {
+      "id": 17,
+      "name": "Defects Liability Period",
+      "standard": "DuraCube accepts a defect liability period of 52 weeks/12 months from the date of Practical Completion (PC) with no re-warranty period. DuraCube offers a 15 years warranty as per www.DuraCube.com.au (this is DuraCube's voluntary offering - if not required by customer/contract, this is favorable and compliant)",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["defects liability period", "DLP", "defects period", "52 weeks", "12 months"],
+        "alternative": ["maintenance period", "rectification period", "warranty period", "fifty-two weeks", "twelve months"],
+        "related": ["re-warranty", "practical completion", "defects warranty", "one year", "extended warranty", "long-term warranty"]
+      },
+      "red_flags": [
+        "Defects period over 52 weeks/12 months",
+        "Re-warranty on rectification work",
+        "Unlimited defects liability",
+        "DLP calculated in calendar months that may exceed 52 weeks",
+        "Extended warranty requirements BEYOND what DuraCube voluntarily offers"
+      ],
+      "compliance_logic": {
+        "compliant_if": "DLP <= 52 weeks OR 12 months with no re-warranty",
+        "non_compliant_if": "DLP > 52 weeks/12 months OR includes re-warranty",
+        "no_term_risk": "HIGH - needs insertion of DLP terms",
+        "special_note": "If contract does NOT mention or require the 15-year warranty, this is COMPLIANT and FAVORABLE"
+      },
+      "negotiation_positions": {
+        "preferred": "52 weeks or 12 months with no re-warranty (no extended warranty requirement)",
+        "fallback": "18 months maximum DLP",
+        "deal_breaker": "Over 24 months or perpetual re-warranty"
+      },
+      "departure_template": "Amend: 'Defects Liability Period limited to 52 weeks from Practical Completion with no re-warranty period'"
+    },
+    {
+      "id": 18,
+      "name": "Indemnities",
+      "standard": "Indemnities, where applicable, will be reciprocal. However, DuraCube can agree to non-reciprocal terms, provided they are reduced proportionally",
+      "risk_level": "MEDIUM-HIGH",
+      "search_terms": {
+        "primary": ["indemnity", "indemnification", "hold harmless"],
+        "alternative": ["indemnify and defend", "harmless provision", "protection clause"],
+        "related": ["reciprocal indemnity", "mutual indemnity", "cross-indemnity"]
+      },
+      "red_flags": [
+        "Broad one-sided indemnities",
+        "Unlimited indemnity scope",
+        "No proportional reduction for non-reciprocal terms",
+        "Indemnities exceeding insurance coverage"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Reciprocal indemnities OR proportionally reduced non-reciprocal",
+        "non_compliant_if": "Unlimited one-sided indemnities without reduction",
+        "no_term_risk": "MEDIUM - assess overall liability position"
+      },
+      "negotiation_positions": {
+        "preferred": "Fully reciprocal indemnities",
+        "fallback": "Proportionally reduced non-reciprocal",
+        "deal_breaker": "Unlimited one-sided indemnities"
+      },
+      "departure_template": "Amend: 'Indemnities to be reciprocal, or if non-reciprocal, proportionally reduced'"
+    },
+    {
+      "id": 19,
+      "name": "Proportionate Liability Act",
+      "standard": "The Proportionate Liability Act must not be excluded in the Contract",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["proportionate liability", "proportionate liability act", "apportionment"],
+        "alternative": ["concurrent wrongdoers", "contributory fault", "apportioned liability"],
+        "related": ["joint and several", "several liability", "statutory liability"]
+      },
+      "red_flags": [
+        "Exclusion of proportionate liability acts",
+        "Joint and several liability provisions",
+        "Contracting out of statutory protections",
+        "Sole liability provisions"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Proportionate liability preserved OR not mentioned",
+        "non_compliant_if": "Proportionate liability excluded OR joint and several imposed",
+        "no_term_risk": "LOW - statutory protection applies by default"
+      },
+      "negotiation_positions": {
+        "preferred": "Full application of proportionate liability",
+        "fallback": "None - this is non-negotiable",
+        "deal_breaker": "Any exclusion of proportionate liability"
+      },
+      "departure_template": "Delete: any clause excluding proportionate liability legislation"
+    },
+    {
+      "id": 20,
+      "name": "Risk & Title Transfer",
+      "standard": "Risk will transfer on delivery and acceptance and title on payment of the Works/Services",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["risk transfer", "title transfer", "passing of risk"],
+        "alternative": ["transfer of ownership", "retention of title", "risk and title"],
+        "related": ["delivery and acceptance", "payment and ownership", "PPSA"]
+      },
+      "red_flags": [
+        "Risk transfer on delivery without acceptance",
+        "Title transfer before payment",
+        "No retention of title clause",
+        "Deemed acceptance provisions"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Risk on accepted delivery AND title on payment",
+        "non_compliant_if": "Risk before acceptance OR title before payment",
+        "no_term_risk": "MEDIUM - unclear ownership/risk allocation"
+      },
+      "negotiation_positions": {
+        "preferred": "Risk on accepted delivery, title on payment",
+        "fallback": "Risk on delivery with inspection period",
+        "deal_breaker": "Title transfer without payment"
+      },
+      "departure_template": "Amend: 'Risk transfers on delivery and acceptance; title transfers on payment'"
+    },
+    {
+      "id": 21,
+      "name": "Unfixed Materials",
+      "standard": "Entitlement to claim is limited to scenarios where DuraCube delivers materials to the Site but encounters impediments preventing installation",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["unfixed materials", "materials on site", "uninstalled materials"],
+        "alternative": ["stored materials", "delivered materials", "goods on site"],
+        "related": ["materials payment", "installation impediment", "site storage"]
+      },
+      "red_flags": [
+        "No unfixed materials provisions",
+        "Payment only upon incorporation",
+        "No protection for stored materials",
+        "Title transfer without payment"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Payment entitlement for delivered materials when installation impeded",
+        "non_compliant_if": "Payment only on full installation",
+        "no_term_risk": "MEDIUM - may need insertion"
+      },
+      "negotiation_positions": {
+        "preferred": "Payment on delivery for impediment scenarios",
+        "fallback": "Payment with appropriate security",
+        "deal_breaker": "No payment until full installation"
+      },
+      "departure_template": "Insert: 'DuraCube entitled to payment for materials delivered to site where installation impeded by Principal or others'"
+    },
+    {
+      "id": 22,
+      "name": "Intellectual Property",
+      "standard": "Background IP vest in DuraCube. IP developed during the project is paid for and vest in the Principal",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["intellectual property", "IP", "background IP"],
+        "alternative": ["project IP", "foreground IP", "developed IP"],
+        "related": ["copyright", "design rights", "moral rights", "IP ownership"]
+      },
+      "red_flags": [
+        "Transfer of background IP",
+        "Unlimited IP assignment",
+        "No payment trigger for IP transfer",
+        "Moral rights waiver requirements"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Background IP retained AND project IP transfers on payment",
+        "non_compliant_if": "Background IP transferred OR project IP without payment",
+        "no_term_risk": "HIGH - unclear IP ownership"
+      },
+      "negotiation_positions": {
+        "preferred": "Background retained, project IP on payment",
+        "fallback": "License for background IP only",
+        "deal_breaker": "Transfer of background IP"
+      },
+      "departure_template": "Amend: 'Background IP remains with DuraCube. Project-specific IP transfers to Principal upon full payment'"
+    },
+    {
+      "id": 23,
+      "name": "Urgent Protection",
+      "standard": "No blanket acceptance of urgent protection clause/instruction. Where urgent protection is required DuraCube should be able to recover demonstrated actual costs with provision of 1 day notice",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["urgent protection", "emergency work", "urgent works"],
+        "alternative": ["immediate protection", "emergency measures", "protective work"],
+        "related": ["mitigation work", "damage prevention", "emergency response"]
+      },
+      "red_flags": [
+        "Unlimited urgent protection obligations",
+        "No cost recovery provisions",
+        "No notice requirements",
+        "Deemed authorization clauses"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Case-by-case approval with cost recovery and notice",
+        "non_compliant_if": "Blanket obligation without cost recovery",
+        "no_term_risk": "LOW - no automatic obligation"
+      },
+      "negotiation_positions": {
+        "preferred": "Case-by-case approval with full costs",
+        "fallback": "Pre-agreed cost rates for urgent work",
+        "deal_breaker": "Blanket obligation without payment"
+      },
+      "departure_template": "Amend: 'Urgent protection works require specific authorization with DuraCube entitled to demonstrated actual costs and 1 day notice'"
+    },
+    {
+      "id": 24,
+      "name": "Set Off",
+      "standard": "An agreement must take place prior to set off consideration",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["set off", "set-off", "setoff"],
+        "alternative": ["deduction", "withholding", "offset"],
+        "related": ["payment deduction", "cross-claim", "counterclaim"]
+      },
+      "red_flags": [
+        "Unilateral set-off rights",
+        "Automatic deduction clauses",
+        "Broad set-off provisions",
+        "Cross-contract set-off"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Mutual agreement required before any set-off",
+        "non_compliant_if": "Unilateral set-off rights",
+        "no_term_risk": "MEDIUM - common law may apply"
+      },
+      "negotiation_positions": {
+        "preferred": "No set-off without agreement",
+        "fallback": "Set-off only for liquidated amounts",
+        "deal_breaker": "Unlimited unilateral set-off"
+      },
+      "departure_template": "Amend: 'No set-off against payments without prior written agreement between parties'"
+    },
+    {
+      "id": 25,
+      "name": "Insurances",
+      "standard": "DuraCube will provide: Public Liability Insurance (General & Product): $20M; Contract Works Insurance material damage: max project Value $400k; Professional Indemnity Insurance: NOT PROVIDED - DuraCube does not provide PI Insurance. DuraCube is listed as interested party, not joint names",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["insurance", "insurance requirements", "professional indemnity", "PI insurance"],
+        "alternative": ["public liability", "contract works", "errors and omissions", "E&O insurance"],
+        "related": ["joint names", "interested party", "insurance limits", "design insurance", "professional liability"]
+      },
+      "red_flags": [
+        "Public liability over $20M",
+        "Contract works over $400k project value",
+        "ANY Professional Indemnity requirement (CRITICAL - NON-COMPLIANT)",
+        "Joint names requirements",
+        "Design liability insurance requirements",
+        "Errors and omissions insurance"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Insurance requirements <= DuraCube limits AND no PI required (FAVORABLE if no insurance requirements)",
+        "non_compliant_if": "Insurance > limits OR Professional Indemnity required",
+        "no_term_risk": "FAVORABLE - no excessive insurance burden",
+        "critical_alert": "Professional Indemnity Insurance requirement = AUTOMATIC NON-COMPLIANT"
+      },
+      "negotiation_positions": {
+        "preferred": "Insurance as per stated limits, NO Professional Indemnity",
+        "fallback": "Project-specific additional coverage if paid (except PI)",
+        "deal_breaker": "Professional Indemnity Insurance requirement"
+      },
+      "departure_template": "Amend: 'Insurance limited to: Public Liability $20M, Contract Works $400k. DuraCube does not provide Professional Indemnity Insurance'"
+    },
+    {
+      "id": 26,
+      "name": "Protection of Works",
+      "standard": "No provision shall be made for the protection of works following the completion of DuraCube's installation",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["protection of works", "works protection", "care of works"],
+        "alternative": ["temporary protection", "maintaining works", "safeguarding works"],
+        "related": ["completed works", "protection period", "care custody control"]
+      },
+      "red_flags": [
+        "Post-completion protection requirements",
+        "Indefinite protection obligations",
+        "Protection of others' work",
+        "No handover provisions"
+      ],
+      "compliance_logic": {
+        "compliant_if": "No protection obligation after DuraCube's installation complete",
+        "non_compliant_if": "Ongoing protection requirements post-completion",
+        "no_term_risk": "LOW - no automatic obligation"
+      },
+      "negotiation_positions": {
+        "preferred": "No protection after completion",
+        "fallback": "Limited period with additional payment",
+        "deal_breaker": "Indefinite protection obligations"
+      },
+      "departure_template": "Delete: any post-completion protection obligations for DuraCube's works"
+    },
+    {
+      "id": 27,
+      "name": "Time is of the Essence / Escalation",
+      "standard": "Not applicable",
+      "risk_level": "MEDIUM",
+      "search_terms": {
+        "primary": ["time is of the essence", "time of essence", "escalation"],
+        "alternative": ["fundamental term", "essential term", "price adjustment"],
+        "related": ["strict compliance", "material breach", "rise and fall"]
+      },
+      "red_flags": [
+        "Time of the essence provisions",
+        "Automatic termination for delay",
+        "Price escalation clauses",
+        "No flexibility for minor delays"
+      ],
+      "compliance_logic": {
+        "compliant_if": "No time of essence OR no escalation provisions",
+        "non_compliant_if": "Time of essence included OR automatic escalation",
+        "no_term_risk": "FAVORABLE - no automatic severe consequences"
+      },
+      "negotiation_positions": {
+        "preferred": "Complete exclusion of both concepts",
+        "fallback": "Limited to specific critical milestones only",
+        "deal_breaker": "Blanket time of essence provision"
+      },
+      "departure_template": "Delete: 'time is of the essence' provisions and any automatic price escalation clauses"
+    },
+    {
+      "id": 28,
+      "name": "Design Liability",
+      "standard": "DuraCube does not accept undefined liability. DuraCube's design scope is limited to the provision of the shop drawings",
+      "risk_level": "HIGH",
+      "search_terms": {
+        "primary": ["design liability", "design responsibility", "design obligation"],
+        "alternative": ["shop drawings", "design documentation", "design risk"],
+        "related": ["fitness for purpose", "design warranty", "performance specification", "professional services"]
+      },
+      "red_flags": [
+        "Broad design responsibilities",
+        "Fitness for purpose warranties",
+        "Performance guarantees",
+        "Design certification requirements",
+        "Requirements for Professional Indemnity Insurance (cross-reference Principle 25)"
+      ],
+      "compliance_logic": {
+        "compliant_if": "Design scope limited to shop drawings only",
+        "non_compliant_if": "Design liability beyond shop drawings OR fitness for purpose required",
+        "no_term_risk": "MEDIUM - may need explicit limitation"
+      },
+      "negotiation_positions": {
+        "preferred": "Shop drawings only, no design liability",
+        "fallback": "Shop drawings with limited review",
+        "deal_breaker": "Full design liability or fitness for purpose"
+      },
+      "departure_template": "Amend: 'DuraCube's design scope limited to provision of shop drawings only. No fitness for purpose or broader design liability accepted'"
+    }
+  ],
+  "critical_non_negotiables": {
+    "professional_indemnity": {
+      "rule": "DuraCube does NOT provide PI insurance. Any requirement = NON-COMPLIANT",
+      "action": "Immediate escalation required. Formal departure documentation needed.",
+      "related_principles": [25, 28]
+    },
+    "unconditional_guarantees": {
+      "rule": "Only dated guarantees accepted. Unconditional/on-demand guarantees = NON-COMPLIANT",
+      "action": "Must be replaced with dated guarantees expiring at PC and DLP",
+      "related_principles": [15, 16]
+    },
+    "parent_company_guarantees": {
+      "rule": "Not provided under any circumstances = NON-COMPLIANT if required",
+      "action": "Must be deleted from contract",
+      "related_principles": [15]
+    }
+  },
+  "methodology": {
+    "three_pass_extraction": {
+      "pass_1": "Structure Mapping - Map all sections, headings, page numbers",
+      "pass_2": "Targeted Extraction - Search using principle keywords from search_terms",
+      "pass_3": "Validation - Verify no clauses missed, check for conflicts"
+    },
+    "three_step_comparison": {
+      "step_1": "Evidence Extraction - Extract exact contract language AND DuraCube standard",
+      "step_2": "Substantive Comparison - Compare meaning, assess implications",
+      "step_3": "Classification Decision - Assign: Compliant | Non-Compliant | No Term"
+    },
+    "constitutional_logic": {
+      "equal": "Contract terms = DuraCube standard -> COMPLIANT",
+      "more_favorable": "Contract terms > DuraCube standard (better for DuraCube) -> COMPLIANT",
+      "less_favorable": "Contract terms < DuraCube standard (worse for DuraCube) -> NON-COMPLIANT",
+      "absent": "No contract terms -> Assess using no_term_risk for each principle"
+    },
+    "favorability_assessment": {
+      "rule": "Absence of burden terms (insurance, security, guarantees) = FAVORABLE = COMPLIANT",
+      "rule_2": "Absence of protective terms (liability caps, EOT) = needs insertion",
+      "decision_tree": [
+        "Term would PROTECT DuraCube (liability cap, EOT)? -> NO TERM = Departure needed",
+        "Term would BURDEN DuraCube (insurance, guarantees)? -> COMPLIANT (favorable)"
+      ]
+    }
+  },
+  "interconnected_principles": [
+    {
+      "principle_a": 15,
+      "principle_b": 16,
+      "relationship": "If Principle 15 = COMPLIANT (no security required), then Principle 16 = AUTOMATICALLY COMPLIANT"
+    },
+    {
+      "principle_a": 25,
+      "principle_b": 28,
+      "relationship": "Both relate to professional services. PI Insurance and Design Liability are connected - DuraCube provides no professional design services"
+    }
+  ]
+}

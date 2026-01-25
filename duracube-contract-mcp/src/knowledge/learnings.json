@@ -1,0 +1,226 @@
+{
+  "learnings": [
+    {
+      "id": "PAGE-001",
+      "category": "methodology",
+      "principle_id": null,
+      "date_logged": "2025-09-24",
+      "issue": "Page column only showed page number without clause reference",
+      "correction": "Page column must include both page number AND clause reference: 'Page X, Clause Y(a)'",
+      "rule": "NEVER use just page numbers alone. ALWAYS provide specific clause location within page.",
+      "examples": {
+        "incorrect": "Page 5",
+        "correct": "Page 5, Clause 8.1"
+      }
+    },
+    {
+      "id": "DESIGN-001",
+      "category": "design",
+      "principle_id": 28,
+      "date_logged": "2025-09-24",
+      "issue": "Marked Design Liability as Compliant when contract required broader design scope than shop drawings",
+      "correction": "Contract requiring 'design, planning, setout, certification, maintenance' EXCEEDS DuraCube's limited 'shop drawings' standard = NON-COMPLIANT",
+      "rule": "Any contract requiring broader design scope than shop drawings = NON-COMPLIANT. DuraCube's design scope is LIMITED to shop drawings only.",
+      "examples": {
+        "compliant": "Design scope limited to shop drawings",
+        "non_compliant": "Design, planning, setout, certification, maintenance of works included in scope"
+      }
+    },
+    {
+      "id": "SEC-001",
+      "category": "security",
+      "principle_id": 15,
+      "date_logged": "2025-09-26",
+      "issue": "Marked N/A security as Non-Compliant",
+      "correction": "N/A or 0% security = COMPLIANT and FAVORABLE (Better than DuraCube standard of 5%)",
+      "rule": "No security required < DuraCube standard (5%) = COMPLIANT. Absence of security burden is FAVORABLE.",
+      "examples": {
+        "compliant": "Form: N/A Amount: N/A",
+        "compliant_2": "Security: 2 x 2.5% dated bank guarantees",
+        "non_compliant": "Security: 10% cash retention"
+      }
+    },
+    {
+      "id": "DLP-001",
+      "category": "dlp",
+      "principle_id": 17,
+      "date_logged": "2025-09-26",
+      "issue": "Confused Defects Liability Period with separate WARRANTY provisions",
+      "correction": "DLP and Warranty are DIFFERENT concepts. Analyze ONLY the DLP clause for Principle 17, ignore warranty schedules.",
+      "rule": "DLP = Main contract term (typically 52 weeks). Warranty = Separate clause, often in schedules. For Principle 17, analyze ONLY the DLP clause.",
+      "examples": {
+        "dlp_correct": "Page 39, Item 15: '52 weeks' = DLP = analyze this",
+        "warranty_ignore": "Page 162, Schedule 3: 'Joinery - 7 years' = Warranty = do NOT analyze for Principle 17"
+      }
+    },
+    {
+      "id": "SEC-002",
+      "category": "security",
+      "principle_id": 16,
+      "date_logged": "2025-09-26",
+      "issue": "Marked Release of Security as Non-Compliant when no security was required",
+      "correction": "If Principle 15 = COMPLIANT (no security), then Principle 16 = AUTOMATICALLY COMPLIANT",
+      "rule": "Cannot have security release issues when no security exists. No security = No release problems = COMPLIANT.",
+      "interconnected_principles": [15, 16]
+    },
+    {
+      "id": "SEC-003",
+      "category": "security",
+      "principle_id": 15,
+      "date_logged": "2025-09-26",
+      "issue": "Marked unconditional Bank Guarantees as Compliant",
+      "correction": "'Unconditional Bank Guarantees' directly violates DuraCube's standard = NON-COMPLIANT. DuraCube ONLY accepts DATED bank guarantees.",
+      "rule": "Unconditional/on-demand guarantees = NON-COMPLIANT. Dated guarantees only. BG1 expires at PC, BG2 expires 52 weeks after PC.",
+      "examples": {
+        "compliant": "Two dated bank guarantees, each for 2.5%",
+        "non_compliant": "Two unconditional bank guarantees without expiry date"
+      }
+    },
+    {
+      "id": "METHOD-001",
+      "category": "methodology",
+      "principle_id": null,
+      "date_logged": "2025-09-26",
+      "issue": "Analyzed executed/marked-up contract terms instead of original template language",
+      "correction": "Analyze ONLY original contract template text. IGNORE all strikethroughs, insertions, highlights, and DocuSign field completions.",
+      "rule": "Compliance assessment is against ORIGINAL TEMPLATE language, not marked-up/executed terms. Struck-through text = Original language to analyze. Inserted text = Ignore.",
+      "examples": {
+        "correct_analysis": "Original: 'Two unconditional bank guarantees' = Analyze this",
+        "incorrect_analysis": "Inserted: '2 X dated bank guarantees' = Do NOT analyze this for compliance"
+      }
+    },
+    {
+      "id": "INS-001",
+      "category": "insurance",
+      "principle_id": 25,
+      "date_logged": "2025-09-30",
+      "issue": "Marked $5M insurance requirement as Non-Compliant when DuraCube limit is $20M",
+      "correction": "Lower customer insurance requirement is MORE FAVORABLE. Customer requirement < DuraCube limit = COMPLIANT.",
+      "rule": "Customer requirement <= DuraCube limit ($20M) = COMPLIANT. Only flag as Non-Compliant if customer requires MORE than DuraCube provides.",
+      "examples": {
+        "compliant": "$5,000,000 public liability required (less than $20M limit)",
+        "non_compliant": "$25,000,000 public liability required (exceeds $20M limit)"
+      }
+    },
+    {
+      "id": "INS-002",
+      "category": "insurance",
+      "principle_id": 25,
+      "date_logged": "2025-01-17",
+      "issue": "Marked absence of insurance requirements as 'No Term' requiring departure",
+      "correction": "Absence of specified insurance limits is FAVORABLE. No insurance requirements = COMPLIANT (no burden on DuraCube).",
+      "rule": "Absence of burden terms = FAVORABLE = COMPLIANT, not 'No Term'. Only insert insurance terms if customer requires MORE than DuraCube provides.",
+      "examples": {
+        "compliant": "Contract mentions insurance but no limits specified",
+        "compliant_2": "Contract silent on Professional Indemnity (favorable)",
+        "non_compliant": "Contract requires Professional Indemnity Insurance"
+      }
+    },
+    {
+      "id": "DLP-002",
+      "category": "dlp",
+      "principle_id": 17,
+      "date_logged": "2025-01-27",
+      "issue": "Relied on project schedule 'days' duration field instead of calculating actual calendar period",
+      "correction": "Calculate actual calendar period between START DATE and END DATE. Do NOT rely on schedule duration fields.",
+      "rule": "52 weeks = 364 days. Calculate from start to end date using calendar. Schedule 'duration' fields show remaining time from reference date, NOT contractual DLP period.",
+      "examples": {
+        "correct": "Jan 23, 2026 to Jan 22, 2027 = 364 days = 52 weeks = COMPLIANT",
+        "incorrect": "239 days shown in schedule = Do NOT use this number"
+      }
+    },
+    {
+      "id": "FAV-001",
+      "category": "methodology",
+      "principle_id": null,
+      "date_logged": "2025-01-27",
+      "issue": "Suggested departures to INSERT insurance/security obligations when contract had none",
+      "correction": "Never suggest departures that ADD obligations when none exist. Absence of burden terms is FAVORABLE.",
+      "rule": "Protective terms absent (liability cap, EOT) -> Insert departure needed. Burden terms absent (insurance, guarantees) -> COMPLIANT, no departure.",
+      "decision_tree": {
+        "protective_term_missing": "Insert departure to add protection for DuraCube",
+        "burden_term_missing": "COMPLIANT - favorable position, no departure needed"
+      }
+    }
+  ],
+  "decision_trees": {
+    "no_term_assessment": {
+      "question": "Would this term PROTECT or BURDEN DuraCube?",
+      "protect": {
+        "examples": ["Liability cap", "EOT provisions", "Variation written direction"],
+        "action": "Status: NO TERM -> Departure needed to insert protection"
+      },
+      "burden": {
+        "examples": ["Insurance requirements", "Security/guarantees", "Parent company guarantee", "Professional Indemnity"],
+        "action": "Status: COMPLIANT (favorable) -> No departure needed"
+      }
+    },
+    "security_assessment": {
+      "no_security": "COMPLIANT and FAVORABLE",
+      "dated_guarantees_5_percent": "COMPLIANT",
+      "unconditional_guarantees": "NON-COMPLIANT",
+      "cash_retention": "NON-COMPLIANT",
+      "parent_company_guarantee": "NON-COMPLIANT",
+      "over_5_percent": "NON-COMPLIANT"
+    },
+    "insurance_assessment": {
+      "no_requirements": "COMPLIANT (favorable)",
+      "within_limits": "COMPLIANT",
+      "exceeds_limits": "NON-COMPLIANT",
+      "pi_required": "NON-COMPLIANT (critical)"
+    },
+    "dlp_assessment": {
+      "52_weeks_or_less": "COMPLIANT",
+      "12_months_or_less": "COMPLIANT",
+      "no_re_warranty": "Required for compliance",
+      "over_52_weeks": "NON-COMPLIANT",
+      "15_year_warranty_not_required": "FAVORABLE (compliant)"
+    }
+  },
+  "category_summaries": {
+    "security": {
+      "key_rules": [
+        "N/A or 0% security = COMPLIANT and FAVORABLE",
+        "Only dated bank guarantees accepted",
+        "Unconditional guarantees = NON-COMPLIANT",
+        "No parent company guarantees",
+        "BG1 expires at PC, BG2 expires 52 weeks after PC"
+      ],
+      "interconnected_principles": [15, 16]
+    },
+    "insurance": {
+      "key_rules": [
+        "No requirements = COMPLIANT (favorable)",
+        "Requirements within limits = COMPLIANT",
+        "Professional Indemnity required = NON-COMPLIANT (critical)",
+        "Lower requirements = FAVORABLE"
+      ],
+      "related_principles": [25, 28]
+    },
+    "dlp": {
+      "key_rules": [
+        "52 weeks OR 12 months = COMPLIANT",
+        "DLP and Warranty are DIFFERENT - analyze separately",
+        "Calculate actual calendar period between dates",
+        "15-year warranty not required = FAVORABLE"
+      ],
+      "related_principles": [17]
+    },
+    "design": {
+      "key_rules": [
+        "Design scope limited to shop drawings only",
+        "Broader design requirements = NON-COMPLIANT",
+        "No Professional Indemnity = DuraCube provides no professional design services"
+      ],
+      "related_principles": [25, 28]
+    },
+    "methodology": {
+      "key_rules": [
+        "Page references must include clause numbers",
+        "Analyze original template, not marked-up text",
+        "Burden term absent = FAVORABLE = COMPLIANT",
+        "Protective term absent = NO TERM = departure needed"
+      ]
+    }
+  }
+}

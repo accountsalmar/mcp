@@ -1,0 +1,127 @@
+{
+  "csv_structure": {
+    "row_1": {
+      "format": "[CustomerName]_[ProjectName]_$[ContractValue],,,,,,",
+      "description": "Metadata header with 6 trailing commas for alignment",
+      "example": "ABC_Construction_NewOffice_$500000,,,,,,"
+    },
+    "row_2": {
+      "format": "No,Term,Status,Page,Clause,Departure,Comments",
+      "description": "Column headers"
+    },
+    "total_columns": 7,
+    "row_1_note": "Row 1 metadata spans into column 1 with 6 empty columns following"
+  },
+  "column_specifications": {
+    "No": {
+      "description": "Principle number, sequential 1-28",
+      "format": "Integer",
+      "validation": "Must be 1-28 in order"
+    },
+    "Term": {
+      "description": "Exact principle name from DuraCube standards",
+      "format": "Text",
+      "validation": "Must match official principle names exactly",
+      "examples": [
+        "Limitation of Liability",
+        "Consequential Damages",
+        "Security & Parent Company Guarantees"
+      ]
+    },
+    "Status": {
+      "description": "Compliance classification",
+      "format": "Enum",
+      "allowed_values": ["Compliant", "Non-Compliant", "No Term"],
+      "notes": {
+        "Compliant": "Contract meets or exceeds DuraCube standard (including favorable absence of burden terms)",
+        "Non-Compliant": "Contract falls short of DuraCube standard",
+        "No Term": "Contract silent on this provision where DuraCube needs protection"
+      }
+    },
+    "Page": {
+      "description": "Location reference in contract",
+      "format": "Page X, Clause Y.Z",
+      "validation": "MUST include both page AND clause reference",
+      "rules": [
+        "NEVER use page number alone",
+        "Always include clause/item reference",
+        "Use contract's own numbering system"
+      ],
+      "examples": {
+        "correct": [
+          "Page 5, Clause 8.1",
+          "Page 39, Item 15",
+          "Page 2, Clause 7(a)"
+        ],
+        "incorrect": [
+          "Page 5",
+          "5",
+          "Clause 8.1"
+        ]
+      }
+    },
+    "Clause": {
+      "description": "Actual contract text",
+      "format": "Quoted text",
+      "validation": "Must be exact contract language, not summaries",
+      "rules": [
+        "Extract actual contract wording",
+        "Use quotation marks around text",
+        "If no term exists, state relevant finding"
+      ],
+      "examples": [
+        "\"Contractor's liability shall be unlimited\"",
+        "\"Neither party shall be liable for any consequential loss\"",
+        "\"No specific insurance limits or PI requirements\""
+      ]
+    },
+    "Departure": {
+      "description": "Required contract change",
+      "format": "Action verb + specific language",
+      "action_verbs": ["Insert:", "Replace:", "Amend:", "Delete:"],
+      "rules": [
+        "Start with action verb",
+        "Be specific about required change",
+        "Leave blank if compliant",
+        "Provide exact replacement language"
+      ],
+      "examples": [
+        "Replace: 'unlimited' with 'limited to 100% of the Contract Value'",
+        "Insert: 'Neither party shall be liable for consequential damages'",
+        "Delete: head contract flow-down provisions",
+        ""
+      ]
+    },
+    "Comments": {
+      "description": "User notes field",
+      "format": "Empty",
+      "validation": "ALWAYS leave blank in generated output",
+      "purpose": "Reserved for user annotations during negotiation"
+    }
+  },
+  "example_rows": [
+    "1,Limitation of Liability,Non-Compliant,\"Page 5, Clause 8.1\",\"Contractor's liability shall be unlimited\",\"Replace: 'unlimited' with 'limited to 100% of the Contract Value'\",",
+    "2,Consequential Damages,Compliant,\"Page 6, Clause 9.2\",\"Neither party shall be liable for any consequential loss\",,",
+    "3,Head Contract Provision,Non-Compliant,\"Page 3, Clause 2.1\",\"Contractor bound by all terms of the Head Contract\",\"Delete: head contract incorporation clause OR Amend: to specify only agreed provisions\",",
+    "4,Liquidated Damages,No Term,\"N/A\",\"No liquidated damages provision found\",,",
+    "15,Security & Parent Company Guarantees,Compliant,\"Page 39, Item 17\",\"Form: N/A Amount: N/A\",,",
+    "15,Security & Parent Company Guarantees,Non-Compliant,\"Page 2, Item 7(a)\",\"Two unconditional Bank Guarantees, each for 2.5% of Subcontract Sum\",\"Replace: 'unconditional Bank Guarantees' with 'dated Bank Guarantees' with BG1 expiring at PC and BG2 expiring 52 weeks after PC\",",
+    "17,Defects Liability Period,Compliant,\"Page 39, Item 15\",\"52 weeks\",,",
+    "25,Insurances,Compliant,\"Page 2, Clause 13\",\"No specific insurance limits or PI requirements\",,",
+    "25,Insurances,Non-Compliant,\"Page 8, Clause 14.2\",\"Contractor shall maintain Professional Indemnity Insurance of not less than $5,000,000\",\"Delete: Professional Indemnity Insurance requirement. DuraCube does not provide PI Insurance.\",",
+    "28,Design Liability,Non-Compliant,\"Page 4, Item 1.5\",\"Design planning setout certification maintenance of works included in scope\",\"Amend: 'DuraCube's design scope is limited to the provision of shop drawings only'\","
+  ],
+  "quality_checklist": [
+    "All 28 principles present in correct sequence (1-28)",
+    "Row 1 contains metadata with 6 trailing commas",
+    "Every data row has exactly 7 columns",
+    "All page references include clause/item numbers",
+    "Actual contract text in Clause column (not summaries)",
+    "Departures use specific action verbs (Insert/Replace/Amend/Delete)",
+    "Comments column always empty",
+    "Status is one of: Compliant, Non-Compliant, No Term",
+    "No Term used only when protective provision missing",
+    "Compliant includes favorable absence of burden terms"
+  ],
+  "complete_csv_example": "ABC_Construction_NewOffice_$500000,,,,,,\nNo,Term,Status,Page,Clause,Departure,Comments\n1,Limitation of Liability,Non-Compliant,\"Page 5, Clause 8.1\",\"Contractor's liability shall be unlimited\",\"Replace: 'unlimited' with 'limited to 100% of the Contract Value'\",\n2,Consequential Damages,Compliant,\"Page 6, Clause 9.2\",\"Neither party shall be liable for any consequential loss\",,\n3,Head Contract Provision,No Term,\"N/A\",\"No head contract provisions found\",,\n4,Liquidated Damages,No Term,\"N/A\",\"No liquidated damages provision found\",,\n5,Extension of Time,Non-Compliant,\"Page 12, Clause 15.1\",\"EOT only for force majeure events\",\"Amend: Include full list of qualifying events with time AND cost relief\",\n6,Force Majeure,Compliant,\"Page 14, Clause 16.2\",\"Force majeure entitles Contractor to EOT and demonstrated costs\",,\n7,Variations: Accelerations Omissions,Compliant,\"Page 18, Clause 20.1\",\"All variations require written direction with cost recovery\",,\n8,Time Bars/Notification Period,Compliant,\"Page 22, Clause 24.3\",\"5 business days notification period\",,\n9,Assessment Period,Non-Compliant,\"Page 23, Clause 25.1\",\"Claims assessed within 20 business days\",\"Amend: Reduce assessment period to 10 business days\",\n10,Service for Notices,Compliant,\"Page 45, Clause 42.1\",\"Notices may be served by email\",,\n11,Termination,Compliant,\"Page 48, Clause 45\",\"Termination rights reciprocal for both parties\",,\n12,Termination for Convenience,Non-Compliant,\"Page 49, Clause 46.2\",\"Termination payment excludes overheads\",\"Amend: Include overheads demobilisation and immediate security release\",\n13,Dispute Resolution,Compliant,\"Page 52, Clause 50.1\",\"Senior executives to negotiate before adjudication\",,\n14,Payment and Cash Neutrality,Compliant,\"Page 8, Item 8\",\"Payment: 14 days End of Month\",,\n15,Security & Parent Company Guarantees,Non-Compliant,\"Page 2, Item 7(a)\",\"Two unconditional Bank Guarantees each for 2.5%\",\"Replace: 'unconditional' with 'dated Bank Guarantees' expiring at PC and 52 weeks after PC\",\n16,Release of Security,Non-Compliant,\"Page 2, Item 7(b)\",\"Security released upon final completion\",\"Amend: BG1 (50%) expires at PC BG2 (50%) expires 52 weeks after PC\",\n17,Defects Liability Period,Compliant,\"Page 39, Item 15\",\"52 weeks\",,\n18,Indemnities,Non-Compliant,\"Page 35, Clause 32.1\",\"Contractor indemnifies Principal for all losses\",\"Amend: Indemnities to be reciprocal or proportionally reduced\",\n19,Proportionate Liability Act,Compliant,\"N/A\",\"No exclusion of proportionate liability found\",,\n20,Risk & Title Transfer,Compliant,\"Page 28, Clause 28.1\",\"Risk on acceptance title on payment\",,\n21,Unfixed Materials,No Term,\"N/A\",\"No unfixed materials provision found\",\"Insert: Payment for delivered materials when installation impeded\",\n22,Intellectual Property,Compliant,\"Page 38, Clause 35.2\",\"Background IP retained project IP on payment\",,\n23,Urgent Protection,Compliant,\"Page 40, Clause 37.1\",\"Urgent works require authorization with cost recovery\",,\n24,Set Off,Non-Compliant,\"Page 10, Clause 11.3\",\"Principal may set off any amounts against payments\",\"Amend: No set-off without prior written agreement\",\n25,Insurances,Compliant,\"Page 2, Clause 13\",\"Public liability $10M no PI requirement\",,\n26,Protection of Works,Compliant,\"Page 42, Clause 39.1\",\"Protection obligations end on installation completion\",,\n27,Time is of the Essence / Escalation,Compliant,\"N/A\",\"No time of essence or escalation provisions\",,\n28,Design Liability,Non-Compliant,\"Page 4, Item 1.5\",\"Design planning setout certification included\",\"Amend: Design scope limited to shop drawings only\","
+}

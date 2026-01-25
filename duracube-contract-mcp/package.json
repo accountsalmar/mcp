@@ -1,0 +1,42 @@
+{
+  "name": "duracube-contract-mcp",
+  "version": "1.0.0",
+  "description": "MCP server providing DuraCube's 28 commercial principles for contract review",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "duracube-contract-mcp": "build/index.js"
+  },
+  "scripts": {
+    "prebuild": "node -e \"const fs=require('fs');if(!fs.existsSync('build/knowledge'))fs.mkdirSync('build/knowledge',{recursive:true})\"",
+    "build": "tsc && npm run copy-json",
+    "copy-json": "node -e \"const fs=require('fs');const path=require('path');['principles.json','learnings.json','format.json'].forEach(f=>fs.copyFileSync(path.join('src/knowledge',f),path.join('build/knowledge',f)))\"",
+    "start": "node build/index.js http",
+    "start:stdio": "node build/index.js stdio",
+    "start:http": "node build/index.js http",
+    "dev": "npm run build && node build/index.js http",
+    "dev:stdio": "npm run build && node build/index.js stdio",
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "contract-review",
+    "duracube",
+    "commercial-principles"
+  ],
+  "author": "DuraCube",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "express": "^4.18.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
