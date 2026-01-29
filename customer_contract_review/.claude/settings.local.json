@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(gh auth status:*)",
+      "Bash(gh repo create:*)",
+      "Bash(curl:*)",
+      "WebSearch",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: Update to MCP Streamable HTTP protocol for Claude.ai\n\n- Add Mcp-Session-Id header generation and validation\n- Update protocol version from 2024-11-05 to 2025-03-26\n- Add session management with UUID\n- Fix CORS to expose Mcp-Session-Id header\n- Add HEAD request support for protocol discovery\n- Handle notifications with 202 Accepted status\n- Add DELETE /mcp endpoint for session cleanup\n- Add ping method support\n\nThis fixes the grayed out toggle issue in Claude.ai connectors.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: Change output format from CSV to formatted Excel specification\n\n- Replace csv_structure with excel_structure\n- Add conditional formatting rules \\(Compliant=Green, Non-Compliant=Red, No Term=Yellow\\)\n- Add column width specifications\n- Output as markdown table with Excel formatting instructions\n- Include complete example with all 28 principles\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(cat:*)",
+      "Bash(dir /s /b \"C:\\\\Users\\\\KasunJ\\\\MCP\\\\*agent*\")",
+      "Bash(node -e \"import\\(''./build/tools/knowledge-tools.js''\\).then\\(m => console.log\\(''Tools loaded:'', Object.keys\\(m.toolDefinitions\\)\\)\\)\")",
+      "Bash(node -e:*)",
+      "Bash(tree:*)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "nexsus",
+    "odoo-crm",
+    "google-workspace"
+  ]
+}
