@@ -11,11 +11,13 @@ import {
   getDuracubePrinciples,
   getLearnedCorrections,
   getOutputFormat,
+  getFinanceExtractionGuide,
   toolDefinitions,
 } from './tools/knowledge-tools.js';
 import {
   GetPrinciplesSchema,
   GetLearnedCorrectionsSchema,
+  GetFinanceExtractionGuideSchema,
 } from './schemas/tool-schemas.js';
 import { startHttpServer } from './server.js';
 
@@ -44,6 +46,7 @@ function createStdioServer(): Server {
         toolDefinitions.get_duracube_principles,
         toolDefinitions.get_learned_corrections,
         toolDefinitions.get_output_format,
+        toolDefinitions.get_finance_extraction_guide,
       ],
     };
   });
@@ -82,6 +85,19 @@ function createStdioServer(): Server {
 
         case 'get_output_format': {
           const result = getOutputFormat();
+          return {
+            content: [
+              {
+                type: 'text',
+                text: result,
+              },
+            ],
+          };
+        }
+
+        case 'get_finance_extraction_guide': {
+          const validatedArgs = GetFinanceExtractionGuideSchema.parse(args || {});
+          const result = getFinanceExtractionGuide(validatedArgs);
           return {
             content: [
               {

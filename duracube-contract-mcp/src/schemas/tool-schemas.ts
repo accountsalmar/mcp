@@ -32,3 +32,21 @@ export type GetLearnedCorrectionsInput = z.infer<typeof GetLearnedCorrectionsSch
 export const GetOutputFormatSchema = z.object({});
 
 export type GetOutputFormatInput = z.infer<typeof GetOutputFormatSchema>;
+
+/**
+ * Schema for get_finance_extraction_guide tool
+ */
+export const GetFinanceExtractionGuideSchema = z.object({
+  include_json_template: z
+    .boolean()
+    .optional()
+    .default(true)
+    .describe('Include the complete JSON output template in the response'),
+  category: z
+    .enum(['all', 'contract_value', 'parties', 'payment', 'retention', 'documentation', 'submission', 'project_manager', 'dollar_values'])
+    .optional()
+    .default('all')
+    .describe('Filter to specific extraction category'),
+});
+
+export type GetFinanceExtractionGuideInput = z.infer<typeof GetFinanceExtractionGuideSchema>;

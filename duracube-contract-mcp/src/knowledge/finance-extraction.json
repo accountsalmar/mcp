@@ -1,0 +1,391 @@
+{
+  "tool_metadata": {
+    "name": "get_finance_extraction_guide",
+    "version": "1.0.0",
+    "purpose": "Extract 9 finance-relevant data points from contracts for DuraCube's accounts receivable and project accounting team",
+    "design_principle": "EXTRACT ONLY - no assessment, no comparison, no judgment"
+  },
+  "business_context": {
+    "company": "DuraCube",
+    "industry": "Australian construction materials supplier (concrete, precast, structural elements)",
+    "typical_contracts": [
+      "Subcontract agreements (DuraCube as subcontractor to head contractor)",
+      "Supply agreements with delivery schedules"
+    ],
+    "contract_value_range": "$100K to $10M+",
+    "regulatory_context": "Subject to Security of Payment legislation (SOP Act)"
+  },
+  "target_audience": {
+    "team": "Accounts receivable and project accounting team",
+    "responsibilities": [
+      "Process monthly progress claims",
+      "Reconcile contract financials against ERP",
+      "Track retention and security releases",
+      "Ensure claim documentation compliance",
+      "Monitor payment term adherence"
+    ],
+    "use_case": "Accurate data extraction to set up contracts in financial systems"
+  },
+  "extraction_categories": [
+    {
+      "id": 1,
+      "name": "Contract Value (Excluding GST)",
+      "description": "The total contract price excluding GST",
+      "alternative_names": ["Fixed Sum", "Subcontract Sum", "Contract Price", "Lump Sum", "Agreed Sum"],
+      "search_terms": {
+        "primary": ["contract value", "subcontract sum", "fixed sum", "lump sum", "contract price"],
+        "secondary": ["total price", "agreed sum", "consideration", "contract sum"],
+        "related": ["GST", "exclusive", "inclusive", "plus GST"]
+      },
+      "extraction_rules": [
+        "Extract the exact amount excluding GST",
+        "Note if GST treatment is specified separately",
+        "If only GST-inclusive amount given, extract that and note 'GST-inclusive only'",
+        "Do NOT calculate GST from totals"
+      ],
+      "output_fields": {
+        "amount": "string - The contract value (e.g., '$1,500,000')",
+        "gst_treatment": "string - 'Exclusive', 'Inclusive', or 'Not specified'",
+        "source": "string - Page and clause reference"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Contract Parties",
+      "description": "All parties to the contract with their business identifiers",
+      "search_terms": {
+        "primary": ["parties", "contractor", "subcontractor", "principal", "supplier"],
+        "secondary": ["between", "agreement between", "this agreement", "hereinafter"],
+        "related": ["ABN", "ACN", "Australian Business Number", "Australian Company Number"]
+      },
+      "extraction_rules": [
+        "Extract all parties to the contract",
+        "Include ABN (11 digits) or ACN (9 digits) for each party",
+        "Note the role of each party (Principal, Head Contractor, Contractor, Subcontractor, Supplier)"
+      ],
+      "output_fields": {
+        "parties": "array - List of party objects with name, role, ABN/ACN",
+        "source": "string - Page and clause reference"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Payment Terms",
+      "description": "Payment frequency, timing, and claim due dates",
+      "search_terms": {
+        "primary": ["payment", "payment terms", "due date", "claim date", "progress claim"],
+        "secondary": ["invoice", "net days", "within X days", "end of month", "EOM"],
+        "related": ["monthly", "milestone", "progress", "upon completion", "reference period"]
+      },
+      "extraction_rules": [
+        "Extract payment frequency (monthly, progress-based, milestone, upon completion)",
+        "Extract payment timing from claim submission (e.g., 'within 30 days of valid claim')",
+        "Extract claim due date (e.g., 'by the 25th of each month')",
+        "Extract reference period for claims",
+        "Do NOT infer dates from durations"
+      ],
+      "output_fields": {
+        "frequency": "string - Payment frequency type",
+        "timing": "string - Payment timing from claim",
+        "claim_due_date": "string - When claims must be submitted",
+        "reference_period": "string - Claim reference period",
+        "source": "string - Page and clause reference"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Payment Claim Conditions",
+      "description": "Required documents and conditions for valid payment claims",
+      "search_terms": {
+        "primary": ["valid claim", "supporting documents", "tax invoice", "payment claim"],
+        "secondary": ["conditions", "substantiation", "submission", "invoice to", "claim requirements"],
+        "related": ["statutory declaration", "certificate", "approval", "sign-off"]
+      },
+      "extraction_rules": [
+        "Extract required supporting documents for valid claim",
+        "Extract conditions precedent to payment entitlement",
+        "Extract invoice submission email address or portal",
+        "Extract tax invoice requirements"
+      ],
+      "output_fields": {
+        "required_documents": "array - List of required documents",
+        "conditions_precedent": "array - Conditions that must be met",
+        "submission_email": "string or null - Email for invoice submission",
+        "tax_invoice_requirements": "string or null - Tax invoice requirements",
+        "source": "string - Page and clause reference"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Retention and Securities",
+      "description": "Retention percentages, security types, and release conditions",
+      "search_terms": {
+        "primary": ["retention", "security", "bank guarantee", "performance security"],
+        "secondary": ["cash retention", "security deposit", "release of security", "defects liability"],
+        "related": ["practical completion", "final completion", "expiry", "unconditional", "dated"]
+      },
+      "extraction_rules": [
+        "Extract retention percentage (typically 5% or 10%)",
+        "Extract maximum retention amount (often capped)",
+        "Extract security type required (bank guarantee, cash retention, insurance bond)",
+        "Extract security amount or formula",
+        "Extract release conditions and timing",
+        "Do NOT calculate security amounts from percentages"
+      ],
+      "output_fields": {
+        "retention_percentage": "string - Retention percentage",
+        "retention_cap": "string or null - Maximum retention amount",
+        "security_type": "string - Type of security required",
+        "security_amount": "string - Amount or formula",
+        "release_conditions": "string - Conditions for release",
+        "release_timing": "string - When security is released",
+        "source": "string - Page and clause reference"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Additional Claim Documentation",
+      "description": "Extra documentation required for claims beyond standard invoices",
+      "search_terms": {
+        "primary": ["subcontractor statement", "declaration", "statutory declaration", "DOR"],
+        "secondary": ["delivery docket", "certificate", "test results", "documentation required"],
+        "related": ["proof of delivery", "quality certificate", "compliance certificate", "daily order records"]
+      },
+      "extraction_rules": [
+        "Extract Subcontractor Statement requirements (NSW/VIC specific)",
+        "Extract Daily Order Records (DORs) or variation documentation requirements",
+        "Extract delivery dockets or proof of delivery requirements",
+        "Extract quality certificates or test results requirements",
+        "Extract any other claim prerequisites"
+      ],
+      "output_fields": {
+        "subcontractor_statement": "string - Required, Not required, or State-specific requirement",
+        "other_requirements": "array - List of other documentation requirements",
+        "source": "string - Page and clause reference"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Claim Submission Method",
+      "description": "How and where to submit payment claims",
+      "search_terms": {
+        "primary": ["submit", "submission", "portal", "email"],
+        "secondary": ["claims to", "send to", "lodge", "Procore", "Aconex"],
+        "related": ["hard copy", "original", "format", "template"]
+      },
+      "extraction_rules": [
+        "Extract submission portal URL (e.g., Procore, Aconex, Oracle)",
+        "Extract submission email address",
+        "Extract hard copy requirements",
+        "Extract specific formatting requirements"
+      ],
+      "output_fields": {
+        "method": "string - Portal, Email, Hard copy, or Multiple",
+        "portal_url": "string or null - Portal URL",
+        "email_address": "string or null - Submission email",
+        "special_requirements": "string or null - Any specific instructions",
+        "source": "string - Page and clause reference"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Project Manager",
+      "description": "Assigned project manager or contract administrator",
+      "search_terms": {
+        "primary": ["project manager", "contract administrator", "superintendent", "representative"],
+        "secondary": ["PM", "CA", "contact", "nominated", "appointed"],
+        "related": ["name", "email", "phone", "address"]
+      },
+      "extraction_rules": [
+        "Extract name of assigned Project Manager or Contract Administrator",
+        "Extract company they represent",
+        "Extract contact details (email, phone if provided)"
+      ],
+      "output_fields": {
+        "name": "string - Full name",
+        "company": "string - Company they represent",
+        "email": "string or null - Email address",
+        "phone": "string or null - Phone number",
+        "source": "string - Page and clause reference"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Dollar Value Mentions",
+      "description": "All monetary amounts mentioned in the contract",
+      "search_terms": {
+        "primary": ["$", "AUD", "amount", "sum", "price"],
+        "secondary": ["value", "fee", "rate", "charge", "cost"],
+        "related": ["per", "each", "total", "maximum", "minimum", "limit"]
+      },
+      "extraction_rules": [
+        "List EVERY monetary ($) amount mentioned in the contract",
+        "Include the page number for each amount",
+        "Include brief context for what each amount relates to"
+      ],
+      "output_fields": {
+        "amounts": "array - List of amount objects with value, context, and page"
+      }
+    }
+  ],
+  "extraction_methodology": {
+    "document_scan_order": [
+      {
+        "priority": 1,
+        "section": "Payment Schedule / Schedule of Rates",
+        "rationale": "Primary source for financial terms"
+      },
+      {
+        "priority": 2,
+        "section": "Special Conditions / Particular Conditions / Annexure A",
+        "rationale": "Often override general terms"
+      },
+      {
+        "priority": 3,
+        "section": "General Conditions of Contract",
+        "rationale": "Standard payment/claim clauses"
+      },
+      {
+        "priority": 4,
+        "section": "Formal Instrument of Agreement",
+        "rationale": "Contract value, parties, signatures"
+      },
+      {
+        "priority": 5,
+        "section": "Annexures / Attachments / Schedules",
+        "rationale": "Supporting details, forms, rates"
+      },
+      {
+        "priority": 6,
+        "section": "Main Contract Body",
+        "rationale": "Catch anything missed above"
+      }
+    ],
+    "extraction_rules": [
+      "Scan the ENTIRE document - do not skip any sections",
+      "Follow the priority order but capture data from ALL sections",
+      "If the same data point appears in multiple places with different values, extract ALL instances and note each location",
+      "Always include page number AND clause reference (e.g., 'Page 5, Clause 8.1')",
+      "For schedules, include schedule reference (e.g., 'Schedule A, Item 3')"
+    ]
+  },
+  "edge_case_handling": {
+    "conflicting_values": {
+      "description": "When different sections state different values for the same data point",
+      "action": "Extract ALL instances with their sources and set status to 'CONFLICT_DETECTED'",
+      "example": {
+        "instances": [
+          { "amount": "$1,500,000", "source": "Page 1, Recital B" },
+          { "amount": "$1,650,000", "source": "Schedule A, Item 1.1" }
+        ],
+        "status": "CONFLICT_DETECTED",
+        "note": "Multiple values found - manual verification required"
+      }
+    },
+    "handwritten_amendments": {
+      "description": "When handwritten notes, strikethroughs, or manual amendments are visible",
+      "action": "Document the amendment with location, description, and legibility assessment",
+      "example": {
+        "location": "Page 5, Clause 8.1",
+        "description": "Handwritten change to payment terms - '30' crossed out, '45' written",
+        "legibility": "CLEAR"
+      },
+      "legibility_values": ["CLEAR", "PARTIALLY_LEGIBLE", "ILLEGIBLE"]
+    },
+    "external_references": {
+      "description": "When the contract references external documents not included",
+      "action": "Document the reference with the document name, relevance, and location",
+      "example": {
+        "document": "Head Contract dated 15 March 2024",
+        "relevance": "Payment terms stated as 'back-to-back with Head Contract'",
+        "location": "Page 3, Clause 5.2"
+      }
+    },
+    "conditional_values": {
+      "description": "When values depend on conditions or formulas",
+      "action": "Extract the formula/condition as stated, do NOT calculate",
+      "example": {
+        "retention_percentage": "5% until Practical Completion, then 2.5%",
+        "security_amount": "10% of Contract Value (calculated as $150,000)",
+        "note": "Formula extracted as stated - not independently calculated"
+      }
+    },
+    "not_found": {
+      "description": "When a data point cannot be located after thorough search",
+      "action": "Return null value with NOT_FOUND status and list of search terms used",
+      "example": {
+        "value": null,
+        "status": "NOT_FOUND",
+        "searched": ["payment", "invoice", "claim", "due date", "net days", "within X days"],
+        "sections_checked": ["General Conditions", "Special Conditions", "Schedule A", "All Annexures"]
+      }
+    }
+  },
+  "output_format": {
+    "style_requirements": {
+      "language": "Australian English (e.g., 'labour' not 'labor')",
+      "tone": "Formal, factual, no commentary",
+      "currency": "AUD with $ symbol (e.g., '$1,500,000')",
+      "dates": "Australian format DD/MM/YYYY",
+      "abbreviations": "No abbreviations except standard ones (ABN, ACN, GST, NSW, VIC)"
+    },
+    "json_structure": {
+      "extraction_metadata": {
+        "document_name": "string - PDF filename",
+        "extraction_date": "string - DD/MM/YYYY",
+        "total_pages": "number - Total pages in document",
+        "document_type": "string - Subcontract, Supply Agreement, or Other"
+      },
+      "categories": "object - All 9 extraction categories with their output fields",
+      "edge_cases": {
+        "conflicts_detected": "array - List of conflicting values",
+        "handwritten_amendments": "array - List of handwritten changes",
+        "external_references": "array - List of external document references",
+        "conditional_values": "array - List of formula-based values"
+      },
+      "extraction_notes": "string - Factual observations about document quality or structure"
+    }
+  },
+  "validation_checklist": [
+    "All 9 categories have been addressed (either with data or NOT_FOUND)",
+    "Every extracted value has a source reference (Page X, Clause X.X)",
+    "NOT_FOUND entries include search terms used",
+    "No values have been calculated or derived (only extracted)",
+    "No assessments or judgments have been included",
+    "Conflicting values (if any) are flagged with all instances",
+    "Handwritten amendments (if any) are documented",
+    "Document name and extraction date are included",
+    "All dollar amounts have been captured with context"
+  ],
+  "explicit_constraints": {
+    "do_not": [
+      "Calculate GST from totals - extract GST-inclusive or exclusive as stated",
+      "Infer end dates from start + duration - extract dates exactly as stated",
+      "Assume 'standard' terms if not stated - mark as NOT_FOUND",
+      "Judge terms as favorable/unfavorable - extract without commentary",
+      "Summarize or paraphrase - quote exact contract language",
+      "Skip sections that look irrelevant - scan entire document",
+      "Guess at illegible text - note as 'ILLEGIBLE' in handwritten_amendments",
+      "Calculate security amounts from percentages - extract formula as stated"
+    ]
+  },
+  "domain_expertise": {
+    "regulatory_knowledge": [
+      "Security of Payment Act (SOP Act) terminology and payment claim conventions",
+      "Building and Construction Industry Security of Payment legislation by state"
+    ],
+    "contract_standards": [
+      "AS2124 - General Conditions of Contract",
+      "AS4000 - General Conditions of Contract",
+      "Bespoke head contracts and subcontracts"
+    ],
+    "terminology": {
+      "retention": "Amount withheld from progress payments until project milestones",
+      "practical_completion": "PC - when works are complete except for minor defects",
+      "defects_liability_period": "DLP - period after PC during which contractor must fix defects",
+      "bank_guarantee": "BG - security instrument from contractor's bank",
+      "progress_claim": "Periodic claim for work completed during reference period",
+      "subcontractor_statement": "NSW/VIC statutory declaration of worker entitlements compliance"
+    }
+  }
+}

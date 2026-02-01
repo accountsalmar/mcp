@@ -1,7 +1,21 @@
 {
+  "categorization": {
+    "description": "Classification of 28 commercial principles into Non-Negotiable and Negotiable categories",
+    "non_negotiable": {
+      "description": "Terms representing DuraCube's firm commercial positions that CANNOT be compromised",
+      "count": 9,
+      "principle_ids": [3, 13, 14, 15, 16, 19, 24, 25, 28]
+    },
+    "negotiable": {
+      "description": "Terms with flexibility that CAN be discussed during contract negotiation",
+      "count": 19,
+      "principle_ids": [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 17, 18, 20, 21, 22, 23, 26, 27]
+    }
+  },
   "principles": [
     {
       "id": 1,
+      "category": "NEGOTIABLE",
       "name": "Limitation of Liability",
       "standard": "Cap of 100% of the Contract value",
       "risk_level": "HIGH",
@@ -29,6 +43,7 @@
     },
     {
       "id": 2,
+      "category": "NEGOTIABLE",
       "name": "Consequential Damages",
       "standard": "Neither party is liable to the other for any consequential loss",
       "risk_level": "HIGH",
@@ -56,6 +71,7 @@
     },
     {
       "id": 3,
+      "category": "NON-NEGOTIABLE",
       "name": "Head Contract Provision",
       "standard": "No Head Contract provision: DuraCube is not obligated to accept the terms and conditions outlined in the Head Contract document",
       "risk_level": "MEDIUM-HIGH",
@@ -83,6 +99,7 @@
     },
     {
       "id": 4,
+      "category": "NEGOTIABLE",
       "name": "Liquidated Damages",
       "standard": "Limited to a max of 10% of the Contract value, and the Contract must specifically say that LDs are the Principal's sole remedy for delay. Liquidated Damages under the Head Contract are not applicable",
       "risk_level": "HIGH",
@@ -111,6 +128,7 @@
     },
     {
       "id": 5,
+      "category": "NEGOTIABLE",
       "name": "Extension of Time",
       "standard": "DuraCube should be entitled to an extension of time (EOT) and demonstrated actual cost for delays not caused by DuraCube, including war and its effect, material delays, material shortages, fuel shortages, delay in granting access to the Site, Epidemics, Pandemics (including COVID-19), Pandemic event declared by a local, state, and/or federal authority, Quarantine Restrictions, Inclement Weather, Force Majeure and events beyond the reasonable control of the DuraCube",
       "risk_level": "HIGH",
@@ -139,6 +157,7 @@
     },
     {
       "id": 6,
+      "category": "NEGOTIABLE",
       "name": "Force Majeure",
       "standard": "Should be entitled to an EOT and demonstrated actual cost",
       "risk_level": "MEDIUM-HIGH",
@@ -166,6 +185,7 @@
     },
     {
       "id": 7,
+      "category": "NEGOTIABLE",
       "name": "Variations: Accelerations, Omissions",
       "standard": "Variation direction shall be in writing or agreed upon prior to commencement. DuraCube can claim demonstrated actual costs incurred due to any direction resulting from change of scope or programme and where applicable EOT",
       "risk_level": "HIGH",
@@ -194,6 +214,7 @@
     },
     {
       "id": 8,
+      "category": "NEGOTIABLE",
       "name": "Time Bars/Notification Period",
       "standard": "Notification periods should be at least 5 business days",
       "risk_level": "HIGH",
@@ -222,6 +243,7 @@
     },
     {
       "id": 9,
+      "category": "NEGOTIABLE",
       "name": "Assessment Period",
       "standard": "10 business days assessment period for all claims",
       "risk_level": "MEDIUM",
@@ -250,6 +272,7 @@
     },
     {
       "id": 10,
+      "category": "NEGOTIABLE",
       "name": "Service for Notices",
       "standard": "Email should be included",
       "risk_level": "LOW-MEDIUM",
@@ -278,6 +301,7 @@
     },
     {
       "id": 11,
+      "category": "NEGOTIABLE",
       "name": "Termination",
       "standard": "The party's rights and remedies shall be reciprocal",
       "risk_level": "MEDIUM",
@@ -306,6 +330,7 @@
     },
     {
       "id": 12,
+      "category": "NEGOTIABLE",
       "name": "Termination for Convenience",
       "standard": "DuraCube must be paid for demonstrated actual costs including overheads, completed works to date, reasonable costs of ordered materials, and demobilisation expenses. Security must be released",
       "risk_level": "HIGH",
@@ -334,6 +359,7 @@
     },
     {
       "id": 13,
+      "category": "NON-NEGOTIABLE",
       "name": "Dispute Resolution",
       "standard": "Senior representatives of both parties with the authority to negotiate a resolution prior to consideration of Adjudication",
       "risk_level": "LOW-MEDIUM",
@@ -362,6 +388,7 @@
     },
     {
       "id": 14,
+      "category": "NON-NEGOTIABLE",
       "name": "Payment and Cash Neutrality",
       "standard": "Payment term 14 days End of Month, subjected to the credit limit approval",
       "risk_level": "MEDIUM",
@@ -390,6 +417,7 @@
     },
     {
       "id": 15,
+      "category": "NON-NEGOTIABLE",
       "name": "Security & Parent Company Guarantees",
       "standard": "DuraCube agrees to 2 x 2.5% dated Commonwealth Bank Guarantee as a form of Security. DuraCube only accepts dated bank guarantees and does not agree to unconditional bank guarantees. BG 1 expires on the Practical Completion date. BG 2 expires after the end of Defect Liability Period (52 weeks/12 months). DuraCube does not provide for cash retention. DuraCube does not agree to provide a Parent Company Guarantee",
       "risk_level": "HIGH",
@@ -421,6 +449,7 @@
     },
     {
       "id": 16,
+      "category": "NON-NEGOTIABLE",
       "name": "Release of Security",
       "standard": "50% of Security is released on the date of Practical Completion of the Contract (BG 1 expires) and 50% upon the expiry date of the defect liability period of the Contract (BG 2 expires after 52 weeks/12 months)",
       "risk_level": "MEDIUM",
@@ -450,6 +479,7 @@
     },
     {
       "id": 17,
+      "category": "NEGOTIABLE",
       "name": "Defects Liability Period",
       "standard": "DuraCube accepts a defect liability period of 52 weeks/12 months from the date of Practical Completion (PC) with no re-warranty period. DuraCube offers a 15 years warranty as per www.DuraCube.com.au (this is DuraCube's voluntary offering - if not required by customer/contract, this is favorable and compliant)",
       "risk_level": "MEDIUM",
@@ -480,6 +510,7 @@
     },
     {
       "id": 18,
+      "category": "NEGOTIABLE",
       "name": "Indemnities",
       "standard": "Indemnities, where applicable, will be reciprocal. However, DuraCube can agree to non-reciprocal terms, provided they are reduced proportionally",
       "risk_level": "MEDIUM-HIGH",
@@ -508,6 +539,7 @@
     },
     {
       "id": 19,
+      "category": "NON-NEGOTIABLE",
       "name": "Proportionate Liability Act",
       "standard": "The Proportionate Liability Act must not be excluded in the Contract",
       "risk_level": "HIGH",
@@ -536,6 +568,7 @@
     },
     {
       "id": 20,
+      "category": "NEGOTIABLE",
       "name": "Risk & Title Transfer",
       "standard": "Risk will transfer on delivery and acceptance and title on payment of the Works/Services",
       "risk_level": "MEDIUM",
@@ -564,6 +597,7 @@
     },
     {
       "id": 21,
+      "category": "NEGOTIABLE",
       "name": "Unfixed Materials",
       "standard": "Entitlement to claim is limited to scenarios where DuraCube delivers materials to the Site but encounters impediments preventing installation",
       "risk_level": "MEDIUM",
@@ -592,6 +626,7 @@
     },
     {
       "id": 22,
+      "category": "NEGOTIABLE",
       "name": "Intellectual Property",
       "standard": "Background IP vest in DuraCube. IP developed during the project is paid for and vest in the Principal",
       "risk_level": "HIGH",
@@ -620,6 +655,7 @@
     },
     {
       "id": 23,
+      "category": "NEGOTIABLE",
       "name": "Urgent Protection",
       "standard": "No blanket acceptance of urgent protection clause/instruction. Where urgent protection is required DuraCube should be able to recover demonstrated actual costs with provision of 1 day notice",
       "risk_level": "MEDIUM",
@@ -648,6 +684,7 @@
     },
     {
       "id": 24,
+      "category": "NON-NEGOTIABLE",
       "name": "Set Off",
       "standard": "An agreement must take place prior to set off consideration",
       "risk_level": "HIGH",
@@ -676,6 +713,7 @@
     },
     {
       "id": 25,
+      "category": "NON-NEGOTIABLE",
       "name": "Insurances",
       "standard": "DuraCube will provide: Public Liability Insurance (General & Product): $20M; Contract Works Insurance material damage: max project Value $400k; Professional Indemnity Insurance: NOT PROVIDED - DuraCube does not provide PI Insurance. DuraCube is listed as interested party, not joint names",
       "risk_level": "HIGH",
@@ -707,6 +745,7 @@
     },
     {
       "id": 26,
+      "category": "NEGOTIABLE",
       "name": "Protection of Works",
       "standard": "No provision shall be made for the protection of works following the completion of DuraCube's installation",
       "risk_level": "MEDIUM",
@@ -735,6 +774,7 @@
     },
     {
       "id": 27,
+      "category": "NEGOTIABLE",
       "name": "Time is of the Essence / Escalation",
       "standard": "Not applicable",
       "risk_level": "MEDIUM",
@@ -763,6 +803,7 @@
     },
     {
       "id": 28,
+      "category": "NON-NEGOTIABLE",
       "name": "Design Liability",
       "standard": "DuraCube does not accept undefined liability. DuraCube's design scope is limited to the provision of the shop drawings",
       "risk_level": "HIGH",

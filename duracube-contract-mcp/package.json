@@ -10,7 +10,7 @@
   "scripts": {
     "prebuild": "node -e \"const fs=require('fs');if(!fs.existsSync('build/knowledge'))fs.mkdirSync('build/knowledge',{recursive:true})\"",
     "build": "tsc && npm run copy-json",
-    "copy-json": "node -e \"const fs=require('fs');const path=require('path');['principles.json','learnings.json','format.json'].forEach(f=>fs.copyFileSync(path.join('src/knowledge',f),path.join('build/knowledge',f)))\"",
+    "copy-json": "node -e \"const fs=require('fs');const path=require('path');['principles.json','learnings.json','format.json','finance-extraction.json'].forEach(f=>fs.copyFileSync(path.join('src/knowledge',f),path.join('build/knowledge',f)))\"",
     "start": "node build/index.js http",
     "start:stdio": "node build/index.js stdio",
     "start:http": "node build/index.js http",
