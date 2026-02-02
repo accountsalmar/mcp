@@ -6,3 +6,7 @@ nul
 *.env
 .mcp.json
 **/CUsersKasunJMCPNexsus.env
+
+# DuraCube Contract MCP - tracked by its own standalone repo
+duracube-contract-mcp/
+customer_contract_review/duracube-contract-mcp/
